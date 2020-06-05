@@ -20,6 +20,10 @@
 		FFCBB2E4248AD6C60026AE7F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2E3248AD6C60026AE7F /* Router.swift */; };
 		FFCBB2EA248AD7600026AE7F /* UIViewController+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2E9248AD7600026AE7F /* UIViewController+Window.swift */; };
 		FFCBB2EC248AD9220026AE7F /* RouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2EB248AD9220026AE7F /* RouterFactory.swift */; };
+		FFCBB2F2248ADAFA0026AE7F /* AppStartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2EE248ADAFA0026AE7F /* AppStartPresenter.swift */; };
+		FFCBB2F3248ADAFA0026AE7F /* AppStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2EF248ADAFA0026AE7F /* AppStartViewController.swift */; };
+		FFCBB2F4248ADAFA0026AE7F /* AppStartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2F0248ADAFA0026AE7F /* AppStartInteractor.swift */; };
+		FFCBB2F5248ADAFA0026AE7F /* AppStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCBB2F1248ADAFA0026AE7F /* AppStartViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		FFCBB2E3248AD6C60026AE7F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FFCBB2E9248AD7600026AE7F /* UIViewController+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Window.swift"; sourceTree = "<group>"; };
 		FFCBB2EB248AD9220026AE7F /* RouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFactory.swift; sourceTree = "<group>"; };
+		FFCBB2EE248ADAFA0026AE7F /* AppStartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartPresenter.swift; sourceTree = "<group>"; };
+		FFCBB2EF248ADAFA0026AE7F /* AppStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewController.swift; sourceTree = "<group>"; };
+		FFCBB2F0248ADAFA0026AE7F /* AppStartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartInteractor.swift; sourceTree = "<group>"; };
+		FFCBB2F1248ADAFA0026AE7F /* AppStartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppStartViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,17 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		FFCBB2ED248ADAE70026AE7F /* AppStart */ = {
+			isa = PBXGroup;
+			children = (
+				FFCBB2F0248ADAFA0026AE7F /* AppStartInteractor.swift */,
+				FFCBB2EE248ADAFA0026AE7F /* AppStartPresenter.swift */,
+				FFCBB2EF248ADAFA0026AE7F /* AppStartViewController.swift */,
+				FFCBB2F1248ADAFA0026AE7F /* AppStartViewController.xib */,
+			);
+			path = AppStart;
+			sourceTree = "<group>";
+		};
 		FFF0AA65248AD29300A38F5D /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +170,7 @@
 		FFF0AA66248AD2A500A38F5D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FFCBB2ED248ADAE70026AE7F /* AppStart */,
 				FF3B7BAB248AC41300E56FDB /* ViewController.swift */,
 			);
 			path = ViewControllers;
@@ -250,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF3B7BB7248AC41400E56FDB /* LaunchScreen.storyboard in Resources */,
+				FFCBB2F5248ADAFA0026AE7F /* AppStartViewController.xib in Resources */,
 				FF3B7BB4248AC41400E56FDB /* Assets.xcassets in Resources */,
 				FF3B7BAF248AC41300E56FDB /* Main.storyboard in Resources */,
 			);
@@ -306,11 +327,14 @@
 			files = (
 				FFCBB2EA248AD7600026AE7F /* UIViewController+Window.swift in Sources */,
 				FF3B7BAC248AC41300E56FDB /* ViewController.swift in Sources */,
+				FFCBB2F3248ADAFA0026AE7F /* AppStartViewController.swift in Sources */,
 				FFCBB2EC248AD9220026AE7F /* RouterFactory.swift in Sources */,
+				FFCBB2F2248ADAFA0026AE7F /* AppStartPresenter.swift in Sources */,
 				FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */,
 				FF3B7BA8248AC41300E56FDB /* AppDelegate.swift in Sources */,
 				FFCBB2E4248AD6C60026AE7F /* Router.swift in Sources */,
 				FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */,
+				FFCBB2F4248ADAFA0026AE7F /* AppStartInteractor.swift in Sources */,
 				FFCBB2DF248AD4ED0026AE7F /* Factory.swift in Sources */,
 				FFCBB2E1248AD5560026AE7F /* ViewControllersFactory.swift in Sources */,
 			);
