@@ -11,7 +11,7 @@ import Swinject
 
 protocol IViewControllersFactory: IFactory {
     func appStartViewController() -> IAppStartViewController
-    func homeViewController() -> UIViewController
+    func homeViewController() -> IHomeViewController
 }
 
 final class ViewControllersFactory: IFactory {
@@ -33,8 +33,13 @@ final class ViewControllersFactory: IFactory {
             return viewController
         }
 
-        container.register(UIViewController.self, name: "Home") { _ in
-            UIViewController()
+        container.register(IHomeViewController.self) { _ in
+            let presenter = HomePresenter()
+            let interactor = HomeInteractor(presenter: presenter)
+            let viewController = HomeViewController(interactor: interactor)
+            presenter.resolveDependencies(viewController: viewController)
+
+            return viewController
         }
     }
 }
@@ -46,7 +51,7 @@ extension ViewControllersFactory: IViewControllersFactory {
         return container.resolve(IAppStartViewController.self)!
     }
 
-    func homeViewController() -> UIViewController {
-        return container.resolve(UIViewController.self, name: "Home")!
+    func homeViewController() -> IHomeViewController {
+        return container.resolve(IHomeViewController.self)!
     }
 }

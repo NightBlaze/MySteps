@@ -24,6 +24,10 @@
 		FFCBB2F3248ADAFA0026AE7F /* AppStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2EF248ADAFA0026AE7F /* AppStartViewController.swift */; };
 		FFCBB2F4248ADAFA0026AE7F /* AppStartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2F0248ADAFA0026AE7F /* AppStartInteractor.swift */; };
 		FFCBB2F5248ADAFA0026AE7F /* AppStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCBB2F1248ADAFA0026AE7F /* AppStartViewController.xib */; };
+		FFCBB2FB248ADC180026AE7F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2F7248ADC180026AE7F /* HomePresenter.swift */; };
+		FFCBB2FC248ADC180026AE7F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2F8248ADC180026AE7F /* HomeViewController.swift */; };
+		FFCBB2FD248ADC180026AE7F /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2F9248ADC180026AE7F /* HomeInteractor.swift */; };
+		FFCBB2FE248ADC180026AE7F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCBB2FA248ADC180026AE7F /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		FFCBB2EF248ADAFA0026AE7F /* AppStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewController.swift; sourceTree = "<group>"; };
 		FFCBB2F0248ADAFA0026AE7F /* AppStartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartInteractor.swift; sourceTree = "<group>"; };
 		FFCBB2F1248ADAFA0026AE7F /* AppStartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppStartViewController.xib; sourceTree = "<group>"; };
+		FFCBB2F7248ADC180026AE7F /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		FFCBB2F8248ADC180026AE7F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FFCBB2F9248ADC180026AE7F /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		FFCBB2FA248ADC180026AE7F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,17 @@
 			path = AppStart;
 			sourceTree = "<group>";
 		};
+		FFCBB2F6248ADBFD0026AE7F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FFCBB2F9248ADC180026AE7F /* HomeInteractor.swift */,
+				FFCBB2F7248ADC180026AE7F /* HomePresenter.swift */,
+				FFCBB2F8248ADC180026AE7F /* HomeViewController.swift */,
+				FFCBB2FA248ADC180026AE7F /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		FFF0AA65248AD29300A38F5D /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				FFCBB2ED248ADAE70026AE7F /* AppStart */,
+				FFCBB2F6248ADBFD0026AE7F /* Home */,
 				FF3B7BAB248AC41300E56FDB /* ViewController.swift */,
 			);
 			path = ViewControllers;
@@ -271,6 +291,7 @@
 			files = (
 				FF3B7BB7248AC41400E56FDB /* LaunchScreen.storyboard in Resources */,
 				FFCBB2F5248ADAFA0026AE7F /* AppStartViewController.xib in Resources */,
+				FFCBB2FE248ADC180026AE7F /* HomeViewController.xib in Resources */,
 				FF3B7BB4248AC41400E56FDB /* Assets.xcassets in Resources */,
 				FF3B7BAF248AC41300E56FDB /* Main.storyboard in Resources */,
 			);
@@ -328,12 +349,15 @@
 				FFCBB2EA248AD7600026AE7F /* UIViewController+Window.swift in Sources */,
 				FF3B7BAC248AC41300E56FDB /* ViewController.swift in Sources */,
 				FFCBB2F3248ADAFA0026AE7F /* AppStartViewController.swift in Sources */,
+				FFCBB2FD248ADC180026AE7F /* HomeInteractor.swift in Sources */,
 				FFCBB2EC248AD9220026AE7F /* RouterFactory.swift in Sources */,
 				FFCBB2F2248ADAFA0026AE7F /* AppStartPresenter.swift in Sources */,
+				FFCBB2FC248ADC180026AE7F /* HomeViewController.swift in Sources */,
 				FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */,
 				FF3B7BA8248AC41300E56FDB /* AppDelegate.swift in Sources */,
 				FFCBB2E4248AD6C60026AE7F /* Router.swift in Sources */,
 				FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */,
+				FFCBB2FB248ADC180026AE7F /* HomePresenter.swift in Sources */,
 				FFCBB2F4248ADAFA0026AE7F /* AppStartInteractor.swift in Sources */,
 				FFCBB2DF248AD4ED0026AE7F /* Factory.swift in Sources */,
 				FFCBB2E1248AD5560026AE7F /* ViewControllersFactory.swift in Sources */,
