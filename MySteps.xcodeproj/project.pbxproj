@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60079AA7CE27B63EE979AA64 /* Pods_MySteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBC42CBC8C7B0A88DE3532A /* Pods_MySteps.framework */; };
 		FF3B7BA8248AC41300E56FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BA7248AC41300E56FDB /* AppDelegate.swift */; };
 		FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BA9248AC41300E56FDB /* SceneDelegate.swift */; };
 		FF3B7BAC248AC41300E56FDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BAB248AC41300E56FDB /* ViewController.swift */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6EB0ACBA72ACB077EA9C6DB5 /* Pods-MySteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySteps.release.xcconfig"; path = "Target Support Files/Pods-MySteps/Pods-MySteps.release.xcconfig"; sourceTree = "<group>"; };
+		9782C5A795F7269FF0A7C304 /* Pods-MySteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySteps.debug.xcconfig"; path = "Target Support Files/Pods-MySteps/Pods-MySteps.debug.xcconfig"; sourceTree = "<group>"; };
+		AEBC42CBC8C7B0A88DE3532A /* Pods_MySteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3B7BA4248AC41300E56FDB /* MySteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3B7BA7248AC41300E56FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF3B7BA9248AC41300E56FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60079AA7CE27B63EE979AA64 /* Pods_MySteps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		669E12E0E766392937A91E26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEBC42CBC8C7B0A88DE3532A /* Pods_MySteps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D96C9D21FC01C8E550839646 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9782C5A795F7269FF0A7C304 /* Pods-MySteps.debug.xcconfig */,
+				6EB0ACBA72ACB077EA9C6DB5 /* Pods-MySteps.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FF3B7B9B248AC41300E56FDB = {
 			isa = PBXGroup;
 			children = (
 				FF3B7BA6248AC41300E56FDB /* MySteps */,
 				FF3B7BA5248AC41300E56FDB /* Products */,
+				D96C9D21FC01C8E550839646 /* Pods */,
+				669E12E0E766392937A91E26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF3B7BBB248AC41500E56FDB /* Build configuration list for PBXNativeTarget "MySteps" */;
 			buildPhases = (
+				3C4C8D8DF2EE0D298B296919 /* [CP] Check Pods Manifest.lock */,
 				FF3B7BA0248AC41300E56FDB /* Sources */,
 				FF3B7BA1248AC41300E56FDB /* Frameworks */,
 				FF3B7BA2248AC41300E56FDB /* Resources */,
+				2FE39CEB1B7A35D29A5846F4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +210,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FE39CEB1B7A35D29A5846F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySteps/Pods-MySteps-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySteps/Pods-MySteps-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MySteps/Pods-MySteps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C4C8D8DF2EE0D298B296919 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MySteps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FF3B7BA0248AC41300E56FDB /* Sources */ = {
@@ -334,6 +403,7 @@
 		};
 		FF3B7BBC248AC41500E56FDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9782C5A795F7269FF0A7C304 /* Pods-MySteps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -352,6 +422,7 @@
 		};
 		FF3B7BBD248AC41500E56FDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EB0ACBA72ACB077EA9C6DB5 /* Pods-MySteps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

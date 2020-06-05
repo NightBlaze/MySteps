@@ -6,5 +6,6 @@ target 'MySteps' do
   use_frameworks!
 
   # Pods for MySteps
+  pod 'Swinject', '~> 2.7.1'
 
 end
