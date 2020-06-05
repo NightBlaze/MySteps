@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BB0248AC41300E56FDB /* MySteps.xcdatamodeld */; };
 		FF3B7BB4248AC41400E56FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3B7BB3248AC41400E56FDB /* Assets.xcassets */; };
 		FF3B7BB7248AC41400E56FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF3B7BB5248AC41400E56FDB /* LaunchScreen.storyboard */; };
+		FFCBB2DF248AD4ED0026AE7F /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2DE248AD4ED0026AE7F /* Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FF3B7BB3248AC41400E56FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF3B7BB6248AC41400E56FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF3B7BB8248AC41400E56FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFCBB2DE248AD4ED0026AE7F /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				9782C5A795F7269FF0A7C304 /* Pods-MySteps.debug.xcconfig */,
 				6EB0ACBA72ACB077EA9C6DB5 /* Pods-MySteps.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,12 +86,21 @@
 			children = (
 				FFF0AA65248AD29300A38F5D /* Application */,
 				FFF0AA69248AD2F300A38F5D /* DataLayer */,
+				FFCBB2DD248AD4C70026AE7F /* Factories */,
 				FFF0AA68248AD2E400A38F5D /* Resources */,
 				FFF0AA67248AD2C300A38F5D /* Storyboards */,
 				FFF0AA6A248AD32C00A38F5D /* SupportingFiles */,
 				FFF0AA66248AD2A500A38F5D /* ViewControllers */,
 			);
 			path = MySteps;
+			sourceTree = "<group>";
+		};
+		FFCBB2DD248AD4C70026AE7F /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				FFCBB2DE248AD4ED0026AE7F /* Factory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		FFF0AA65248AD29300A38F5D /* Application */ = {
@@ -262,6 +272,7 @@
 				FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */,
 				FF3B7BA8248AC41300E56FDB /* AppDelegate.swift in Sources */,
 				FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */,
+				FFCBB2DF248AD4ED0026AE7F /* Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
