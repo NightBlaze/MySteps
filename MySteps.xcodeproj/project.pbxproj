@@ -17,6 +17,9 @@
 		FF3B7BB7248AC41400E56FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF3B7BB5248AC41400E56FDB /* LaunchScreen.storyboard */; };
 		FFCBB2DF248AD4ED0026AE7F /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2DE248AD4ED0026AE7F /* Factory.swift */; };
 		FFCBB2E1248AD5560026AE7F /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2E0248AD5560026AE7F /* ViewControllersFactory.swift */; };
+		FFCBB2E4248AD6C60026AE7F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2E3248AD6C60026AE7F /* Router.swift */; };
+		FFCBB2EA248AD7600026AE7F /* UIViewController+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2E9248AD7600026AE7F /* UIViewController+Window.swift */; };
+		FFCBB2EC248AD9220026AE7F /* RouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2EB248AD9220026AE7F /* RouterFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		FF3B7BB8248AC41400E56FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFCBB2DE248AD4ED0026AE7F /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		FFCBB2E0248AD5560026AE7F /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
+		FFCBB2E3248AD6C60026AE7F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FFCBB2E9248AD7600026AE7F /* UIViewController+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Window.swift"; sourceTree = "<group>"; };
+		FFCBB2EB248AD9220026AE7F /* RouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +94,10 @@
 			children = (
 				FFF0AA65248AD29300A38F5D /* Application */,
 				FFF0AA69248AD2F300A38F5D /* DataLayer */,
+				FFCBB2E5248AD6FF0026AE7F /* Extensions */,
 				FFCBB2DD248AD4C70026AE7F /* Factories */,
 				FFF0AA68248AD2E400A38F5D /* Resources */,
+				FFCBB2E2248AD6AF0026AE7F /* Router */,
 				FFF0AA67248AD2C300A38F5D /* Storyboards */,
 				FFF0AA6A248AD32C00A38F5D /* SupportingFiles */,
 				FFF0AA66248AD2A500A38F5D /* ViewControllers */,
@@ -101,9 +109,34 @@
 			isa = PBXGroup;
 			children = (
 				FFCBB2DE248AD4ED0026AE7F /* Factory.swift */,
+				FFCBB2EB248AD9220026AE7F /* RouterFactory.swift */,
 				FFCBB2E0248AD5560026AE7F /* ViewControllersFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		FFCBB2E2248AD6AF0026AE7F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FFCBB2E3248AD6C60026AE7F /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FFCBB2E5248AD6FF0026AE7F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFCBB2E6248AD7180026AE7F /* UIViewController */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FFCBB2E6248AD7180026AE7F /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FFCBB2E9248AD7600026AE7F /* UIViewController+Window.swift */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		FFF0AA65248AD29300A38F5D /* Application */ = {
@@ -271,9 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFCBB2EA248AD7600026AE7F /* UIViewController+Window.swift in Sources */,
 				FF3B7BAC248AC41300E56FDB /* ViewController.swift in Sources */,
+				FFCBB2EC248AD9220026AE7F /* RouterFactory.swift in Sources */,
 				FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */,
 				FF3B7BA8248AC41300E56FDB /* AppDelegate.swift in Sources */,
+				FFCBB2E4248AD6C60026AE7F /* Router.swift in Sources */,
 				FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */,
 				FFCBB2DF248AD4ED0026AE7F /* Factory.swift in Sources */,
 				FFCBB2E1248AD5560026AE7F /* ViewControllersFactory.swift in Sources */,
