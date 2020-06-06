@@ -10,7 +10,8 @@ import Foundation
 
 protocol IAppStartPresenter {
     func appInitializationSuccess()
-    func appInitializationError(_ error: Error)
+    func errorInitializeLocalPersistentStore(_ error: Error)
+    func errorInitializeHealthKitStore(_ error: Error)
 }
 
 final class AppStartPresenter {
@@ -27,8 +28,14 @@ extension AppStartPresenter: IAppStartPresenter {
     func appInitializationSuccess() {
         viewController?.goToHomeScreen()
     }
+    
+    func errorInitializeLocalPersistentStore(_ error: Error) {
+        // TODO: Localize
+        let errorViewModel = AppStartErrorViewModel(title: "Warning", message: "Cannot initialize application. Please try to reinstall it.")
+        viewController?.showError(viewModel: errorViewModel)
+    }
 
-    func appInitializationError(_ error: Error) {
+    func errorInitializeHealthKitStore(_ error: Error) {
         // TODO: Localize
         let errorViewModel = AppStartErrorViewModel(title: "Warning", message: "Cannot initialize application. Please try to reinstall it.")
         viewController?.showError(viewModel: errorViewModel)

@@ -26,7 +26,11 @@ final class ViewControllersFactory: IFactory {
     func register() {
         container.register(IAppStartViewController.self) { [unowned self] _ in
             let presenter = AppStartPresenter()
-            let interactor = AppStartInteractor(presenter: presenter)
+            let healthKit = self.mainFactory.dataLayerFactory().healthKitStoreInitializer()
+            let localPersistentStore = self.mainFactory.dataLayerFactory().localPersistentStoreInitializer()
+            let interactor = AppStartInteractor(presenter: presenter,
+                                                healthKitStore: healthKit,
+                                                localPersistentStore: localPersistentStore)
             let router = self.mainFactory.routerFactory().appStartRouterScenario()
             let viewController = AppStartViewController(interactor: interactor, router: router)
             presenter.resolveDependencies(viewController: viewController)

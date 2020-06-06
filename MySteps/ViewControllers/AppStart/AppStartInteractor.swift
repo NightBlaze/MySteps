@@ -13,10 +13,16 @@ protocol IAppStartInteractor {
 }
 
 final class AppStartInteractor {
-    private var presenter: IAppStartPresenter
+    private let presenter: IAppStartPresenter
+    private let healthKitStore: IHealthKitStoreInitializer
+    private let localPersistentStore: ILocalPersistentStoreInitializer
     
-    init(presenter: IAppStartPresenter) {
+    init(presenter: IAppStartPresenter,
+         healthKitStore: IHealthKitStoreInitializer,
+         localPersistentStore: ILocalPersistentStoreInitializer) {
         self.presenter = presenter
+        self.healthKitStore = healthKitStore
+        self.localPersistentStore = localPersistentStore
     }
 }
 
@@ -24,8 +30,25 @@ final class AppStartInteractor {
 
 extension AppStartInteractor: IAppStartInteractor {
     func initializeApp() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
-            self.presenter.appInitializationSuccess()
+        // Because we have only two core subsystems
+        // here we can use "stair" syntax.
+        // In case if we'll have more core subsystems
+        // it's better to use "plain" syntax and to use
+        // disptach group for grouping of initialization
+        self.initializeLPS { [weak self] result in
+            guard let self = self else { return }
+            if case .failure(let error) = result {
+                self.presenter.errorInitializeLocalPersistentStore(error)
+                return
+            }
+
+            self.initializeHealthKit { result in
+                if case .failure(let error) = result {
+                    self.presenter.errorInitializeHealthKitStore(error)
+                } else {
+                    self.presenter.appInitializationSuccess()
+                }
+            }
         }
     }
 }
@@ -33,4 +56,11 @@ extension AppStartInteractor: IAppStartInteractor {
 // MARK: - Private
 
 private extension AppStartInteractor {
+    func initializeLPS(_ completion: @escaping (Result<Void, Error>) -> Void) {
+        localPersistentStore.initializeLPS(completion)
+    }
+
+    func initializeHealthKit(_ completion: @escaping (Result<Void, Error>) -> Void) {
+        healthKitStore.initializeHKS(completion)
+    }
 }
