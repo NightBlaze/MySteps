@@ -33,7 +33,7 @@ extension AppStartInteractor: IAppStartInteractor {
         // Because we have only two core subsystems
         // here we can use "stair" syntax.
         // In case if we'll have more core subsystems
-        // it's better to use "plain" syntax and to use
+        // it's better to use "plain" syntax and use
         // disptach group for grouping of initialization
         self.initializeLPS { [weak self] result in
             guard let self = self else { return }

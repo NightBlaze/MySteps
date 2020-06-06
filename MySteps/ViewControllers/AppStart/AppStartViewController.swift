@@ -14,16 +14,14 @@ protocol IAppStartViewController: UIViewController {
 }
 
 final class AppStartViewController: UIViewController {
-    private var interactor: IAppStartInteractor
-    private var router: IAppStartRouterScenario
+    private let interactor: IAppStartInteractor
+    private let router: IAppStartRouterScenario
     
     init(interactor: IAppStartInteractor,
          router: IAppStartRouterScenario) {
         self.interactor = interactor
         self.router = router
-        // The name of the class is hardcoded because I use custom template
-        // to generate VIP module
-        super.init(nibName: "AppStartViewController", bundle: nil)
+        super.init(nibName: String(describing: type(of: self)), bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -45,7 +43,7 @@ extension AppStartViewController: IAppStartViewController {
     }
 
     func showError(viewModel: AppStartErrorViewModel) {
-        
+        // TODO: show error
     }
 }
 

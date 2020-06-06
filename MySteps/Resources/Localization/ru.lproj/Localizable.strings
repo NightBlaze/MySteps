@@ -5,3 +5,11 @@
   Created by Alexander Timonenkov on 06.06.2020.
   Copyright © 2020 ATi Soft. All rights reserved.
 */
+
+"ok" = "ОК";
+"cancel" = "Отмена";
+"warning" = "Внимание";
+
+// AppStartViewController
+"app_start_view_controller.app_initialization.error" = "Ошибка инициализации приложения";
+"app_start_view_controller.healthkit_initialization.error" = "Ошибка инициализации HealthKit";

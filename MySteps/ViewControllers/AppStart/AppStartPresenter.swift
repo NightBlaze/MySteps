@@ -30,14 +30,14 @@ extension AppStartPresenter: IAppStartPresenter {
     }
     
     func errorInitializeLocalPersistentStore(_ error: Error) {
-        // TODO: Localize
-        let errorViewModel = AppStartErrorViewModel(title: "Warning", message: "Cannot initialize application. Please try to reinstall it.")
+        let errorViewModel = AppStartErrorViewModel(title: "warning".localized,
+                                                    message: "app_start_view_controller.app_initialization.error".localized)
         viewController?.showError(viewModel: errorViewModel)
     }
 
     func errorInitializeHealthKitStore(_ error: Error) {
-        // TODO: Localize
-        let errorViewModel = AppStartErrorViewModel(title: "Warning", message: "Cannot initialize application. Please try to reinstall it.")
+        let errorViewModel = AppStartErrorViewModel(title: "warning".localized,
+                                                    message: "app_start_view_controller.healthkit_initialization.error".localized)
         viewController?.showError(viewModel: errorViewModel)
     }
 }
