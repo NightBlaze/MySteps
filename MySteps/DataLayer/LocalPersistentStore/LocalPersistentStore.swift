@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import CoreStore
 
 protocol ILocalPersistentStore: ILocalPersistentStoreInitializer {
 }
@@ -17,18 +18,23 @@ protocol ILocalPersistentStoreInitializer {
 }
 
 final class LocalPersistentStore: ILocalPersistentStore {
-    enum Errors: Error {
-        case errorInitializeCoreData
-    }
+    private static let modelName = "MySteps"
+    private static let sqliteFileName = modelName + ".sqlite"
 
-    private static let containerName = "MySteps"
-    private static let sqliteName = containerName + ".sqlite"
+    lazy var dataStack = DataStack(xcodeModelName: LocalPersistentStore.modelName)
 }
 
 // MARK: - ILocalPersistentStoreInitializer
 
 extension LocalPersistentStore: ILocalPersistentStoreInitializer {
     func initializeLPS(_ completion: @escaping (Result<Void, Error>) -> Void) {
-        completion(.success(()))
+        let _ = dataStack.addStorage(SQLiteStore(fileName: LocalPersistentStore.sqliteFileName)) { result in
+            switch result {
+            case .success(_):
+                completion(.success(()))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }
