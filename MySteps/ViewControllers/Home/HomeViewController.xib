@@ -10,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MySteps" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="0t7-dj-jUy" id="opE-8e-LJl"/>
-                <outlet property="topBar" destination="6vy-QH-sPf" id="YbW-hh-qtl"/>
+                <outlet property="userBarView" destination="6vy-QH-sPf" id="W8W-MD-VLO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vy-QH-sPf">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vy-QH-sPf" customClass="UserBarView" customModule="MySteps" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>

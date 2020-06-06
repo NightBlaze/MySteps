@@ -13,8 +13,14 @@ class BaseNibView: UIView {
 
     private var nibName: String { nameOfClass() }
 
-    // MARK: - Initialization
+    func hostViewControllerViewDidLoad() {
+        
+    }
+}
 
+// MARK: - Initialization
+
+extension BaseNibView {
     func initialize(useAutoLayout: Bool = true,
                     bundle: Bundle? = .main) {
         translatesAutoresizingMaskIntoConstraints = !useAutoLayout
@@ -43,8 +49,11 @@ class BaseNibView: UIView {
         }
     }
 
-    // MARK: - Overrides
+}
 
+// MARK: - Overrides
+
+extension BaseNibView {
     override var backgroundColor: UIColor? {
         get {
             return super.backgroundColor

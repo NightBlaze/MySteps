@@ -34,11 +34,13 @@ final class LPSUser {
 
 extension LPSUser: ILPSUserReader {
     func fetchUser(_ completion: @escaping (Result<UserDAO?, Error>) -> Void) {
-        do {
-            let user = try dataStack.fetchOne(From<UserDAO>())
-            completion(.success(user))
-        } catch let error {
-            completion(.failure(error))
+        DispatchQueue.main.async { [weak self] in
+            do {
+                let user = try self?.dataStack.fetchOne(From<UserDAO>())
+                completion(.success(user))
+            } catch let error {
+                completion(.failure(error))
+            }
         }
     }
 }

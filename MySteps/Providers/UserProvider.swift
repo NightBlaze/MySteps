@@ -34,7 +34,9 @@ extension UserProvider: IUserProviderReader {
 
         let handle: (UserDAO?) -> Bool = { user -> Bool in
             if let user = user {
-                completion(.success(user))
+                DispatchQueue.main.async {
+                    completion(.success(user))
+                }
                 return true
             }
             return false
@@ -63,13 +65,18 @@ extension UserProvider: IUserProviderReader {
 
             // 3. User not found
             // Trying to create fake user
+            group.enter()
             self.createUser { createdUser in
                 user = createdUser
+                group.leave()
             }
+            group.wait()
 
             // 4. Error creating fake user
             if !handle(user) {
-                completion(.failure(UserProviderReaderErrors.errorFetchLoggedInUser))
+                DispatchQueue.main.async {
+                    completion(.failure(UserProviderReaderErrors.errorFetchLoggedInUser))
+                }
             }
         }
     }

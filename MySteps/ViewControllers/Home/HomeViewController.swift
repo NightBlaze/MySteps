@@ -32,13 +32,16 @@ final class HomeViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var topBar: UIView!
+    @IBOutlet weak var userBarView: UserBarView!
     @IBOutlet weak var tableView: UITableView!
     
     private let interactor: IHomeInteractor
+    private let userProvider: IUserProviderReader
     
-    init(interactor: IHomeInteractor) {
+    init(interactor: IHomeInteractor,
+         userProvider: IUserProviderReader) {
         self.interactor = interactor
+        self.userProvider = userProvider
         super.init(nibName: String(describing: type(of: self)), bundle: nil)
     }
     
@@ -52,6 +55,9 @@ final class HomeViewController: UIViewController {
         AchievementsTableViewCell.registerNib(for: tableView)
         ChartTableViewCell.registerNib(for: tableView)
         UserAvatarTableViewCell.registerNib(for: tableView)
+
+        userBarView.resolveDependencies(userProvider: userProvider)
+        userBarView.hostViewControllerViewDidLoad()
     }
 }
 

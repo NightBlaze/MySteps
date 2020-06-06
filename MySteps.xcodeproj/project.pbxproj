@@ -48,6 +48,9 @@
 		FFCBB2FD248ADC180026AE7F /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2F9248ADC180026AE7F /* HomeInteractor.swift */; };
 		FFCBB2FE248ADC180026AE7F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCBB2FA248ADC180026AE7F /* HomeViewController.xib */; };
 		FFFC5AAF248C13DB00116A4E /* BaseNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC5AAE248C13DB00116A4E /* BaseNibView.swift */; };
+		FFFC5AB3248C165E00116A4E /* UserBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC5AB2248C165E00116A4E /* UserBarView.swift */; };
+		FFFC5AB5248C166E00116A4E /* UserBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFC5AB4248C166E00116A4E /* UserBarView.xib */; };
+		FFFC5AB7248C1E5300116A4E /* UserBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC5AB6248C1E5300116A4E /* UserBarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +102,9 @@
 		FFCBB2F9248ADC180026AE7F /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		FFCBB2FA248ADC180026AE7F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FFFC5AAE248C13DB00116A4E /* BaseNibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNibView.swift; sourceTree = "<group>"; };
+		FFFC5AB2248C165E00116A4E /* UserBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBarView.swift; sourceTree = "<group>"; };
+		FFFC5AB4248C166E00116A4E /* UserBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserBarView.xib; sourceTree = "<group>"; };
+		FFFC5AB6248C1E5300116A4E /* UserBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				FFFC5AAD248C13C300116A4E /* Base */,
+				FFFC5AB1248C163700116A4E /* UserBar */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -412,6 +419,16 @@
 				FFFC5AAE248C13DB00116A4E /* BaseNibView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		FFFC5AB1248C163700116A4E /* UserBar */ = {
+			isa = PBXGroup;
+			children = (
+				FFFC5AB2248C165E00116A4E /* UserBarView.swift */,
+				FFFC5AB4248C166E00116A4E /* UserBarView.xib */,
+				FFFC5AB6248C1E5300116A4E /* UserBarViewModel.swift */,
+			);
+			path = UserBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,6 +495,7 @@
 				FF361A2B248BC1BA00E6DDA6 /* UserAvatarTableViewCell.xib in Resources */,
 				FF361A0F248BAE2A00E6DDA6 /* Localizable.strings in Resources */,
 				FF361A12248BAE2D00E6DDA6 /* InfoPlist.strings in Resources */,
+				FFFC5AB5248C166E00116A4E /* UserBarView.xib in Resources */,
 				FF3B7BB7248AC41400E56FDB /* LaunchScreen.storyboard in Resources */,
 				FF361A30248BC1E100E6DDA6 /* ChartTableViewCell.xib in Resources */,
 				FFCBB2F5248ADAFA0026AE7F /* AppStartViewController.xib in Resources */,
@@ -553,10 +571,12 @@
 				FFCBB2E4248AD6C60026AE7F /* Router.swift in Sources */,
 				FF361A2A248BC1BA00E6DDA6 /* UserAvatarTableViewCell.swift in Sources */,
 				FF361A3B248BCA2200E6DDA6 /* LPSUser.swift in Sources */,
+				FFFC5AB7248C1E5300116A4E /* UserBarViewModel.swift in Sources */,
 				FF82E0BF248B7D4B00F693DF /* HealthKitStore.swift in Sources */,
 				FF361A3D248BCDC900E6DDA6 /* UserDAO+Extensions.swift in Sources */,
 				FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */,
 				FF361A3F248BD4B400E6DDA6 /* ProvidersFactory.swift in Sources */,
+				FFFC5AB3248C165E00116A4E /* UserBarView.swift in Sources */,
 				FFCBB2FB248ADC180026AE7F /* HomePresenter.swift in Sources */,
 				FFCBB2F4248ADAFA0026AE7F /* AppStartInteractor.swift in Sources */,
 				FF361A39248BC8DB00E6DDA6 /* UserProvider.swift in Sources */,

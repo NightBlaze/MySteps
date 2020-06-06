@@ -38,10 +38,11 @@ final class ViewControllersFactory: IFactory {
             return viewController
         }
 
-        container.register(IHomeViewController.self) { _ in
+        container.register(IHomeViewController.self) { [unowned self] _ in
             let presenter = HomePresenter()
             let interactor = HomeInteractor(presenter: presenter)
-            let viewController = HomeViewController(interactor: interactor)
+            let userProvider = self.mainFactory.providersFactory().userProviderReader()
+            let viewController = HomeViewController(interactor: interactor, userProvider: userProvider)
             presenter.resolveDependencies(viewController: viewController)
 
             return viewController
