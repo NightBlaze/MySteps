@@ -13,6 +13,14 @@
 		FF361A19248BAF7200E6DDA6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF361A18248BAF7200E6DDA6 /* HealthKit.framework */; };
 		FF361A1C248BB8DF00E6DDA6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A1B248BB8DF00E6DDA6 /* String+Localization.swift */; };
 		FF361A1E248BBB6C00E6DDA6 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A1D248BBB6C00E6DDA6 /* UIViewController+Alert.swift */; };
+		FF361A22248BC01400E6DDA6 /* UITableViewCell+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A21248BC01400E6DDA6 /* UITableViewCell+Creation.swift */; };
+		FF361A25248BC06700E6DDA6 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A24248BC06700E6DDA6 /* NSObject+Extensions.swift */; };
+		FF361A2A248BC1BA00E6DDA6 /* UserAvatarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A28248BC1BA00E6DDA6 /* UserAvatarTableViewCell.swift */; };
+		FF361A2B248BC1BA00E6DDA6 /* UserAvatarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF361A29248BC1BA00E6DDA6 /* UserAvatarTableViewCell.xib */; };
+		FF361A2F248BC1E100E6DDA6 /* ChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A2D248BC1E100E6DDA6 /* ChartTableViewCell.swift */; };
+		FF361A30248BC1E100E6DDA6 /* ChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF361A2E248BC1E100E6DDA6 /* ChartTableViewCell.xib */; };
+		FF361A34248BC20B00E6DDA6 /* AchievementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A32248BC20B00E6DDA6 /* AchievementsTableViewCell.swift */; };
+		FF361A35248BC20B00E6DDA6 /* AchievementsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF361A33248BC20B00E6DDA6 /* AchievementsTableViewCell.xib */; };
 		FF3B7BA8248AC41300E56FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BA7248AC41300E56FDB /* AppDelegate.swift */; };
 		FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BA9248AC41300E56FDB /* SceneDelegate.swift */; };
 		FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BB0248AC41300E56FDB /* MySteps.xcdatamodeld */; };
@@ -49,6 +57,14 @@
 		FF361A18248BAF7200E6DDA6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		FF361A1B248BB8DF00E6DDA6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		FF361A1D248BBB6C00E6DDA6 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		FF361A21248BC01400E6DDA6 /* UITableViewCell+Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Creation.swift"; sourceTree = "<group>"; };
+		FF361A24248BC06700E6DDA6 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
+		FF361A28248BC1BA00E6DDA6 /* UserAvatarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAvatarTableViewCell.swift; sourceTree = "<group>"; };
+		FF361A29248BC1BA00E6DDA6 /* UserAvatarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserAvatarTableViewCell.xib; sourceTree = "<group>"; };
+		FF361A2D248BC1E100E6DDA6 /* ChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTableViewCell.swift; sourceTree = "<group>"; };
+		FF361A2E248BC1E100E6DDA6 /* ChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartTableViewCell.xib; sourceTree = "<group>"; };
+		FF361A32248BC20B00E6DDA6 /* AchievementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsTableViewCell.swift; sourceTree = "<group>"; };
+		FF361A33248BC20B00E6DDA6 /* AchievementsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementsTableViewCell.xib; sourceTree = "<group>"; };
 		FF3B7BA4248AC41300E56FDB /* MySteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3B7BA7248AC41300E56FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF3B7BA9248AC41300E56FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +145,59 @@
 				FF361A1B248BB8DF00E6DDA6 /* String+Localization.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		FF361A1F248BBFC400E6DDA6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FF361A31248BC1F300E6DDA6 /* Achievements */,
+				FF361A2C248BC1CB00E6DDA6 /* Chart */,
+				FF361A26248BC18600E6DDA6 /* UserAvatar */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FF361A20248BBFE800E6DDA6 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF361A21248BC01400E6DDA6 /* UITableViewCell+Creation.swift */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		FF361A23248BC05400E6DDA6 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				FF361A24248BC06700E6DDA6 /* NSObject+Extensions.swift */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		FF361A26248BC18600E6DDA6 /* UserAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				FF361A28248BC1BA00E6DDA6 /* UserAvatarTableViewCell.swift */,
+				FF361A29248BC1BA00E6DDA6 /* UserAvatarTableViewCell.xib */,
+			);
+			path = UserAvatar;
+			sourceTree = "<group>";
+		};
+		FF361A2C248BC1CB00E6DDA6 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				FF361A2D248BC1E100E6DDA6 /* ChartTableViewCell.swift */,
+				FF361A2E248BC1E100E6DDA6 /* ChartTableViewCell.xib */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		FF361A31248BC1F300E6DDA6 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				FF361A32248BC20B00E6DDA6 /* AchievementsTableViewCell.swift */,
+				FF361A33248BC20B00E6DDA6 /* AchievementsTableViewCell.xib */,
+			);
+			path = Achievements;
 			sourceTree = "<group>";
 		};
 		FF3B7B9B248AC41300E56FDB = {
@@ -212,7 +281,9 @@
 		FFCBB2E5248AD6FF0026AE7F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FF361A23248BC05400E6DDA6 /* NSObject */,
 				FF361A1A248BB8C100E6DDA6 /* String */,
+				FF361A20248BBFE800E6DDA6 /* UITableViewCell */,
 				FFCBB2E6248AD7180026AE7F /* UIViewController */,
 			);
 			path = Extensions;
@@ -242,6 +313,7 @@
 		FFCBB2F6248ADBFD0026AE7F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FF361A1F248BBFC400E6DDA6 /* Cells */,
 				FFCBB2F9248ADC180026AE7F /* HomeInteractor.swift */,
 				FFCBB2F7248ADC180026AE7F /* HomePresenter.swift */,
 				FFCBB2F8248ADC180026AE7F /* HomeViewController.swift */,
@@ -364,10 +436,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF361A2B248BC1BA00E6DDA6 /* UserAvatarTableViewCell.xib in Resources */,
 				FF361A0F248BAE2A00E6DDA6 /* Localizable.strings in Resources */,
 				FF361A12248BAE2D00E6DDA6 /* InfoPlist.strings in Resources */,
 				FF3B7BB7248AC41400E56FDB /* LaunchScreen.storyboard in Resources */,
+				FF361A30248BC1E100E6DDA6 /* ChartTableViewCell.xib in Resources */,
 				FFCBB2F5248ADAFA0026AE7F /* AppStartViewController.xib in Resources */,
+				FF361A35248BC20B00E6DDA6 /* AchievementsTableViewCell.xib in Resources */,
 				FFCBB2FE248ADC180026AE7F /* HomeViewController.xib in Resources */,
 				FF3B7BB4248AC41400E56FDB /* Assets.xcassets in Resources */,
 			);
@@ -422,16 +497,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF361A2F248BC1E100E6DDA6 /* ChartTableViewCell.swift in Sources */,
+				FF361A34248BC20B00E6DDA6 /* AchievementsTableViewCell.swift in Sources */,
+				FF361A22248BC01400E6DDA6 /* UITableViewCell+Creation.swift in Sources */,
 				FFCBB2EA248AD7600026AE7F /* UIViewController+Window.swift in Sources */,
 				FFCBB2F3248ADAFA0026AE7F /* AppStartViewController.swift in Sources */,
 				FF82E0B8248B799500F693DF /* AppStartErrorViewModel.swift in Sources */,
 				FFCBB2FD248ADC180026AE7F /* HomeInteractor.swift in Sources */,
+				FF361A25248BC06700E6DDA6 /* NSObject+Extensions.swift in Sources */,
 				FFCBB2EC248AD9220026AE7F /* RouterFactory.swift in Sources */,
 				FFCBB2F2248ADAFA0026AE7F /* AppStartPresenter.swift in Sources */,
 				FFCBB2FC248ADC180026AE7F /* HomeViewController.swift in Sources */,
 				FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */,
 				FF3B7BA8248AC41300E56FDB /* AppDelegate.swift in Sources */,
 				FFCBB2E4248AD6C60026AE7F /* Router.swift in Sources */,
+				FF361A2A248BC1BA00E6DDA6 /* UserAvatarTableViewCell.swift in Sources */,
 				FF82E0BF248B7D4B00F693DF /* HealthKitStore.swift in Sources */,
 				FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */,
 				FFCBB2FB248ADC180026AE7F /* HomePresenter.swift in Sources */,

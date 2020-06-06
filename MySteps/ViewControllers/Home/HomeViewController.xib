@@ -2,14 +2,15 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MySteps" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="0t7-dj-jUy" id="opE-8e-LJl"/>
+                <outlet property="topBar" destination="6vy-QH-sPf" id="YbW-hh-qtl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,21 +19,34 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OG-AN-M68">
-                    <rect key="frame" x="10" y="437.5" width="394" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vy-QH-sPf">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="YQ8-2u-rf5"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0t7-dj-jUy">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="SD1-VN-DmQ"/>
+                        <outlet property="delegate" destination="-1" id="Ag7-rT-0nL"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="NSU-yq-1C4" firstAttribute="trailing" secondItem="0OG-AN-M68" secondAttribute="trailing" constant="10" id="NkK-MU-M74"/>
-                <constraint firstItem="0OG-AN-M68" firstAttribute="leading" secondItem="NSU-yq-1C4" secondAttribute="leading" constant="10" id="aE1-3S-b8b"/>
-                <constraint firstItem="0OG-AN-M68" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nlM-k7-FzL"/>
+                <constraint firstItem="6vy-QH-sPf" firstAttribute="leading" secondItem="NSU-yq-1C4" secondAttribute="leading" id="6nR-eq-iOg"/>
+                <constraint firstItem="0t7-dj-jUy" firstAttribute="top" secondItem="6vy-QH-sPf" secondAttribute="bottom" id="Uyl-0G-y0b"/>
+                <constraint firstItem="0t7-dj-jUy" firstAttribute="leading" secondItem="NSU-yq-1C4" secondAttribute="leading" id="Vcb-s0-YwS"/>
+                <constraint firstItem="0t7-dj-jUy" firstAttribute="bottom" secondItem="NSU-yq-1C4" secondAttribute="bottom" id="XJh-Ua-UpO"/>
+                <constraint firstItem="6vy-QH-sPf" firstAttribute="trailing" secondItem="NSU-yq-1C4" secondAttribute="trailing" id="bYu-TE-PSw"/>
+                <constraint firstItem="6vy-QH-sPf" firstAttribute="top" secondItem="NSU-yq-1C4" secondAttribute="top" id="e4E-Hl-AXP"/>
+                <constraint firstItem="0t7-dj-jUy" firstAttribute="trailing" secondItem="NSU-yq-1C4" secondAttribute="trailing" id="xuc-sd-buB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="NSU-yq-1C4"/>
-            <point key="canvasLocation" x="33.5" y="54.5"/>
+            <point key="canvasLocation" x="33.333333333333336" y="54.241071428571423"/>
         </view>
     </objects>
 </document>

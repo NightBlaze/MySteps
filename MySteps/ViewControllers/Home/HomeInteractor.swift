@@ -13,7 +13,7 @@ protocol IHomeInteractor {
 }
 
 final class HomeInteractor {
-    private var presenter: IHomePresenter
+    private let presenter: IHomePresenter
     
     init(presenter: IHomePresenter) {
         self.presenter = presenter
