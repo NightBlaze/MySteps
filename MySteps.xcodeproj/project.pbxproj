@@ -21,6 +21,10 @@
 		FF361A30248BC1E100E6DDA6 /* ChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF361A2E248BC1E100E6DDA6 /* ChartTableViewCell.xib */; };
 		FF361A34248BC20B00E6DDA6 /* AchievementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A32248BC20B00E6DDA6 /* AchievementsTableViewCell.swift */; };
 		FF361A35248BC20B00E6DDA6 /* AchievementsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF361A33248BC20B00E6DDA6 /* AchievementsTableViewCell.xib */; };
+		FF361A39248BC8DB00E6DDA6 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A38248BC8DB00E6DDA6 /* UserProvider.swift */; };
+		FF361A3B248BCA2200E6DDA6 /* LPSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A3A248BCA2200E6DDA6 /* LPSUser.swift */; };
+		FF361A3D248BCDC900E6DDA6 /* UserDAO+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A3C248BCDC900E6DDA6 /* UserDAO+Extensions.swift */; };
+		FF361A3F248BD4B400E6DDA6 /* ProvidersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A3E248BD4B400E6DDA6 /* ProvidersFactory.swift */; };
 		FF3B7BA8248AC41300E56FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BA7248AC41300E56FDB /* AppDelegate.swift */; };
 		FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BA9248AC41300E56FDB /* SceneDelegate.swift */; };
 		FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BB0248AC41300E56FDB /* MySteps.xcdatamodeld */; };
@@ -65,6 +69,10 @@
 		FF361A2E248BC1E100E6DDA6 /* ChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartTableViewCell.xib; sourceTree = "<group>"; };
 		FF361A32248BC20B00E6DDA6 /* AchievementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsTableViewCell.swift; sourceTree = "<group>"; };
 		FF361A33248BC20B00E6DDA6 /* AchievementsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementsTableViewCell.xib; sourceTree = "<group>"; };
+		FF361A38248BC8DB00E6DDA6 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
+		FF361A3A248BCA2200E6DDA6 /* LPSUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPSUser.swift; sourceTree = "<group>"; };
+		FF361A3C248BCDC900E6DDA6 /* UserDAO+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDAO+Extensions.swift"; sourceTree = "<group>"; };
+		FF361A3E248BD4B400E6DDA6 /* ProvidersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersFactory.swift; sourceTree = "<group>"; };
 		FF3B7BA4248AC41300E56FDB /* MySteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3B7BA7248AC41300E56FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF3B7BA9248AC41300E56FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +208,14 @@
 			path = Achievements;
 			sourceTree = "<group>";
 		};
+		FF361A37248BC8AF00E6DDA6 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				FF361A38248BC8DB00E6DDA6 /* UserProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
 		FF3B7B9B248AC41300E56FDB = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +241,7 @@
 				FFF0AA69248AD2F300A38F5D /* DataLayer */,
 				FFCBB2E5248AD6FF0026AE7F /* Extensions */,
 				FFCBB2DD248AD4C70026AE7F /* Factories */,
+				FF361A37248BC8AF00E6DDA6 /* Providers */,
 				FFF0AA68248AD2E400A38F5D /* Resources */,
 				FFCBB2E2248AD6AF0026AE7F /* Router */,
 				FFF0AA67248AD2C300A38F5D /* Storyboards */,
@@ -238,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				FF3B7BB0248AC41300E56FDB /* MySteps.xcdatamodeld */,
+				FF361A3C248BCDC900E6DDA6 /* UserDAO+Extensions.swift */,
 			);
 			path = DataAccessObjects;
 			sourceTree = "<group>";
@@ -246,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				FF82E0BB248B7BF600F693DF /* LocalPersistentStore.swift */,
+				FF361A3A248BCA2200E6DDA6 /* LPSUser.swift */,
 			);
 			path = LocalPersistentStore;
 			sourceTree = "<group>";
@@ -263,6 +282,7 @@
 			children = (
 				FF82E0C0248B7DEF00F693DF /* DataLayerFactory.swift */,
 				FFCBB2DE248AD4ED0026AE7F /* Factory.swift */,
+				FF361A3E248BD4B400E6DDA6 /* ProvidersFactory.swift */,
 				FFCBB2EB248AD9220026AE7F /* RouterFactory.swift */,
 				FFCBB2E0248AD5560026AE7F /* ViewControllersFactory.swift */,
 			);
@@ -512,10 +532,14 @@
 				FF3B7BA8248AC41300E56FDB /* AppDelegate.swift in Sources */,
 				FFCBB2E4248AD6C60026AE7F /* Router.swift in Sources */,
 				FF361A2A248BC1BA00E6DDA6 /* UserAvatarTableViewCell.swift in Sources */,
+				FF361A3B248BCA2200E6DDA6 /* LPSUser.swift in Sources */,
 				FF82E0BF248B7D4B00F693DF /* HealthKitStore.swift in Sources */,
+				FF361A3D248BCDC900E6DDA6 /* UserDAO+Extensions.swift in Sources */,
 				FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */,
+				FF361A3F248BD4B400E6DDA6 /* ProvidersFactory.swift in Sources */,
 				FFCBB2FB248ADC180026AE7F /* HomePresenter.swift in Sources */,
 				FFCBB2F4248ADAFA0026AE7F /* AppStartInteractor.swift in Sources */,
+				FF361A39248BC8DB00E6DDA6 /* UserProvider.swift in Sources */,
 				FF82E0C1248B7DEF00F693DF /* DataLayerFactory.swift in Sources */,
 				FF361A1E248BBB6C00E6DDA6 /* UIViewController+Alert.swift in Sources */,
 				FFCBB2DF248AD4ED0026AE7F /* Factory.swift in Sources */,

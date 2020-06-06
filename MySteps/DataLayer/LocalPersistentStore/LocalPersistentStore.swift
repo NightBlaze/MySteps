@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import CoreData
 import CoreStore
 
 protocol ILocalPersistentStore: ILocalPersistentStoreInitializer {
+    var dataStack: DataStack { get }
 }
 
 protocol ILocalPersistentStoreInitializer {

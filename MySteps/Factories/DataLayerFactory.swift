@@ -12,6 +12,8 @@ import Swinject
 protocol IDataLayerFactory: IFactory {
     func healthKitStoreInitializer() -> IHealthKitStoreInitializer
     func localPersistentStoreInitializer() -> ILocalPersistentStoreInitializer
+    func lpsUserReader() -> ILPSUserReader
+    func lpsUserWriter() -> ILPSUserWriter
 }
 
 final class DataLayerFactory: IFactory {
@@ -31,6 +33,16 @@ final class DataLayerFactory: IFactory {
         container.register(ILocalPersistentStore.self) { _ in
             LocalPersistentStore()
         }.inObjectScope(.container)
+
+        container.register(ILPSUserReader.self) { [unowned self] _ in
+            let lps = self.localPersistentStore()
+            return LPSUser(lps: lps)
+        }
+
+        container.register(ILPSUserWriter.self) { [unowned self] _ in
+            let lps = self.localPersistentStore()
+            return LPSUser(lps: lps)
+        }
     }
 }
 
@@ -43,6 +55,14 @@ extension DataLayerFactory: IDataLayerFactory {
 
     func localPersistentStoreInitializer() -> ILocalPersistentStoreInitializer {
         return localPersistentStore() as ILocalPersistentStoreInitializer
+    }
+
+    func lpsUserReader() -> ILPSUserReader {
+        return container.resolve(ILPSUserReader.self)!
+    }
+
+    func lpsUserWriter() -> ILPSUserWriter {
+        return container.resolve(ILPSUserWriter.self)!
     }
 }
 
