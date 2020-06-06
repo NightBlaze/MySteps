@@ -221,7 +221,6 @@
 		FF3B7BA6248AC41300E56FDB /* MySteps */ = {
 			isa = PBXGroup;
 			children = (
-				FF361A17248BAF7200E6DDA6 /* MySteps.entitlements */,
 				FFF0AA65248AD29300A38F5D /* Application */,
 				FFF0AA69248AD2F300A38F5D /* DataLayer */,
 				FFCBB2E5248AD6FF0026AE7F /* Extensions */,
@@ -370,6 +369,7 @@
 		FFF0AA6A248AD32C00A38F5D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				FF361A17248BAF7200E6DDA6 /* MySteps.entitlements */,
 				FF3B7BB8248AC41400E56FDB /* Info.plist */,
 			);
 			path = SupportingFiles;
@@ -678,7 +678,7 @@
 			baseConfigurationReference = 9782C5A795F7269FF0A7C304 /* Pods-MySteps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MySteps/MySteps.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MySteps/SupportingFiles/MySteps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98W2A74UW7;
 				INFOPLIST_FILE = "$(SRCROOT)/MySteps/SupportingFiles/Info.plist";
@@ -698,7 +698,7 @@
 			baseConfigurationReference = 6EB0ACBA72ACB077EA9C6DB5 /* Pods-MySteps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MySteps/MySteps.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MySteps/SupportingFiles/MySteps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98W2A74UW7;
 				INFOPLIST_FILE = "$(SRCROOT)/MySteps/SupportingFiles/Info.plist";
