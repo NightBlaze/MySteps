@@ -43,7 +43,7 @@ extension AppStartViewController: IAppStartViewController {
     }
 
     func showError(viewModel: AppStartErrorViewModel) {
-        // TODO: show error
+        showSimpleAlert(title: viewModel.title, message: viewModel.message)
     }
 }
 

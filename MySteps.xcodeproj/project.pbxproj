@@ -12,6 +12,7 @@
 		FF361A12248BAE2D00E6DDA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF361A14248BAE2D00E6DDA6 /* InfoPlist.strings */; };
 		FF361A19248BAF7200E6DDA6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF361A18248BAF7200E6DDA6 /* HealthKit.framework */; };
 		FF361A1C248BB8DF00E6DDA6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A1B248BB8DF00E6DDA6 /* String+Localization.swift */; };
+		FF361A1E248BBB6C00E6DDA6 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A1D248BBB6C00E6DDA6 /* UIViewController+Alert.swift */; };
 		FF3B7BA8248AC41300E56FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BA7248AC41300E56FDB /* AppDelegate.swift */; };
 		FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BA9248AC41300E56FDB /* SceneDelegate.swift */; };
 		FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BB0248AC41300E56FDB /* MySteps.xcdatamodeld */; };
@@ -47,6 +48,7 @@
 		FF361A17248BAF7200E6DDA6 /* MySteps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MySteps.entitlements; sourceTree = "<group>"; };
 		FF361A18248BAF7200E6DDA6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		FF361A1B248BB8DF00E6DDA6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		FF361A1D248BBB6C00E6DDA6 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		FF3B7BA4248AC41300E56FDB /* MySteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3B7BA7248AC41300E56FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF3B7BA9248AC41300E56FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				FFCBB2E9248AD7600026AE7F /* UIViewController+Window.swift */,
+				FF361A1D248BBB6C00E6DDA6 /* UIViewController+Alert.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				FFCBB2FB248ADC180026AE7F /* HomePresenter.swift in Sources */,
 				FFCBB2F4248ADAFA0026AE7F /* AppStartInteractor.swift in Sources */,
 				FF82E0C1248B7DEF00F693DF /* DataLayerFactory.swift in Sources */,
+				FF361A1E248BBB6C00E6DDA6 /* UIViewController+Alert.swift in Sources */,
 				FFCBB2DF248AD4ED0026AE7F /* Factory.swift in Sources */,
 				FF82E0BC248B7BF600F693DF /* LocalPersistentStore.swift in Sources */,
 				FFCBB2E1248AD5560026AE7F /* ViewControllersFactory.swift in Sources */,
