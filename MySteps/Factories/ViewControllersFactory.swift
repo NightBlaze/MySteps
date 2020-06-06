@@ -24,10 +24,11 @@ final class ViewControllersFactory: IFactory {
     }
 
     func register() {
-        container.register(IAppStartViewController.self) { _ in
+        container.register(IAppStartViewController.self) { [unowned self] _ in
             let presenter = AppStartPresenter()
             let interactor = AppStartInteractor(presenter: presenter)
-            let viewController = AppStartViewController(interactor: interactor)
+            let router = self.mainFactory.routerFactory().appStartRouterScenario()
+            let viewController = AppStartViewController(interactor: interactor, router: router)
             presenter.resolveDependencies(viewController: viewController)
 
             return viewController

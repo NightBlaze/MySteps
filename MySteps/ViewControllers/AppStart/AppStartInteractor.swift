@@ -9,7 +9,7 @@
 import Foundation
 
 protocol IAppStartInteractor {
-    
+    func initializeApp()
 }
 
 final class AppStartInteractor {
@@ -23,6 +23,11 @@ final class AppStartInteractor {
 // MARK: - IAppStartInteractor
 
 extension AppStartInteractor: IAppStartInteractor {
+    func initializeApp() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+            self.presenter.appInitializationSuccess()
+        }
+    }
 }
 
 // MARK: - Private

@@ -13,6 +13,7 @@
 		FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BB0248AC41300E56FDB /* MySteps.xcdatamodeld */; };
 		FF3B7BB4248AC41400E56FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3B7BB3248AC41400E56FDB /* Assets.xcassets */; };
 		FF3B7BB7248AC41400E56FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF3B7BB5248AC41400E56FDB /* LaunchScreen.storyboard */; };
+		FF82E0B8248B799500F693DF /* AppStartErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82E0B7248B799500F693DF /* AppStartErrorViewModel.swift */; };
 		FFCBB2DF248AD4ED0026AE7F /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2DE248AD4ED0026AE7F /* Factory.swift */; };
 		FFCBB2E1248AD5560026AE7F /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2E0248AD5560026AE7F /* ViewControllersFactory.swift */; };
 		FFCBB2E4248AD6C60026AE7F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2E3248AD6C60026AE7F /* Router.swift */; };
@@ -39,6 +40,7 @@
 		FF3B7BB3248AC41400E56FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF3B7BB6248AC41400E56FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF3B7BB8248AC41400E56FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF82E0B7248B799500F693DF /* AppStartErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartErrorViewModel.swift; sourceTree = "<group>"; };
 		FFCBB2DE248AD4ED0026AE7F /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		FFCBB2E0248AD5560026AE7F /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 		FFCBB2E3248AD6C60026AE7F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		FFCBB2ED248ADAE70026AE7F /* AppStart */ = {
 			isa = PBXGroup;
 			children = (
+				FF82E0B7248B799500F693DF /* AppStartErrorViewModel.swift */,
 				FFCBB2F0248ADAFA0026AE7F /* AppStartInteractor.swift */,
 				FFCBB2EE248ADAFA0026AE7F /* AppStartPresenter.swift */,
 				FFCBB2EF248ADAFA0026AE7F /* AppStartViewController.swift */,
@@ -341,6 +344,7 @@
 			files = (
 				FFCBB2EA248AD7600026AE7F /* UIViewController+Window.swift in Sources */,
 				FFCBB2F3248ADAFA0026AE7F /* AppStartViewController.swift in Sources */,
+				FF82E0B8248B799500F693DF /* AppStartErrorViewModel.swift in Sources */,
 				FFCBB2FD248ADC180026AE7F /* HomeInteractor.swift in Sources */,
 				FFCBB2EC248AD9220026AE7F /* RouterFactory.swift in Sources */,
 				FFCBB2F2248ADAFA0026AE7F /* AppStartPresenter.swift in Sources */,
