@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  MySteps
+
+  Created by Alexander Timonenkov on 06.06.2020.
+  Copyright © 2020 ATi Soft. All rights reserved.
+*/
+
+NSHealthShareUsageDescription = "We need access to HealthKit to gather your steps count";

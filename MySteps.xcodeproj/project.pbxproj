@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		60079AA7CE27B63EE979AA64 /* Pods_MySteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBC42CBC8C7B0A88DE3532A /* Pods_MySteps.framework */; };
+		FF361A0F248BAE2A00E6DDA6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF361A11248BAE2A00E6DDA6 /* Localizable.strings */; };
+		FF361A12248BAE2D00E6DDA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF361A14248BAE2D00E6DDA6 /* InfoPlist.strings */; };
+		FF361A19248BAF7200E6DDA6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF361A18248BAF7200E6DDA6 /* HealthKit.framework */; };
 		FF3B7BA8248AC41300E56FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BA7248AC41300E56FDB /* AppDelegate.swift */; };
 		FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BA9248AC41300E56FDB /* SceneDelegate.swift */; };
 		FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BB0248AC41300E56FDB /* MySteps.xcdatamodeld */; };
@@ -36,6 +39,12 @@
 		6EB0ACBA72ACB077EA9C6DB5 /* Pods-MySteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySteps.release.xcconfig"; path = "Target Support Files/Pods-MySteps/Pods-MySteps.release.xcconfig"; sourceTree = "<group>"; };
 		9782C5A795F7269FF0A7C304 /* Pods-MySteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySteps.debug.xcconfig"; path = "Target Support Files/Pods-MySteps/Pods-MySteps.debug.xcconfig"; sourceTree = "<group>"; };
 		AEBC42CBC8C7B0A88DE3532A /* Pods_MySteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF361A10248BAE2A00E6DDA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FF361A13248BAE2D00E6DDA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF361A15248BAE5900E6DDA6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FF361A16248BAE5900E6DDA6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF361A17248BAF7200E6DDA6 /* MySteps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MySteps.entitlements; sourceTree = "<group>"; };
+		FF361A18248BAF7200E6DDA6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		FF3B7BA4248AC41300E56FDB /* MySteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3B7BA7248AC41300E56FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF3B7BA9248AC41300E56FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60079AA7CE27B63EE979AA64 /* Pods_MySteps.framework in Frameworks */,
+				FF361A19248BAF7200E6DDA6 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +87,7 @@
 		669E12E0E766392937A91E26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF361A18248BAF7200E6DDA6 /* HealthKit.framework */,
 				AEBC42CBC8C7B0A88DE3532A /* Pods_MySteps.framework */,
 			);
 			name = Frameworks;
@@ -89,6 +100,23 @@
 				6EB0ACBA72ACB077EA9C6DB5 /* Pods-MySteps.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF361A0B248BAD4C00E6DDA6 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				FF361A11248BAE2A00E6DDA6 /* Localizable.strings */,
+				FF361A14248BAE2D00E6DDA6 /* InfoPlist.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		FF361A0C248BAD5400E6DDA6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FF3B7BB3248AC41400E56FDB /* Assets.xcassets */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		FF3B7B9B248AC41300E56FDB = {
@@ -112,6 +140,7 @@
 		FF3B7BA6248AC41300E56FDB /* MySteps */ = {
 			isa = PBXGroup;
 			children = (
+				FF361A17248BAF7200E6DDA6 /* MySteps.entitlements */,
 				FFF0AA65248AD29300A38F5D /* Application */,
 				FFF0AA69248AD2F300A38F5D /* DataLayer */,
 				FFCBB2E5248AD6FF0026AE7F /* Extensions */,
@@ -236,7 +265,8 @@
 		FFF0AA68248AD2E400A38F5D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FF3B7BB3248AC41400E56FDB /* Assets.xcassets */,
+				FF361A0C248BAD5400E6DDA6 /* Images */,
+				FF361A0B248BAD4C00E6DDA6 /* Localization */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -303,6 +333,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = FF3B7B9B248AC41300E56FDB;
 			productRefGroup = FF3B7BA5248AC41300E56FDB /* Products */;
@@ -319,6 +350,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF361A0F248BAE2A00E6DDA6 /* Localizable.strings in Resources */,
+				FF361A12248BAE2D00E6DDA6 /* InfoPlist.strings in Resources */,
 				FF3B7BB7248AC41400E56FDB /* LaunchScreen.storyboard in Resources */,
 				FFCBB2F5248ADAFA0026AE7F /* AppStartViewController.xib in Resources */,
 				FFCBB2FE248ADC180026AE7F /* HomeViewController.xib in Resources */,
@@ -399,6 +432,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		FF361A11248BAE2A00E6DDA6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF361A10248BAE2A00E6DDA6 /* en */,
+				FF361A15248BAE5900E6DDA6 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		FF361A14248BAE2D00E6DDA6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF361A13248BAE2D00E6DDA6 /* en */,
+				FF361A16248BAE5900E6DDA6 /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		FF3B7BB5248AC41400E56FDB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -414,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -474,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -529,6 +582,7 @@
 			baseConfigurationReference = 9782C5A795F7269FF0A7C304 /* Pods-MySteps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MySteps/MySteps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98W2A74UW7;
 				INFOPLIST_FILE = "$(SRCROOT)/MySteps/SupportingFiles/Info.plist";
@@ -548,6 +602,7 @@
 			baseConfigurationReference = 6EB0ACBA72ACB077EA9C6DB5 /* Pods-MySteps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MySteps/MySteps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98W2A74UW7;
 				INFOPLIST_FILE = "$(SRCROOT)/MySteps/SupportingFiles/Info.plist";
