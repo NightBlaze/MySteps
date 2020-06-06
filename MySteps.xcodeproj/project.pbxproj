@@ -47,6 +47,7 @@
 		FFCBB2FC248ADC180026AE7F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2F8248ADC180026AE7F /* HomeViewController.swift */; };
 		FFCBB2FD248ADC180026AE7F /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2F9248ADC180026AE7F /* HomeInteractor.swift */; };
 		FFCBB2FE248ADC180026AE7F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCBB2FA248ADC180026AE7F /* HomeViewController.xib */; };
+		FFFC5AAF248C13DB00116A4E /* BaseNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC5AAE248C13DB00116A4E /* BaseNibView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,7 @@
 		FFCBB2F8248ADC180026AE7F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FFCBB2F9248ADC180026AE7F /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		FFCBB2FA248ADC180026AE7F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FFFC5AAE248C13DB00116A4E /* BaseNibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNibView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				FFF0AA65248AD29300A38F5D /* Application */,
+				FFFC5AAC248C138200116A4E /* Components */,
 				FFF0AA69248AD2F300A38F5D /* DataLayer */,
 				FFCBB2E5248AD6FF0026AE7F /* Extensions */,
 				FFCBB2DD248AD4C70026AE7F /* Factories */,
@@ -395,6 +398,22 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		FFFC5AAC248C138200116A4E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FFFC5AAD248C13C300116A4E /* Base */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FFFC5AAD248C13C300116A4E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FFFC5AAE248C13DB00116A4E /* BaseNibView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -524,6 +543,7 @@
 				FFCBB2F3248ADAFA0026AE7F /* AppStartViewController.swift in Sources */,
 				FF82E0B8248B799500F693DF /* AppStartErrorViewModel.swift in Sources */,
 				FFCBB2FD248ADC180026AE7F /* HomeInteractor.swift in Sources */,
+				FFFC5AAF248C13DB00116A4E /* BaseNibView.swift in Sources */,
 				FF361A25248BC06700E6DDA6 /* NSObject+Extensions.swift in Sources */,
 				FFCBB2EC248AD9220026AE7F /* RouterFactory.swift in Sources */,
 				FFCBB2F2248ADAFA0026AE7F /* AppStartPresenter.swift in Sources */,
