@@ -52,8 +52,12 @@ extension StepsSynchronizer: IStepsSynchronizer {
 private extension StepsSynchronizer {
     func synchronize() {
         // 1. Get last synchronization date
-        let startDate = lastSynchronizationDate()
-        let endDate = Date()
+        // In any case synchronize tomorrow and today
+        var startDate = lastSynchronizationDate()
+        if startDate.timeIntervalSince1970 > Date.startOfYesterday.timeIntervalSince1970 {
+            startDate = Date.startOfYesterday
+        }
+        let endDate = Date.endOfToday
 
         // 2. Get steps from external resource - HealthKit
         stepsReader.steps(startDate: startDate, endDate: endDate) { [weak self] result in
@@ -68,8 +72,7 @@ private extension StepsSynchronizer {
     }
 
     func lastSynchronizationDate() -> Date {
-        // TODO: get default date
-        let defaultDate = Date()
+        let defaultDate = Date.startOfPreviousMonth
         return localStore.get(key: StepsSynchronizer.lastSynchronizationDateKey) ?? defaultDate
     }
 
