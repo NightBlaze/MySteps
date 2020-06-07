@@ -4,7 +4,7 @@ PODS:
   - Swinject (2.7.1)
 
 DEPENDENCIES:
-  - AFDateHelper
+  - AFDateHelper (~> 4.3.0)
   - CoreStore (~> 7.1.0)
   - Swinject (~> 2.7.1)
 
@@ -19,6 +19,6 @@ SPEC CHECKSUMS:
   CoreStore: 7bab47bb4189c116ea4491802313613a98c12882
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 4e6957284aa6e9bfc4c6bacf80bd5d23c836ea11
+PODFILE CHECKSUM: 9c104c9ab6cf6c1e055d99b5341eac74a47e2ad1
 
 COCOAPODS: 1.9.2
