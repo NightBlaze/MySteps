@@ -11,9 +11,12 @@ import Swinject
 
 protocol IDataLayerFactory: IFactory {
     func healthKitStoreInitializer() -> IHealthKitStoreInitializer
+    func healthKitStoreStepsReader() -> IHealthKitStoreStepsReader
     func localPersistentStoreInitializer() -> ILocalPersistentStoreInitializer
     func lpsUserReader() -> ILPSUserReader
     func lpsUserWriter() -> ILPSUserWriter
+    func lpsStepsReader() -> ILPSStepsReader
+    func lpsStepsWriter() -> ILPSStepsWriter
 }
 
 final class DataLayerFactory: IFactory {
@@ -28,7 +31,11 @@ final class DataLayerFactory: IFactory {
     func register() {
         container.register(IHealthKitStoreInitializer.self) { _ in
             HealthKitStore()
-        }.inObjectScope(.container)
+        }
+
+        container.register(IHealthKitStoreStepsReader.self) { _ in
+            HealthKitStore()
+        }
 
         container.register(ILocalPersistentStore.self) { _ in
             LocalPersistentStore()
@@ -43,6 +50,16 @@ final class DataLayerFactory: IFactory {
             let lps = self.localPersistentStore()
             return LPSUser(lps: lps)
         }
+
+        container.register(ILPSStepsReader.self) { [unowned self] _ in
+            let lps = self.localPersistentStore()
+            return LPSSteps(lps: lps)
+        }
+
+        container.register(ILPSStepsWriter.self) { [unowned self] _ in
+            let lps = self.localPersistentStore()
+            return LPSSteps(lps: lps)
+        }
     }
 }
 
@@ -50,7 +67,11 @@ final class DataLayerFactory: IFactory {
 
 extension DataLayerFactory: IDataLayerFactory {
     func healthKitStoreInitializer() -> IHealthKitStoreInitializer {
-        return healthKitStore() as IHealthKitStoreInitializer
+        return container.resolve(IHealthKitStoreInitializer.self)!
+    }
+
+    func healthKitStoreStepsReader() -> IHealthKitStoreStepsReader {
+        return container.resolve(IHealthKitStoreStepsReader.self)!
     }
 
     func localPersistentStoreInitializer() -> ILocalPersistentStoreInitializer {
@@ -64,15 +85,19 @@ extension DataLayerFactory: IDataLayerFactory {
     func lpsUserWriter() -> ILPSUserWriter {
         return container.resolve(ILPSUserWriter.self)!
     }
+
+    func lpsStepsReader() -> ILPSStepsReader {
+        return container.resolve(ILPSStepsReader.self)!
+    }
+
+    func lpsStepsWriter() -> ILPSStepsWriter {
+        return container.resolve(ILPSStepsWriter.self)!
+    }
 }
 
 // MARK: - Private
 
 private extension DataLayerFactory {
-    func healthKitStore() -> IHealthKitStoreInitializer {
-        return container.resolve(IHealthKitStoreInitializer.self)!
-    }
-
     func localPersistentStore() -> ILocalPersistentStore {
         return container.resolve(ILocalPersistentStore.self)!
     }

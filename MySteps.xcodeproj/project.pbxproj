@@ -47,6 +47,11 @@
 		FFCBB2FC248ADC180026AE7F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2F8248ADC180026AE7F /* HomeViewController.swift */; };
 		FFCBB2FD248ADC180026AE7F /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2F9248ADC180026AE7F /* HomeInteractor.swift */; };
 		FFCBB2FE248ADC180026AE7F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCBB2FA248ADC180026AE7F /* HomeViewController.xib */; };
+		FFD3ED5F248CEC6600E13C5C /* StepsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD3ED5E248CEC6600E13C5C /* StepsProvider.swift */; };
+		FFD3ED61248CF47200E13C5C /* LPSSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD3ED60248CF47200E13C5C /* LPSSteps.swift */; };
+		FFD3ED64248CF97C00E13C5C /* StepsSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD3ED63248CF97C00E13C5C /* StepsSynchronizer.swift */; };
+		FFD3ED66248CFF9300E13C5C /* SynchronizersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD3ED65248CFF9300E13C5C /* SynchronizersFactory.swift */; };
+		FFD3ED69248D00FB00E13C5C /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD3ED68248D00FB00E13C5C /* UserDefaults+Extensions.swift */; };
 		FFFC5AAF248C13DB00116A4E /* BaseNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC5AAE248C13DB00116A4E /* BaseNibView.swift */; };
 		FFFC5AB3248C165E00116A4E /* UserBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC5AB2248C165E00116A4E /* UserBarView.swift */; };
 		FFFC5AB5248C166E00116A4E /* UserBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFC5AB4248C166E00116A4E /* UserBarView.xib */; };
@@ -101,6 +106,11 @@
 		FFCBB2F8248ADC180026AE7F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FFCBB2F9248ADC180026AE7F /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		FFCBB2FA248ADC180026AE7F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FFD3ED5E248CEC6600E13C5C /* StepsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsProvider.swift; sourceTree = "<group>"; };
+		FFD3ED60248CF47200E13C5C /* LPSSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPSSteps.swift; sourceTree = "<group>"; };
+		FFD3ED63248CF97C00E13C5C /* StepsSynchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsSynchronizer.swift; sourceTree = "<group>"; };
+		FFD3ED65248CFF9300E13C5C /* SynchronizersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizersFactory.swift; sourceTree = "<group>"; };
+		FFD3ED68248D00FB00E13C5C /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		FFFC5AAE248C13DB00116A4E /* BaseNibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNibView.swift; sourceTree = "<group>"; };
 		FFFC5AB2248C165E00116A4E /* UserBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBarView.swift; sourceTree = "<group>"; };
 		FFFC5AB4248C166E00116A4E /* UserBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserBarView.xib; sourceTree = "<group>"; };
@@ -219,6 +229,7 @@
 		FF361A37248BC8AF00E6DDA6 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				FFD3ED5E248CEC6600E13C5C /* StepsProvider.swift */,
 				FF361A38248BC8DB00E6DDA6 /* UserProvider.swift */,
 			);
 			path = Providers;
@@ -255,6 +266,7 @@
 				FFCBB2E2248AD6AF0026AE7F /* Router */,
 				FFF0AA67248AD2C300A38F5D /* Storyboards */,
 				FFF0AA6A248AD32C00A38F5D /* SupportingFiles */,
+				FFD3ED62248CF95E00E13C5C /* Synchronizers */,
 				FFF0AA66248AD2A500A38F5D /* ViewControllers */,
 			);
 			path = MySteps;
@@ -273,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				FF82E0BB248B7BF600F693DF /* LocalPersistentStore.swift */,
+				FFD3ED60248CF47200E13C5C /* LPSSteps.swift */,
 				FF361A3A248BCA2200E6DDA6 /* LPSUser.swift */,
 			);
 			path = LocalPersistentStore;
@@ -293,6 +306,7 @@
 				FFCBB2DE248AD4ED0026AE7F /* Factory.swift */,
 				FF361A3E248BD4B400E6DDA6 /* ProvidersFactory.swift */,
 				FFCBB2EB248AD9220026AE7F /* RouterFactory.swift */,
+				FFD3ED65248CFF9300E13C5C /* SynchronizersFactory.swift */,
 				FFCBB2E0248AD5560026AE7F /* ViewControllersFactory.swift */,
 			);
 			path = Factories;
@@ -313,6 +327,7 @@
 				FF361A1A248BB8C100E6DDA6 /* String */,
 				FF361A20248BBFE800E6DDA6 /* UITableViewCell */,
 				FFCBB2E6248AD7180026AE7F /* UIViewController */,
+				FFD3ED67248D00DA00E13C5C /* UserDefaults */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -348,6 +363,22 @@
 				FFCBB2FA248ADC180026AE7F /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		FFD3ED62248CF95E00E13C5C /* Synchronizers */ = {
+			isa = PBXGroup;
+			children = (
+				FFD3ED63248CF97C00E13C5C /* StepsSynchronizer.swift */,
+			);
+			path = Synchronizers;
+			sourceTree = "<group>";
+		};
+		FFD3ED67248D00DA00E13C5C /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				FFD3ED68248D00FB00E13C5C /* UserDefaults+Extensions.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		FFF0AA65248AD29300A38F5D /* Application */ = {
@@ -560,6 +591,7 @@
 				FFCBB2EA248AD7600026AE7F /* UIViewController+Window.swift in Sources */,
 				FFCBB2F3248ADAFA0026AE7F /* AppStartViewController.swift in Sources */,
 				FF82E0B8248B799500F693DF /* AppStartErrorViewModel.swift in Sources */,
+				FFD3ED5F248CEC6600E13C5C /* StepsProvider.swift in Sources */,
 				FFCBB2FD248ADC180026AE7F /* HomeInteractor.swift in Sources */,
 				FFFC5AAF248C13DB00116A4E /* BaseNibView.swift in Sources */,
 				FF361A25248BC06700E6DDA6 /* NSObject+Extensions.swift in Sources */,
@@ -571,6 +603,7 @@
 				FFCBB2E4248AD6C60026AE7F /* Router.swift in Sources */,
 				FF361A2A248BC1BA00E6DDA6 /* UserAvatarTableViewCell.swift in Sources */,
 				FF361A3B248BCA2200E6DDA6 /* LPSUser.swift in Sources */,
+				FFD3ED66248CFF9300E13C5C /* SynchronizersFactory.swift in Sources */,
 				FFFC5AB7248C1E5300116A4E /* UserBarViewModel.swift in Sources */,
 				FF82E0BF248B7D4B00F693DF /* HealthKitStore.swift in Sources */,
 				FF361A3D248BCDC900E6DDA6 /* UserDAO+Extensions.swift in Sources */,
@@ -578,12 +611,15 @@
 				FF361A3F248BD4B400E6DDA6 /* ProvidersFactory.swift in Sources */,
 				FFFC5AB3248C165E00116A4E /* UserBarView.swift in Sources */,
 				FFCBB2FB248ADC180026AE7F /* HomePresenter.swift in Sources */,
+				FFD3ED64248CF97C00E13C5C /* StepsSynchronizer.swift in Sources */,
+				FFD3ED69248D00FB00E13C5C /* UserDefaults+Extensions.swift in Sources */,
 				FFCBB2F4248ADAFA0026AE7F /* AppStartInteractor.swift in Sources */,
 				FF361A39248BC8DB00E6DDA6 /* UserProvider.swift in Sources */,
 				FF82E0C1248B7DEF00F693DF /* DataLayerFactory.swift in Sources */,
 				FF361A1E248BBB6C00E6DDA6 /* UIViewController+Alert.swift in Sources */,
 				FFCBB2DF248AD4ED0026AE7F /* Factory.swift in Sources */,
 				FF82E0BC248B7BF600F693DF /* LocalPersistentStore.swift in Sources */,
+				FFD3ED61248CF47200E13C5C /* LPSSteps.swift in Sources */,
 				FFCBB2E1248AD5560026AE7F /* ViewControllersFactory.swift in Sources */,
 				FF361A1C248BB8DF00E6DDA6 /* String+Localization.swift in Sources */,
 			);

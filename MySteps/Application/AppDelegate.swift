@@ -13,9 +13,12 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     lazy var factory = Factory()
+    private var stepsSynchronizer: IStepsSynchronizer?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         factory.register()
+        stepsSynchronizer = factory.synchronizersFactory().stepsSynchronizer()
+        stepsSynchronizer?.startSynchronization()
 
         return true
     }
