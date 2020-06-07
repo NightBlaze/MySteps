@@ -10,12 +10,12 @@ import Foundation
 import AFDateHelper
 
 extension Date {
-    static var startOfMonth: Date {
-        Date().dateFor(.startOfMonth)
+    var startOfMonth: Date {
+        self.dateFor(.startOfMonth)
     }
 
-    static var endOfMonth: Date {
-        Date().dateFor(.endOfMonth).adjust(hour: 23, minute: 59, second: 59)
+    var endOfMonth: Date {
+        self.dateFor(.endOfMonth).adjust(hour: 23, minute: 59, second: 59)
     }
 
     static var startOfPreviousMonth: Date {

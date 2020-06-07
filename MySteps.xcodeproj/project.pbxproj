@@ -35,6 +35,7 @@
 		FF82E0BF248B7D4B00F693DF /* HealthKitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82E0BE248B7D4B00F693DF /* HealthKitStore.swift */; };
 		FF82E0C1248B7DEF00F693DF /* DataLayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82E0C0248B7DEF00F693DF /* DataLayerFactory.swift */; };
 		FF9456D1248D23060011B819 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9456D0248D23060011B819 /* Date+Extensions.swift */; };
+		FF9456D6248D35410011B819 /* AchievementsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9456D5248D35410011B819 /* AchievementsProvider.swift */; };
 		FFCBB2DF248AD4ED0026AE7F /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2DE248AD4ED0026AE7F /* Factory.swift */; };
 		FFCBB2E1248AD5560026AE7F /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2E0248AD5560026AE7F /* ViewControllersFactory.swift */; };
 		FFCBB2E4248AD6C60026AE7F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2E3248AD6C60026AE7F /* Router.swift */; };
@@ -95,6 +96,7 @@
 		FF82E0BE248B7D4B00F693DF /* HealthKitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitStore.swift; sourceTree = "<group>"; };
 		FF82E0C0248B7DEF00F693DF /* DataLayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerFactory.swift; sourceTree = "<group>"; };
 		FF9456D0248D23060011B819 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		FF9456D5248D35410011B819 /* AchievementsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsProvider.swift; sourceTree = "<group>"; };
 		FFCBB2DE248AD4ED0026AE7F /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		FFCBB2E0248AD5560026AE7F /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 		FFCBB2E3248AD6C60026AE7F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		FF361A37248BC8AF00E6DDA6 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				FF9456D5248D35410011B819 /* AchievementsProvider.swift */,
 				FFD3ED5E248CEC6600E13C5C /* StepsProvider.swift */,
 				FF361A38248BC8DB00E6DDA6 /* UserProvider.swift */,
 			);
@@ -603,6 +606,7 @@
 				FFCBB2F3248ADAFA0026AE7F /* AppStartViewController.swift in Sources */,
 				FF82E0B8248B799500F693DF /* AppStartErrorViewModel.swift in Sources */,
 				FFD3ED5F248CEC6600E13C5C /* StepsProvider.swift in Sources */,
+				FF9456D6248D35410011B819 /* AchievementsProvider.swift in Sources */,
 				FFCBB2FD248ADC180026AE7F /* HomeInteractor.swift in Sources */,
 				FFFC5AAF248C13DB00116A4E /* BaseNibView.swift in Sources */,
 				FF9456D1248D23060011B819 /* Date+Extensions.swift in Sources */,

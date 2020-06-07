@@ -11,6 +11,7 @@ import Swinject
 
 protocol IProvidersFactory: IFactory {
     func userProviderReader() -> IUserProviderReader
+    func stepsProviderReader() -> IStepsProviderReader
 }
 
 final class ProvidersFactory: IFactory {
@@ -28,6 +29,11 @@ final class ProvidersFactory: IFactory {
             let userWriter = self.mainFactory.dataLayerFactory().lpsUserWriter()
             return UserProvider(userReader: userReader, userWriter: userWriter)
         }
+
+        container.register(IStepsProviderReader.self) { [unowned self] _ in
+            let lpsStepsReader = self.mainFactory.dataLayerFactory().lpsStepsReader()
+            return StepsProvider(stepsReader: lpsStepsReader)
+        }
     }
 }
 
@@ -36,5 +42,9 @@ final class ProvidersFactory: IFactory {
 extension ProvidersFactory: IProvidersFactory {
     func userProviderReader() -> IUserProviderReader {
         return container.resolve(IUserProviderReader.self)!
+    }
+
+    func stepsProviderReader() -> IStepsProviderReader {
+        return container.resolve(IStepsProviderReader.self)!
     }
 }

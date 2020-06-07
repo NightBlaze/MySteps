@@ -28,7 +28,12 @@ final class LocalPersistentStore: ILocalPersistentStore {
 
 extension LocalPersistentStore: ILocalPersistentStoreInitializer {
     func initializeLPS(_ completion: @escaping (Result<Void, Error>) -> Void) {
-        let _ = dataStack.addStorage(SQLiteStore(fileName: LocalPersistentStore.sqliteFileName)) { result in
+        let _ = dataStack.addStorage(
+        SQLiteStore(
+            fileName: LocalPersistentStore.sqliteFileName,
+            localStorageOptions: .recreateStoreOnModelMismatch // Only for development! Never use in production!
+            )
+        ) { result in
             switch result {
             case .success(_):
                 completion(.success(()))

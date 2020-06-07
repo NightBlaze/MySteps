@@ -1,5 +1,5 @@
 //
-//  StepsProvider.swift
+//  AchievementsProvider.swift
 //  MySteps
 //
 //  Created by Alexander Timonenkov on 07.06.2020.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol IStepsProviderReader {
+protocol IAchievementsProviderReader {
     func steps(startDate: Date, endDate: Date, _ completion: @escaping (Result<[StepsDAO], Error>) -> Void)
 }
 
-final class StepsProvider {
+final class AchievementsProvider {
     private let stepsReader: ILPSStepsReader
 
     init(stepsReader: ILPSStepsReader) {
@@ -20,9 +20,9 @@ final class StepsProvider {
     }
 }
 
-// MARK: - IStepsProviderReader
+// MARK: - IAchievementsProviderReader
 
-extension StepsProvider: IStepsProviderReader {
+extension AchievementsProvider: IAchievementsProviderReader {
     func steps(startDate: Date, endDate: Date, _ completion: @escaping (Result<[StepsDAO], Error>) -> Void) {
         stepsReader.fetchSteps(startDate: startDate, endDate: endDate, completion)
     }
