@@ -28,9 +28,11 @@ final class ViewControllersFactory: IFactory {
             let presenter = AppStartPresenter()
             let healthKit = self.mainFactory.dataLayerFactory().healthKitStoreInitializer()
             let localPersistentStore = self.mainFactory.dataLayerFactory().localPersistentStoreInitializer()
+            let stepsSynchronizer = self.mainFactory.synchronizersFactory().stepsSynchronizer()
             let interactor = AppStartInteractor(presenter: presenter,
                                                 healthKitStore: healthKit,
-                                                localPersistentStore: localPersistentStore)
+                                                localPersistentStore: localPersistentStore,
+                                                stepsSynchronizer: stepsSynchronizer)
             let router = self.mainFactory.routerFactory().appStartRouterScenario()
             let viewController = AppStartViewController(interactor: interactor, router: router)
             presenter.resolveDependencies(viewController: viewController)

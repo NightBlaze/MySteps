@@ -6,7 +6,7 @@
 //  Copyright © 2020 ATi Soft. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol IAppStartInteractor {
     func initializeApp()
@@ -16,13 +16,16 @@ final class AppStartInteractor {
     private let presenter: IAppStartPresenter
     private let healthKitStore: IHealthKitStoreInitializer
     private let localPersistentStore: ILocalPersistentStoreInitializer
+    private let stepsSynchronizer: IStepsSynchronizer
     
     init(presenter: IAppStartPresenter,
          healthKitStore: IHealthKitStoreInitializer,
-         localPersistentStore: ILocalPersistentStoreInitializer) {
+         localPersistentStore: ILocalPersistentStoreInitializer,
+         stepsSynchronizer: IStepsSynchronizer) {
         self.presenter = presenter
         self.healthKitStore = healthKitStore
         self.localPersistentStore = localPersistentStore
+        self.stepsSynchronizer = stepsSynchronizer
     }
 }
 
@@ -41,6 +44,11 @@ extension AppStartInteractor: IAppStartInteractor {
                 self.presenter.errorInitializeLocalPersistentStore(error)
                 return
             }
+
+            // We can start steps synchronization only after LPS initialization
+            self.stepsSynchronizer.startSynchronization()
+            // App delegate should holds StepsSynchronizer
+            (UIApplication.shared.delegate as! AppDelegate).stepsSynchronizer = self.stepsSynchronizer
 
             self.initializeHealthKit { result in
                 if case .failure(let error) = result {
