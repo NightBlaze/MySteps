@@ -45,12 +45,12 @@ extension AppStartInteractor: IAppStartInteractor {
                 return
             }
 
-            // We can start steps synchronization only after LPS initialization
-            self.stepsSynchronizer.startSynchronization()
-            // App delegate should holds StepsSynchronizer
-            (UIApplication.shared.delegate as! AppDelegate).stepsSynchronizer = self.stepsSynchronizer
-
             self.initializeHealthKit { result in
+                // We can start steps synchronization only after LPS and HealthKit initialization
+                self.stepsSynchronizer.startSynchronization()
+                // App delegate should holds StepsSynchronizer
+                (UIApplication.shared.delegate as! AppDelegate).stepsSynchronizer = self.stepsSynchronizer
+
                 if case .failure(let error) = result {
                     self.presenter.errorInitializeHealthKitStore(error)
                 } else {
