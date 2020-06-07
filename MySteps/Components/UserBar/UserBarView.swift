@@ -25,18 +25,6 @@ final class UserBarView: BaseNibView {
         }
     }
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-
-        initialize()
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-
-        initialize()
-    }
-
     override func hostViewControllerViewDidLoad() {
         super.hostViewControllerViewDidLoad()
 
@@ -48,7 +36,7 @@ final class UserBarView: BaseNibView {
     }
 }
 
-// MARK: - Functions
+// MARK: - IUserBarView
 
 extension UserBarView: IUserBarView {
     func resolveDependencies(userProvider: IUserProviderReader) {

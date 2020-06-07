@@ -36,6 +36,9 @@
 		FF82E0C1248B7DEF00F693DF /* DataLayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82E0C0248B7DEF00F693DF /* DataLayerFactory.swift */; };
 		FF9456D1248D23060011B819 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9456D0248D23060011B819 /* Date+Extensions.swift */; };
 		FF9456D6248D35410011B819 /* AchievementsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9456D5248D35410011B819 /* AchievementsProvider.swift */; };
+		FF9456D9248D4C010011B819 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9456D8248D4C010011B819 /* ChartView.swift */; };
+		FF9456DB248D4C0B0011B819 /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9456DA248D4C0B0011B819 /* ChartView.xib */; };
+		FF9456DD248D50340011B819 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9456DC248D50340011B819 /* ChartViewModel.swift */; };
 		FFCBB2DF248AD4ED0026AE7F /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2DE248AD4ED0026AE7F /* Factory.swift */; };
 		FFCBB2E1248AD5560026AE7F /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2E0248AD5560026AE7F /* ViewControllersFactory.swift */; };
 		FFCBB2E4248AD6C60026AE7F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBB2E3248AD6C60026AE7F /* Router.swift */; };
@@ -97,6 +100,9 @@
 		FF82E0C0248B7DEF00F693DF /* DataLayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerFactory.swift; sourceTree = "<group>"; };
 		FF9456D0248D23060011B819 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		FF9456D5248D35410011B819 /* AchievementsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsProvider.swift; sourceTree = "<group>"; };
+		FF9456D8248D4C010011B819 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		FF9456DA248D4C0B0011B819 /* ChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
+		FF9456DC248D50340011B819 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		FFCBB2DE248AD4ED0026AE7F /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		FFCBB2E0248AD5560026AE7F /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 		FFCBB2E3248AD6C60026AE7F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -312,6 +318,16 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		FF9456D7248D4BE20011B819 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				FF9456D8248D4C010011B819 /* ChartView.swift */,
+				FF9456DA248D4C0B0011B819 /* ChartView.xib */,
+				FF9456DC248D50340011B819 /* ChartViewModel.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
 		FFCBB2DD248AD4C70026AE7F /* Factories */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				FFFC5AAD248C13C300116A4E /* Base */,
+				FF9456D7248D4BE20011B819 /* Chart */,
 				FFFC5AB1248C163700116A4E /* UserBar */,
 			);
 			path = Components;
@@ -541,6 +558,7 @@
 				FF361A0F248BAE2A00E6DDA6 /* Localizable.strings in Resources */,
 				FF361A12248BAE2D00E6DDA6 /* InfoPlist.strings in Resources */,
 				FFFC5AB5248C166E00116A4E /* UserBarView.xib in Resources */,
+				FF9456DB248D4C0B0011B819 /* ChartView.xib in Resources */,
 				FF3B7BB7248AC41400E56FDB /* LaunchScreen.storyboard in Resources */,
 				FF361A30248BC1E100E6DDA6 /* ChartTableViewCell.xib in Resources */,
 				FFCBB2F5248ADAFA0026AE7F /* AppStartViewController.xib in Resources */,
@@ -612,6 +630,7 @@
 				FF9456D1248D23060011B819 /* Date+Extensions.swift in Sources */,
 				FF361A25248BC06700E6DDA6 /* NSObject+Extensions.swift in Sources */,
 				FFCBB2EC248AD9220026AE7F /* RouterFactory.swift in Sources */,
+				FF9456DD248D50340011B819 /* ChartViewModel.swift in Sources */,
 				FFCBB2F2248ADAFA0026AE7F /* AppStartPresenter.swift in Sources */,
 				FFCBB2FC248ADC180026AE7F /* HomeViewController.swift in Sources */,
 				FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */,
@@ -622,6 +641,7 @@
 				FFD3ED66248CFF9300E13C5C /* SynchronizersFactory.swift in Sources */,
 				FFFC5AB7248C1E5300116A4E /* UserBarViewModel.swift in Sources */,
 				FF82E0BF248B7D4B00F693DF /* HealthKitStore.swift in Sources */,
+				FF9456D9248D4C010011B819 /* ChartView.swift in Sources */,
 				FF361A3D248BCDC900E6DDA6 /* UserDAO+Extensions.swift in Sources */,
 				FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */,
 				FF361A3F248BD4B400E6DDA6 /* ProvidersFactory.swift in Sources */,

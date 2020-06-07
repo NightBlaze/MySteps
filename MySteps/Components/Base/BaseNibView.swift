@@ -13,14 +13,18 @@ class BaseNibView: UIView {
 
     private var nibName: String { nameOfClass() }
 
-    func hostViewControllerViewDidLoad() {
-        
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        initialize()
     }
-}
 
-// MARK: - Initialization
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
 
-extension BaseNibView {
+        initialize()
+    }
+
     func initialize(useAutoLayout: Bool = true,
                     bundle: Bundle? = .main) {
         translatesAutoresizingMaskIntoConstraints = !useAutoLayout
@@ -49,6 +53,9 @@ extension BaseNibView {
         }
     }
 
+    func hostViewControllerViewDidLoad() {
+        
+    }
 }
 
 // MARK: - Overrides

@@ -9,16 +9,11 @@
 import UIKit
 
 class ChartTableViewCell: UITableViewCell {
+    static let height: CGFloat = 206
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var chartView: ChartView!
+
+    func resolveDependencies(stepsReader: IStepsProviderReader) {
+        chartView.resolveDependencies(stepsReader: stepsReader)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

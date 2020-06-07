@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChartView" customModule="MySteps" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="8ge-Bk-tGe"/>
+                <outlet property="datePeriodLabel" destination="BMN-rT-eqT" id="JeE-ZU-av2"/>
+                <outlet property="stepsCountLabel" destination="dsN-Ry-6aJ" id="Snq-xE-s7O"/>
+                <outlet property="stepsTitleLabel" destination="xMO-DQ-8gb" id="Tcp-EE-d9h"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="206"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMO-DQ-8gb">
+                    <rect key="frame" x="20" y="0.0" width="79" height="38"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsN-Ry-6aJ">
+                    <rect key="frame" x="320" y="0.0" width="74" height="38"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nov - Dec 2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMN-rT-eqT">
+                    <rect key="frame" x="20" y="38" width="127" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7R-RD-5sb">
+                    <rect key="frame" x="0.0" y="68" width="414" height="138"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="dsN-Ry-6aJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0nE-FR-eb7"/>
+                <constraint firstAttribute="trailing" secondItem="dsN-Ry-6aJ" secondAttribute="trailing" constant="20" id="8wT-7Z-xAL"/>
+                <constraint firstItem="n7R-RD-5sb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="91g-ia-c5I"/>
+                <constraint firstItem="n7R-RD-5sb" firstAttribute="top" secondItem="BMN-rT-eqT" secondAttribute="bottom" constant="8" id="AEh-b9-nkg"/>
+                <constraint firstItem="n7R-RD-5sb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="BMk-UG-LhP"/>
+                <constraint firstItem="n7R-RD-5sb" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ESa-dy-3m1"/>
+                <constraint firstItem="xMO-DQ-8gb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="N59-Rk-spx"/>
+                <constraint firstItem="BMN-rT-eqT" firstAttribute="top" secondItem="xMO-DQ-8gb" secondAttribute="bottom" id="hJq-hL-gsR"/>
+                <constraint firstItem="xMO-DQ-8gb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="r1J-IP-ion"/>
+                <constraint firstItem="BMN-rT-eqT" firstAttribute="leading" secondItem="xMO-DQ-8gb" secondAttribute="leading" id="yoX-px-340"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-99.776785714285708"/>
+        </view>
+    </objects>
+</document>

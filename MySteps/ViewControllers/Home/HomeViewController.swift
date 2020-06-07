@@ -36,8 +36,7 @@ final class HomeViewController: UIViewController {
             case .userAvatar:
                 return UserAvatarTableViewCell.height
             case .chart:
-                return 0
-//                return ChartTableViewCell.height
+                return ChartTableViewCell.height
             case .achievements:
                 return 0
 //                return AchievementsTableViewCell.height
@@ -50,11 +49,14 @@ final class HomeViewController: UIViewController {
     
     private let interactor: IHomeInteractor
     private let userProvider: IUserProviderReader
+    private let stepsReader: IStepsProviderReader
     
     init(interactor: IHomeInteractor,
-         userProvider: IUserProviderReader) {
+         userProvider: IUserProviderReader,
+         stepsReader: IStepsProviderReader) {
         self.interactor = interactor
         self.userProvider = userProvider
+        self.stepsReader = stepsReader
         super.init(nibName: String(describing: type(of: self)), bundle: nil)
     }
     
@@ -101,7 +103,9 @@ private extension HomeViewController {
                     cell.resolveDependencies(userReader: userProvider)
                 }
             case .chart:
-                break
+                if let cell = cell as? ChartTableViewCell {
+                    cell.resolveDependencies(stepsReader: stepsReader)
+                }
             case .achievements:
                 break
         }
