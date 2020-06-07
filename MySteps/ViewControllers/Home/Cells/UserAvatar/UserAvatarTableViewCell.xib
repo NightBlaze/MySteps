@@ -9,15 +9,32 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserAvatarTableViewCell" id="KGk-i7-Jjw" customClass="UserAvatarTableViewCell" customModule="MySteps" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserAvatarTableViewCell" rowHeight="220" id="KGk-i7-Jjw" customClass="UserAvatarTableViewCell" customModule="MySteps" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bq7-gt-NKr">
+                        <rect key="frame" x="70" y="20" width="180" height="180"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="nAh-4Z-lr2"/>
+                            <constraint firstAttribute="height" constant="180" id="vOg-Lw-Mnq"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bq7-gt-NKr" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="uGA-am-cmF"/>
+                    <constraint firstItem="bq7-gt-NKr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zZd-m0-OVg"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="139" y="112"/>
+            <connections>
+                <outlet property="avatarImageView" destination="bq7-gt-NKr" id="tNf-yG-QEG"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="111.16071428571428"/>
         </tableViewCell>
     </objects>
 </document>

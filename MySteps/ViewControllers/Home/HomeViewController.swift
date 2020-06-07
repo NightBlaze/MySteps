@@ -30,6 +30,19 @@ final class HomeViewController: UIViewController {
                 return AchievementsTableViewCell.self as UITableViewCell.Type
             }
         }
+
+        func cellHeight() -> CGFloat {
+            switch self {
+            case .userAvatar:
+                return UserAvatarTableViewCell.height
+            case .chart:
+                return 0
+//                return ChartTableViewCell.height
+            case .achievements:
+                return 0
+//                return AchievementsTableViewCell.height
+            }
+        }
     }
 
     @IBOutlet weak var userBarView: UserBarView!
@@ -80,7 +93,18 @@ private extension HomeViewController {
     }
 
     func configureCell(_ cell: UITableViewCell, at indexPath: IndexPath) {
+        guard let cellType = CellType.fromIndexPath(indexPath) else { return }
 
+        switch cellType {
+            case .userAvatar:
+                if let cell = cell as? UserAvatarTableViewCell {
+                    cell.resolveDependencies(userReader: userProvider)
+                }
+            case .chart:
+                break
+            case .achievements:
+                break
+        }
     }
 }
 
@@ -106,4 +130,11 @@ extension HomeViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let cellType = CellType.fromIndexPath(indexPath) else {
+            return 0
+        }
+
+        return cellType.cellHeight()
+    }
 }

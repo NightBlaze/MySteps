@@ -8,17 +8,37 @@
 
 import UIKit
 
+// Here we can use VIP module
+// but because the cell is very simple use just View
 class UserAvatarTableViewCell: UITableViewCell {
+    static let height: CGFloat = 220
+
+    @IBOutlet weak var avatarImageView: UIImageView!
+
+    private var avatarImageName: String? {
+        didSet {
+            if oldValue != avatarImageName,
+                let avatarImageName = avatarImageName {
+                avatarImageView.image = UIImage(named: avatarImageName)
+            }
+        }
+    }
+    private var userReader: IUserProviderReader? {
+        didSet {
+            userReader?.loggedInUser{ [weak self] result in
+                if case .success(let user) = result {
+                    self?.avatarImageName = user.avatar
+                }
+            }
+        }
+    }
+
+    func resolveDependencies(userReader: IUserProviderReader) {
+        self.userReader = userReader
+    }
 
     override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+        avatarImageView.layer.masksToBounds = true
+        avatarImageView.layer.cornerRadius = avatarImageView.bounds.size.width / 2
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

@@ -53,7 +53,7 @@ extension LPSUser: ILPSUserWriter {
             asynchronous: { transaction -> UserDAO in
                 UserDAO.create(firstName: "Neil",
                                lastName: "Armstrong",
-                               avatar: "", // TODO: set avatar name
+                               avatar: "profile-photo",
                                transaction: transaction)
             },
             success: { transactionUser in
