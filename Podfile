@@ -8,4 +8,5 @@ target 'MySteps' do
   # Pods for MySteps
   pod 'Swinject', '~> 2.7.1'
   pod 'CoreStore', '~> 7.1.0'
+  pod 'AFDateHelper', '~> 4.3.0'
 end
