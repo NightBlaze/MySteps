@@ -9,15 +9,30 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AchievementsTableViewCell" id="KGk-i7-Jjw" customClass="AchievementsTableViewCell" customModule="MySteps" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AchievementsTableViewCell" rowHeight="162" id="KGk-i7-Jjw" customClass="AchievementsTableViewCell" customModule="MySteps" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKL-1J-5wx" customClass="AchievementsView" customModule="MySteps" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="aKL-1J-5wx" secondAttribute="bottom" id="Cwj-i9-3ex"/>
+                    <constraint firstItem="aKL-1J-5wx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cpB-5Q-0Ae"/>
+                    <constraint firstAttribute="trailing" secondItem="aKL-1J-5wx" secondAttribute="trailing" id="oPk-wV-WFv"/>
+                    <constraint firstItem="aKL-1J-5wx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="y8d-Ea-89o"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="139" y="112"/>
+            <connections>
+                <outlet property="achievementsView" destination="aKL-1J-5wx" id="SDX-Tn-arX"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="151.00446428571428"/>
         </tableViewCell>
     </objects>
 </document>

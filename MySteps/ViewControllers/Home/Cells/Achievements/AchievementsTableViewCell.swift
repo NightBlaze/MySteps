@@ -9,16 +9,11 @@
 import UIKit
 
 class AchievementsTableViewCell: UITableViewCell {
+    static let height: CGFloat = 224
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var achievementsView: AchievementsView!
+
+    func resolveDependencies(stepsReader: IStepsProviderReader) {
+        achievementsView.resolveDependencies(stepsReader: stepsReader)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

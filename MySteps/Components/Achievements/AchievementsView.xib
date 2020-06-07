@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchievementsView" customModule="MySteps" customModuleProvider="target">
+            <connections>
+                <outlet property="achievementsCountLabel" destination="R2U-Uq-xDU" id="Cup-dl-pjv"/>
+                <outlet property="achievementsTitleLabel" destination="j8A-IH-JPt" id="6Hk-qg-C36"/>
+                <outlet property="collectionView" destination="aeM-dH-CJV" id="v9j-0v-PRf"/>
+                <outlet property="containerView" destination="iN0-l3-epB" id="ohl-Zd-Er6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8A-IH-JPt">
+                    <rect key="frame" x="20" y="0.0" width="147.5" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2U-Uq-xDU">
+                    <rect key="frame" x="368" y="0.0" width="26" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-dH-CJV">
+                    <rect key="frame" x="0.0" y="47" width="414" height="177"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="32" id="SfB-pn-mWS">
+                        <size key="itemSize" width="116" height="177"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="aeM-dH-CJV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0FV-6B-xs4"/>
+                <constraint firstItem="aeM-dH-CJV" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="O9Y-cy-uPC"/>
+                <constraint firstItem="R2U-Uq-xDU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Tfr-zL-7nD"/>
+                <constraint firstItem="j8A-IH-JPt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="g8W-iT-tZJ"/>
+                <constraint firstItem="aeM-dH-CJV" firstAttribute="top" secondItem="j8A-IH-JPt" secondAttribute="bottom" constant="18" id="nod-vm-s69"/>
+                <constraint firstItem="j8A-IH-JPt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tCt-8D-ldo"/>
+                <constraint firstItem="aeM-dH-CJV" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="yw1-3p-7cM"/>
+                <constraint firstAttribute="trailing" secondItem="R2U-Uq-xDU" secondAttribute="trailing" constant="20" id="zBH-g6-Nqt"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </view>
+    </objects>
+</document>

@@ -38,8 +38,7 @@ final class HomeViewController: UIViewController {
             case .chart:
                 return ChartTableViewCell.height
             case .achievements:
-                return 0
-//                return AchievementsTableViewCell.height
+                return AchievementsTableViewCell.height
             }
         }
     }
@@ -107,6 +106,9 @@ private extension HomeViewController {
                     cell.resolveDependencies(stepsReader: stepsReader)
                 }
             case .achievements:
+                if let cell = cell as? AchievementsTableViewCell {
+                    cell.resolveDependencies(stepsReader: stepsReader)
+                }
                 break
         }
     }
