@@ -54,6 +54,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FontsFree-Net-SFProText-Heavy.ttf</string>
+		<string>FontsFree-Net-SFProDisplay-Heavy.ttf</string>
+		<string>FontsFree-Net-SFProDisplay-Regular.ttf</string>
+		<string>FontsFree-Net-SFProDisplay-Semibold.ttf</string>
+		<string>FontsFree-Net-SFProDisplay-Bold.ttf</string>
+		<string>FontsFree-Net-SFCompactText-SemiBold.ttf</string>
+	</array>
 	<key>NSHealthShareUsageDescription</key>
 	<string>We need access to HealthKit to gather your steps count</string>
 </dict>

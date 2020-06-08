@@ -24,5 +24,15 @@ class AchievementCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         imageView.layer.masksToBounds = true
         imageView.layer.cornerRadius = imageView.bounds.size.width / 2
+
+        backgroundColor = Colors.Background.collectionViewCell
+        imageView.backgroundColor = Colors.Background.imageView
+        achievementTitleLabel.textColor = Colors.Foreground.white
+        achievementTitleLabel.backgroundColor = Colors.Background.label
+        stepsCountLabel.textColor = Colors.Foreground.grey
+        stepsCountLabel.backgroundColor = Colors.Background.label
+
+        achievementTitleLabel.font = Fonts.achievement
+        stepsCountLabel.font = Fonts.achievementSteps
     }
 }

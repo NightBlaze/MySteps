@@ -30,6 +30,18 @@ final class ChartView: BaseNibView {
                              bundle: Bundle? = .main) {
         super.initialize(useAutoLayout: useAutoLayout, bundle: bundle)
 
+        backgroundColor = Colors.Background.view
+        stepsTitleLabel.textColor = Colors.Foreground.white
+        stepsTitleLabel.backgroundColor = Colors.Background.label
+        stepsCountLabel.textColor = Colors.Foreground.green
+        stepsCountLabel.backgroundColor = Colors.Background.label
+        datePeriodLabel.textColor = Colors.Foreground.grey
+        datePeriodLabel.backgroundColor = Colors.Background.label
+        chartView.backgroundColor = Colors.Background.view
+        stepsTitleLabel.font = Fonts.stepsTitle
+        stepsCountLabel.font = Fonts.stepsCount
+        datePeriodLabel.font = Fonts.period
+
         // TODO: localize
         stepsTitleLabel.text = "Steps"
 

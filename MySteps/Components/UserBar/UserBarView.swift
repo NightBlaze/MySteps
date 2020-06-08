@@ -17,12 +17,23 @@ protocol IUserBarView: UIView {
 /// but because it's very simple I use only View
 final class UserBarView: BaseNibView {
     @IBOutlet weak var nameLabel: UILabel!
-
+    @IBOutlet weak var lineView: UIView!
+    
     private var userProvider: IUserProviderReader?
     private var viewModel: UserBarViewModel? {
         didSet {
             nameLabel.text = viewModel?.fullName
         }
+    }
+
+    override func initialize(useAutoLayout: Bool = true, bundle: Bundle? = .main) {
+        super.initialize(useAutoLayout: useAutoLayout, bundle: bundle)
+
+        backgroundColor = Colors.Background.view
+        nameLabel.textColor = Colors.Foreground.white
+        nameLabel.backgroundColor = Colors.Background.label
+        lineView.backgroundColor = Colors.Foreground.lightGrey
+        nameLabel.font = Fonts.name
     }
 
     override func hostViewControllerViewDidLoad() {

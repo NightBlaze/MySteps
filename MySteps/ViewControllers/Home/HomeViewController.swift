@@ -66,6 +66,9 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = Colors.Background.viewController
+        tableView.backgroundColor = Colors.Background.view
+
         AchievementsTableViewCell.registerNib(for: tableView)
         ChartTableViewCell.registerNib(for: tableView)
         UserAvatarTableViewCell.registerNib(for: tableView)

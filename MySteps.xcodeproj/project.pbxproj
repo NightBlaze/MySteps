@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		60079AA7CE27B63EE979AA64 /* Pods_MySteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBC42CBC8C7B0A88DE3532A /* Pods_MySteps.framework */; };
+		FF0A9869248E7A4200BAC69A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A9868248E7A4200BAC69A /* Colors.swift */; };
+		FF0A986B248E7E1400BAC69A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A986A248E7E1300BAC69A /* Fonts.swift */; };
+		FF0A986E248E90F700BAC69A /* FontsFree-Net-SFProText-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF0A986D248E90BA00BAC69A /* FontsFree-Net-SFProText-Heavy.ttf */; };
+		FF0A9870248E928800BAC69A /* FontsFree-Net-SFProDisplay-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF0A986F248E928800BAC69A /* FontsFree-Net-SFProDisplay-Heavy.ttf */; };
+		FF0A9872248E92CB00BAC69A /* FontsFree-Net-SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF0A9871248E92CB00BAC69A /* FontsFree-Net-SFProDisplay-Regular.ttf */; };
+		FF0A9874248E92F800BAC69A /* FontsFree-Net-SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF0A9873248E92F800BAC69A /* FontsFree-Net-SFProDisplay-Semibold.ttf */; };
+		FF0A9876248E932900BAC69A /* FontsFree-Net-SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF0A9875248E932900BAC69A /* FontsFree-Net-SFProDisplay-Bold.ttf */; };
+		FF0A9878248E936D00BAC69A /* FontsFree-Net-SFCompactText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF0A9877248E936D00BAC69A /* FontsFree-Net-SFCompactText-SemiBold.ttf */; };
 		FF361A0F248BAE2A00E6DDA6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF361A11248BAE2A00E6DDA6 /* Localizable.strings */; };
 		FF361A12248BAE2D00E6DDA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF361A14248BAE2D00E6DDA6 /* InfoPlist.strings */; };
 		FF361A19248BAF7200E6DDA6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF361A18248BAF7200E6DDA6 /* HealthKit.framework */; };
@@ -78,6 +86,14 @@
 		6EB0ACBA72ACB077EA9C6DB5 /* Pods-MySteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySteps.release.xcconfig"; path = "Target Support Files/Pods-MySteps/Pods-MySteps.release.xcconfig"; sourceTree = "<group>"; };
 		9782C5A795F7269FF0A7C304 /* Pods-MySteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySteps.debug.xcconfig"; path = "Target Support Files/Pods-MySteps/Pods-MySteps.debug.xcconfig"; sourceTree = "<group>"; };
 		AEBC42CBC8C7B0A88DE3532A /* Pods_MySteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0A9868248E7A4200BAC69A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		FF0A986A248E7E1300BAC69A /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		FF0A986D248E90BA00BAC69A /* FontsFree-Net-SFProText-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProText-Heavy.ttf"; sourceTree = "<group>"; };
+		FF0A986F248E928800BAC69A /* FontsFree-Net-SFProDisplay-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProDisplay-Heavy.ttf"; sourceTree = "<group>"; };
+		FF0A9871248E92CB00BAC69A /* FontsFree-Net-SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		FF0A9873248E92F800BAC69A /* FontsFree-Net-SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		FF0A9875248E932900BAC69A /* FontsFree-Net-SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		FF0A9877248E936D00BAC69A /* FontsFree-Net-SFCompactText-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFCompactText-SemiBold.ttf"; sourceTree = "<group>"; };
 		FF361A10248BAE2A00E6DDA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF361A13248BAE2D00E6DDA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FF361A15248BAE5900E6DDA6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -178,6 +194,28 @@
 				6EB0ACBA72ACB077EA9C6DB5 /* Pods-MySteps.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF0A9867248E7A3000BAC69A /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				FF0A9868248E7A4200BAC69A /* Colors.swift */,
+				FF0A986A248E7E1300BAC69A /* Fonts.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		FF0A986C248E90AD00BAC69A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FF0A9877248E936D00BAC69A /* FontsFree-Net-SFCompactText-SemiBold.ttf */,
+				FF0A9875248E932900BAC69A /* FontsFree-Net-SFProDisplay-Bold.ttf */,
+				FF0A986F248E928800BAC69A /* FontsFree-Net-SFProDisplay-Heavy.ttf */,
+				FF0A9871248E92CB00BAC69A /* FontsFree-Net-SFProDisplay-Regular.ttf */,
+				FF0A9873248E92F800BAC69A /* FontsFree-Net-SFProDisplay-Semibold.ttf */,
+				FF0A986D248E90BA00BAC69A /* FontsFree-Net-SFProText-Heavy.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		FF361A0B248BAD4C00E6DDA6 /* Localization */ = {
@@ -292,6 +330,7 @@
 				FFF0AA65248AD29300A38F5D /* Application */,
 				FFFC5AAC248C138200116A4E /* Components */,
 				FFF0AA69248AD2F300A38F5D /* DataLayer */,
+				FF0A9867248E7A3000BAC69A /* Design */,
 				FFCBB2E5248AD6FF0026AE7F /* Extensions */,
 				FFCBB2DD248AD4C70026AE7F /* Factories */,
 				FF361A37248BC8AF00E6DDA6 /* Providers */,
@@ -504,6 +543,7 @@
 		FFF0AA68248AD2E400A38F5D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FF0A986C248E90AD00BAC69A /* Fonts */,
 				FF361A0C248BAD5400E6DDA6 /* Images */,
 				FF361A0B248BAD4C00E6DDA6 /* Localization */,
 			);
@@ -622,7 +662,12 @@
 				FF361A2B248BC1BA00E6DDA6 /* UserAvatarTableViewCell.xib in Resources */,
 				FF361A0F248BAE2A00E6DDA6 /* Localizable.strings in Resources */,
 				FF361A12248BAE2D00E6DDA6 /* InfoPlist.strings in Resources */,
+				FF0A986E248E90F700BAC69A /* FontsFree-Net-SFProText-Heavy.ttf in Resources */,
+				FF0A9874248E92F800BAC69A /* FontsFree-Net-SFProDisplay-Semibold.ttf in Resources */,
 				FFFC5AB5248C166E00116A4E /* UserBarView.xib in Resources */,
+				FF0A9876248E932900BAC69A /* FontsFree-Net-SFProDisplay-Bold.ttf in Resources */,
+				FF0A9870248E928800BAC69A /* FontsFree-Net-SFProDisplay-Heavy.ttf in Resources */,
+				FF0A9878248E936D00BAC69A /* FontsFree-Net-SFCompactText-SemiBold.ttf in Resources */,
 				FF79EBDD248D580B0063D703 /* AchievementsView.xib in Resources */,
 				FF9456DB248D4C0B0011B819 /* ChartView.xib in Resources */,
 				FF79EBE6248D62DB0063D703 /* AchievementCollectionViewCell.xib in Resources */,
@@ -631,6 +676,7 @@
 				FFCBB2F5248ADAFA0026AE7F /* AppStartViewController.xib in Resources */,
 				FF361A35248BC20B00E6DDA6 /* AchievementsTableViewCell.xib in Resources */,
 				FFCBB2FE248ADC180026AE7F /* HomeViewController.xib in Resources */,
+				FF0A9872248E92CB00BAC69A /* FontsFree-Net-SFProDisplay-Regular.ttf in Resources */,
 				FF3B7BB4248AC41400E56FDB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -712,6 +758,7 @@
 				FFFC5AB7248C1E5300116A4E /* UserBarViewModel.swift in Sources */,
 				FF79EBE5248D62DB0063D703 /* AchievementCollectionViewCell.swift in Sources */,
 				FFFDEE9F248E6D8700503866 /* ChartFormatter.swift in Sources */,
+				FF0A986B248E7E1400BAC69A /* Fonts.swift in Sources */,
 				FF82E0BF248B7D4B00F693DF /* HealthKitStore.swift in Sources */,
 				FF79EBDF248D581B0063D703 /* AchievementCellViewModel.swift in Sources */,
 				FF9456D9248D4C010011B819 /* ChartView.swift in Sources */,
@@ -721,6 +768,7 @@
 				FF361A3F248BD4B400E6DDA6 /* ProvidersFactory.swift in Sources */,
 				FFFC5AB3248C165E00116A4E /* UserBarView.swift in Sources */,
 				FFCBB2FB248ADC180026AE7F /* HomePresenter.swift in Sources */,
+				FF0A9869248E7A4200BAC69A /* Colors.swift in Sources */,
 				FF6728AA248E546700E731B3 /* AchievementsViewFlowLayout.swift in Sources */,
 				FF6728A6248E44CD00E731B3 /* AchievementsViewInteractor.swift in Sources */,
 				FFD3ED64248CF97C00E13C5C /* StepsSynchronizer.swift in Sources */,

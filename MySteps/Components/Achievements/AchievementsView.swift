@@ -34,6 +34,15 @@ final class AchievementsView: BaseNibView {
                              bundle: Bundle? = .main) {
         super.initialize(useAutoLayout: useAutoLayout, bundle: bundle)
 
+        backgroundColor = Colors.Background.view
+        achievementsTitleLabel.textColor = Colors.Foreground.white
+        achievementsTitleLabel.backgroundColor = Colors.Background.label
+        achievementsCountLabel.textColor = Colors.Foreground.blue
+        achievementsCountLabel.backgroundColor = Colors.Background.label
+        collectionView.backgroundColor = Colors.Background.collectionViewCell
+        achievementsTitleLabel.font = Fonts.achievementsTitle
+        achievementsCountLabel.font = Fonts.achievementsCount
+
         let presenter = AchievementsViewPresenter()
         presenter.resolveDependencies(view: self)
         interactor = AchievementsViewInteractor(presenter: presenter)
