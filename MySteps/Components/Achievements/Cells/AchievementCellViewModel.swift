@@ -1,5 +1,5 @@
 //
-//  AchievementViewModel.swift
+//  AchievementCellViewModel.swift
 //  MySteps
 //
 //  Created by Alexander Timonenkov on 07.06.2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AchievementViewModel {
+struct AchievementCellViewModel {
     let title: String
     let stepsCount: String
     let imageName: String

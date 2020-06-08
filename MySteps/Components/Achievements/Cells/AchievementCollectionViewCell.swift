@@ -15,7 +15,7 @@ class AchievementCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var achievementTitleLabel: UILabel!
     @IBOutlet weak var stepsCountLabel: UILabel!
 
-    func update(viewModel: AchievementViewModel) {
+    func update(viewModel: AchievementCellViewModel) {
         imageView.image = UIImage(named: viewModel.imageName)
         achievementTitleLabel.text = viewModel.title
         stepsCountLabel.text = viewModel.stepsCount

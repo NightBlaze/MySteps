@@ -12,13 +12,18 @@ protocol IAchievementsView: UIView {
     func resolveDependencies(stepsReader: IStepsProviderReader)
 }
 
+protocol IAchievementsViewUpdater: UIView {
+    func updateViewModels(_ viewModels: [AchievementCellViewModel])
+}
+
 final class AchievementsView: BaseNibView {
     @IBOutlet weak var achievementsTitleLabel: UILabel!
     @IBOutlet weak var achievementsCountLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
 
-    private var stepsReader: IStepsProviderReader?
-    private var viewModels: [AchievementViewModel]? {
+    private var interactor: IAchievementsViewInteractor?
+
+    private var viewModels: [AchievementCellViewModel]? {
         didSet {
             updateUI()
         }
@@ -27,6 +32,10 @@ final class AchievementsView: BaseNibView {
     override func initialize(useAutoLayout: Bool = true,
                              bundle: Bundle? = .main) {
         super.initialize(useAutoLayout: useAutoLayout, bundle: bundle)
+
+        let presenter = AchievementsViewPresenter()
+        presenter.resolveDependencies(view: self)
+        interactor = AchievementsViewInteractor(presenter: presenter)
 
         // TODO: localize
         achievementsTitleLabel.text = "Achievements"
@@ -41,53 +50,27 @@ final class AchievementsView: BaseNibView {
 
 extension AchievementsView: IAchievementsView {
     func resolveDependencies(stepsReader: IStepsProviderReader) {
-        self.stepsReader = stepsReader
+        interactor?.resolveDependencies(stepsReader: stepsReader)
+        interactor?.loadData()
+    }
+}
 
-        loadData()
+// MARK: - IAchievementsViewUpdater
+
+extension AchievementsView: IAchievementsViewUpdater {
+    func updateViewModels(_ viewModels: [AchievementCellViewModel]) {
+        self.viewModels = viewModels
     }
 }
 
 // MARK: - Private
 
 private extension AchievementsView {
-    func loadData() {
-        stepsReader?.stepsForLastMonth() { [weak self] result in
-            guard let self = self,
-                case .success(let stepsResult) = result else { return }
-
-            self.viewModels = self.createViewModels(daos: stepsResult.steps)
-        }
-    }
-
     func updateUI() {
         // TODO: localize
         achievementsCountLabel.text = "\(viewModels?.count ?? 0)"
 
         collectionView.reloadData()
-    }
-}
-
-// MARK: - Presenter
-
-private extension AchievementsView {
-    func createViewModels(daos: [StepsDAO]) -> [AchievementViewModel] {
-        var totalSteps = Int(daos.reduce(0) { $0 + $1.count })
-        if totalSteps > 40000 {
-            totalSteps = 40000
-        }
-        return checkStepsAndReturnAchievements(acc: [], steps: totalSteps, decreaseStep: 5000).reversed()
-    }
-
-    func checkStepsAndReturnAchievements(acc: [AchievementViewModel], steps: Int, decreaseStep: Int) -> [AchievementViewModel] {
-        if steps < 10000 {
-            return acc
-        }
-
-        let achievement = AchievementViewModel(steps: steps)
-        var result = acc
-        result.append(achievement)
-
-        return checkStepsAndReturnAchievements(acc: result, steps: steps - decreaseStep, decreaseStep: decreaseStep)
     }
 }
 
