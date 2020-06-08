@@ -22,6 +22,14 @@ extension Date {
         Calendar.current.date(byAdding: .month, value: -1, to: Date())!.adjust(hour: 0, minute: 0, second: 0, day: 0)
     }
 
+    static var previousMonth: Date {
+        Calendar.current.date(byAdding: .month, value: -1, to: Date())!.adjust(hour: 0, minute: 0, second: 0)
+    }
+
+    static var today: Date {
+        Date().dateFor(.startOfDay)
+    }
+
     static var endOfToday: Date {
         Date().dateFor(.endOfDay)
     }

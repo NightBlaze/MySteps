@@ -9,7 +9,13 @@
 import Foundation
 
 protocol IStepsProviderReader {
-    func steps(startDate: Date, endDate: Date, _ completion: @escaping (Result<[StepsDAO], Error>) -> Void)
+    func stepsForLastMonth(_ completion: @escaping (Result<StepsProviderResult, Error>) -> Void)
+}
+
+struct StepsProviderResult {
+    let startDate: Date
+    let endDate: Date
+    let steps: [StepsDAO]
 }
 
 final class StepsProvider {
@@ -23,7 +29,16 @@ final class StepsProvider {
 // MARK: - IStepsProviderReader
 
 extension StepsProvider: IStepsProviderReader {
-    func steps(startDate: Date, endDate: Date, _ completion: @escaping (Result<[StepsDAO], Error>) -> Void) {
-        stepsReader.fetchSteps(startDate: startDate, endDate: endDate, completion)
+    func stepsForLastMonth(_ completion: @escaping (Result<StepsProviderResult, Error>) -> Void) {
+        let startDate = Date.previousMonth
+        let endDate = Date.today
+        stepsReader.fetchSteps(startDate: startDate, endDate: endDate) { result in
+            switch result {
+            case .success(let daos):
+                completion(.success(StepsProviderResult(startDate: startDate, endDate: endDate, steps: daos)))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }

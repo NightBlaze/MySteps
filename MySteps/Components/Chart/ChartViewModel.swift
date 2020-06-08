@@ -9,6 +9,8 @@
 import Foundation
 
 struct ChartViewModel {
+    let startDate: Date
+    let endDate: Date
     let stepsPerDay: [Date: UInt]
     var totalSteps: UInt {
         stepsPerDay.reduce(0) { (sum, steps) -> UInt in
@@ -17,7 +19,9 @@ struct ChartViewModel {
         }
     }
 
-    init(daos: [StepsDAO]) {
+    init(startDate: Date, endDate: Date, daos: [StepsDAO]) {
+        self.startDate = startDate
+        self.endDate = endDate
         var steps = [Date: UInt]()
         for dao in daos {
             if let date = dao.date {

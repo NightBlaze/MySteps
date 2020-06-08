@@ -24,16 +24,12 @@ final class ChartView: BaseNibView {
         }
     }
 
-    var startDate = Date().startOfMonth
-    var endDate = Date().endOfMonth
-
     override func initialize(useAutoLayout: Bool = true,
                              bundle: Bundle? = .main) {
         super.initialize(useAutoLayout: useAutoLayout, bundle: bundle)
 
         // TODO: localize
         stepsTitleLabel.text = "Steps"
-        datePeriodLabel.text = "\(startDate) - \(endDate)"
     }
 }
 
@@ -51,16 +47,19 @@ extension ChartView: IChartView {
 
 private extension ChartView {
     func loadData() {
-        stepsReader?.steps(startDate: startDate, endDate: endDate) { [weak self] result in
+        stepsReader?.stepsForLastMonth() { [weak self] result in
             guard let self = self,
-                case .success(let steps) = result else { return }
+                case .success(let stepsResult) = result else { return }
 
-            self.viewModel = ChartViewModel(daos: steps)
+            self.viewModel = ChartViewModel(startDate: stepsResult.startDate,
+                                            endDate: stepsResult.endDate,
+                                            daos: stepsResult.steps)
         }
     }
 
     func updateUI() {
         // TODO: localize
         stepsCountLabel.text = "\(viewModel?.totalSteps ?? 0)"
+//        datePeriodLabel.text = "\(viewModel?.startDate) - \(viewModel?.endDate)"
     }
 }
