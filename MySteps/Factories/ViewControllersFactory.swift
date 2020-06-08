@@ -45,9 +45,11 @@ final class ViewControllersFactory: IFactory {
             let interactor = HomeInteractor(presenter: presenter)
             let userProvider = self.mainFactory.providersFactory().userProviderReader()
             let stepsReader = self.mainFactory.providersFactory().stepsProviderReader()
+            let animator = self.mainFactory.animatorsFactory().achievementAnimator()
             let viewController = HomeViewController(interactor: interactor,
                                                     userProvider: userProvider,
-                                                    stepsReader: stepsReader)
+                                                    stepsReader: stepsReader,
+                                                    animator: animator)
             presenter.resolveDependencies(viewController: viewController)
 
             return viewController

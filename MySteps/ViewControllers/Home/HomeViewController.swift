@@ -49,13 +49,16 @@ final class HomeViewController: UIViewController {
     private let interactor: IHomeInteractor
     private let userProvider: IUserProviderReader
     private let stepsReader: IStepsProviderReader
+    private let animator: IAchievementAnimator
     
     init(interactor: IHomeInteractor,
          userProvider: IUserProviderReader,
-         stepsReader: IStepsProviderReader) {
+         stepsReader: IStepsProviderReader,
+         animator: IAchievementAnimator) {
         self.interactor = interactor
         self.userProvider = userProvider
         self.stepsReader = stepsReader
+        self.animator = animator
         super.init(nibName: String(describing: type(of: self)), bundle: nil)
     }
     
@@ -110,7 +113,7 @@ private extension HomeViewController {
                 }
             case .achievements:
                 if let cell = cell as? AchievementsTableViewCell {
-                    cell.resolveDependencies(stepsReader: stepsReader)
+                    cell.resolveDependencies(stepsReader: stepsReader, animator: animator)
                 }
                 break
         }

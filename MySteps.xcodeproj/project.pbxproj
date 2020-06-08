@@ -16,6 +16,8 @@
 		FF0A9874248E92F800BAC69A /* FontsFree-Net-SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF0A9873248E92F800BAC69A /* FontsFree-Net-SFProDisplay-Semibold.ttf */; };
 		FF0A9876248E932900BAC69A /* FontsFree-Net-SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF0A9875248E932900BAC69A /* FontsFree-Net-SFProDisplay-Bold.ttf */; };
 		FF0A9878248E936D00BAC69A /* FontsFree-Net-SFCompactText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF0A9877248E936D00BAC69A /* FontsFree-Net-SFCompactText-SemiBold.ttf */; };
+		FF0A987A248E983900BAC69A /* AchievementAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A9879248E983900BAC69A /* AchievementAnimator.swift */; };
+		FF0A987C248EA9A800BAC69A /* AnimatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A987B248EA9A800BAC69A /* AnimatorsFactory.swift */; };
 		FF361A0F248BAE2A00E6DDA6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF361A11248BAE2A00E6DDA6 /* Localizable.strings */; };
 		FF361A12248BAE2D00E6DDA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF361A14248BAE2D00E6DDA6 /* InfoPlist.strings */; };
 		FF361A19248BAF7200E6DDA6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF361A18248BAF7200E6DDA6 /* HealthKit.framework */; };
@@ -40,7 +42,6 @@
 		FF3B7BB7248AC41400E56FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF3B7BB5248AC41400E56FDB /* LaunchScreen.storyboard */; };
 		FF6728A6248E44CD00E731B3 /* AchievementsViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6728A5248E44CD00E731B3 /* AchievementsViewInteractor.swift */; };
 		FF6728A8248E44DE00E731B3 /* AchievementsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6728A7248E44DD00E731B3 /* AchievementsViewPresenter.swift */; };
-		FF6728AA248E546700E731B3 /* AchievementsViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6728A9248E546700E731B3 /* AchievementsViewFlowLayout.swift */; };
 		FF79EBDB248D57FC0063D703 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79EBDA248D57FC0063D703 /* AchievementsView.swift */; };
 		FF79EBDD248D580B0063D703 /* AchievementsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF79EBDC248D580B0063D703 /* AchievementsView.xib */; };
 		FF79EBDF248D581B0063D703 /* AchievementCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79EBDE248D581B0063D703 /* AchievementCellViewModel.swift */; };
@@ -94,6 +95,8 @@
 		FF0A9873248E92F800BAC69A /* FontsFree-Net-SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
 		FF0A9875248E932900BAC69A /* FontsFree-Net-SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		FF0A9877248E936D00BAC69A /* FontsFree-Net-SFCompactText-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFCompactText-SemiBold.ttf"; sourceTree = "<group>"; };
+		FF0A9879248E983900BAC69A /* AchievementAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementAnimator.swift; sourceTree = "<group>"; };
+		FF0A987B248EA9A800BAC69A /* AnimatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorsFactory.swift; sourceTree = "<group>"; };
 		FF361A10248BAE2A00E6DDA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF361A13248BAE2D00E6DDA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FF361A15248BAE5900E6DDA6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -123,7 +126,6 @@
 		FF3B7BB8248AC41400E56FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF6728A5248E44CD00E731B3 /* AchievementsViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewInteractor.swift; sourceTree = "<group>"; };
 		FF6728A7248E44DD00E731B3 /* AchievementsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewPresenter.swift; sourceTree = "<group>"; };
-		FF6728A9248E546700E731B3 /* AchievementsViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewFlowLayout.swift; sourceTree = "<group>"; };
 		FF79EBDA248D57FC0063D703 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		FF79EBDC248D580B0063D703 /* AchievementsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementsView.xib; sourceTree = "<group>"; };
 		FF79EBDE248D581B0063D703 /* AchievementCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCellViewModel.swift; sourceTree = "<group>"; };
@@ -358,9 +360,9 @@
 			isa = PBXGroup;
 			children = (
 				FF6728A4248E447A00E731B3 /* Cells */,
+				FF0A9879248E983900BAC69A /* AchievementAnimator.swift */,
 				FF79EBDA248D57FC0063D703 /* AchievementsView.swift */,
 				FF79EBDC248D580B0063D703 /* AchievementsView.xib */,
-				FF6728A9248E546700E731B3 /* AchievementsViewFlowLayout.swift */,
 				FF6728A5248E44CD00E731B3 /* AchievementsViewInteractor.swift */,
 				FF6728A7248E44DD00E731B3 /* AchievementsViewPresenter.swift */,
 			);
@@ -432,6 +434,7 @@
 		FFCBB2DD248AD4C70026AE7F /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				FF0A987B248EA9A800BAC69A /* AnimatorsFactory.swift */,
 				FF82E0C0248B7DEF00F693DF /* DataLayerFactory.swift */,
 				FFCBB2DE248AD4ED0026AE7F /* Factory.swift */,
 				FF361A3E248BD4B400E6DDA6 /* ProvidersFactory.swift */,
@@ -758,6 +761,7 @@
 				FFFC5AB7248C1E5300116A4E /* UserBarViewModel.swift in Sources */,
 				FF79EBE5248D62DB0063D703 /* AchievementCollectionViewCell.swift in Sources */,
 				FFFDEE9F248E6D8700503866 /* ChartFormatter.swift in Sources */,
+				FF0A987C248EA9A800BAC69A /* AnimatorsFactory.swift in Sources */,
 				FF0A986B248E7E1400BAC69A /* Fonts.swift in Sources */,
 				FF82E0BF248B7D4B00F693DF /* HealthKitStore.swift in Sources */,
 				FF79EBDF248D581B0063D703 /* AchievementCellViewModel.swift in Sources */,
@@ -769,7 +773,7 @@
 				FFFC5AB3248C165E00116A4E /* UserBarView.swift in Sources */,
 				FFCBB2FB248ADC180026AE7F /* HomePresenter.swift in Sources */,
 				FF0A9869248E7A4200BAC69A /* Colors.swift in Sources */,
-				FF6728AA248E546700E731B3 /* AchievementsViewFlowLayout.swift in Sources */,
+				FF0A987A248E983900BAC69A /* AchievementAnimator.swift in Sources */,
 				FF6728A6248E44CD00E731B3 /* AchievementsViewInteractor.swift in Sources */,
 				FFD3ED64248CF97C00E13C5C /* StepsSynchronizer.swift in Sources */,
 				FFD3ED69248D00FB00E13C5C /* UserDefaults+Extensions.swift in Sources */,

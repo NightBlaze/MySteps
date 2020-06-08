@@ -13,7 +13,8 @@ class AchievementsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var achievementsView: AchievementsView!
 
-    func resolveDependencies(stepsReader: IStepsProviderReader) {
-        achievementsView.resolveDependencies(stepsReader: stepsReader)
+    func resolveDependencies(stepsReader: IStepsProviderReader,
+                             animator: IAchievementAnimator) {
+        achievementsView.resolveDependencies(stepsReader: stepsReader, animator: animator)
     }
 }

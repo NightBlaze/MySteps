@@ -9,7 +9,8 @@
 import UIKit
 
 protocol IAchievementsView: UIView {
-    func resolveDependencies(stepsReader: IStepsProviderReader)
+    func resolveDependencies(stepsReader: IStepsProviderReader,
+                             animator: IAchievementAnimator)
 }
 
 protocol IAchievementsViewUpdater: UIView {
@@ -21,18 +22,26 @@ final class AchievementsView: BaseNibView {
     @IBOutlet weak var achievementsCountLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
 
-    private let collectionViewLayout = AchievementsViewFlowLayout()
     private var interactor: IAchievementsViewInteractor?
+    private var animator: IAchievementAnimator?
 
-    private var viewModels: [AchievementCellViewModel]? {
-        didSet {
-            updateUI()
-        }
-    }
+    private var viewModels: [AchievementCellViewModel]?
+    private var tempViewModels: [AchievementCellViewModel]?
+    private var needToAnimate = true
 
     override func initialize(useAutoLayout: Bool = true,
                              bundle: Bundle? = .main) {
         super.initialize(useAutoLayout: useAutoLayout, bundle: bundle)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(applicationWillEnterForeground(notification:)),
+                                               name: UIApplication.willEnterForegroundNotification,
+                                               object: nil)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(applicationDidBecomeActive(notification:)),
+                                               name: UIApplication.didBecomeActiveNotification,
+                                               object: nil)
 
         backgroundColor = Colors.Background.view
         achievementsTitleLabel.textColor = Colors.Foreground.white
@@ -52,15 +61,17 @@ final class AchievementsView: BaseNibView {
 
         AchievementCollectionViewCell.registerNib(for: collectionView)
 
-        collectionView.setCollectionViewLayout(collectionViewLayout, animated: false)
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
 }
 
 // MARK: - IAchievementsView
 
 extension AchievementsView: IAchievementsView {
-    func resolveDependencies(stepsReader: IStepsProviderReader) {
+    func resolveDependencies(stepsReader: IStepsProviderReader,
+                             animator: IAchievementAnimator) {
+        self.animator = animator
         interactor?.resolveDependencies(stepsReader: stepsReader)
         interactor?.loadData()
     }
@@ -71,6 +82,7 @@ extension AchievementsView: IAchievementsView {
 extension AchievementsView: IAchievementsViewUpdater {
     func updateViewModels(_ viewModels: [AchievementCellViewModel]) {
         self.viewModels = viewModels
+        updateUI()
     }
 }
 
@@ -81,11 +93,25 @@ private extension AchievementsView {
         // TODO: localize
         achievementsCountLabel.text = "\(viewModels?.count ?? 0)"
 
-        let viewModelsCount = viewModels?.count ?? 0
-        let indexPaths = (0..<viewModelsCount).map { IndexPath(item: $0, section: 0) }
-        collectionView.performBatchUpdates({
-            collectionView.reloadItems(at: indexPaths)
-        })
+        collectionView.performBatchUpdates(nil)
+    }
+
+    @objc func applicationWillEnterForeground(notification: NSNotification) {
+        tempViewModels = viewModels
+        viewModels = nil
+        collectionView.reloadData()
+    }
+
+    @objc func applicationDidBecomeActive(notification: NSNotification) {
+        guard tempViewModels != nil else { return }
+
+        viewModels = tempViewModels
+        tempViewModels = nil
+        needToAnimate = true
+        collectionView.reloadData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            self.needToAnimate = false
+        }
     }
 }
 
@@ -102,5 +128,25 @@ extension AchievementsView: UICollectionViewDataSource {
             cell.update(viewModel: viewModel)
         }
         return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension AchievementsView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if needToAnimate {
+            animator?.animate(view: cell, indexPath: indexPath)
+
+            // We need show animation only once
+            // and do not animate while scrolling
+            // On the screen there are max 3 cells
+            // so we disable animation after 3 animations
+            // or after all cells appears (if we have not 3 cells)
+            let totalAchievements = self.collectionView(collectionView, numberOfItemsInSection: indexPath.section)
+            if indexPath.row >= totalAchievements || indexPath.row >= 2 {
+                needToAnimate = false
+            }
+        }
     }
 }
