@@ -21,6 +21,7 @@ final class AchievementsView: BaseNibView {
     @IBOutlet weak var achievementsCountLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
 
+    private let collectionViewLayout = AchievementsViewFlowLayout()
     private var interactor: IAchievementsViewInteractor?
 
     private var viewModels: [AchievementCellViewModel]? {
@@ -42,6 +43,7 @@ final class AchievementsView: BaseNibView {
 
         AchievementCollectionViewCell.registerNib(for: collectionView)
 
+        collectionView.setCollectionViewLayout(collectionViewLayout, animated: false)
         collectionView.dataSource = self
     }
 }
@@ -70,7 +72,11 @@ private extension AchievementsView {
         // TODO: localize
         achievementsCountLabel.text = "\(viewModels?.count ?? 0)"
 
-        collectionView.reloadData()
+        let viewModelsCount = viewModels?.count ?? 0
+        let indexPaths = (0..<viewModelsCount).map { IndexPath(item: $0, section: 0) }
+        collectionView.performBatchUpdates({
+            collectionView.reloadItems(at: indexPaths)
+        })
     }
 }
 

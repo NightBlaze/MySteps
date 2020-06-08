@@ -20,4 +20,9 @@ class AchievementCollectionViewCell: UICollectionViewCell {
         achievementTitleLabel.text = viewModel.title
         stepsCountLabel.text = viewModel.stepsCount
     }
+
+    override func awakeFromNib() {
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = imageView.bounds.size.width / 2
+    }
 }

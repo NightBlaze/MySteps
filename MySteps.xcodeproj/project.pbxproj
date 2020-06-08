@@ -32,6 +32,7 @@
 		FF3B7BB7248AC41400E56FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF3B7BB5248AC41400E56FDB /* LaunchScreen.storyboard */; };
 		FF6728A6248E44CD00E731B3 /* AchievementsViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6728A5248E44CD00E731B3 /* AchievementsViewInteractor.swift */; };
 		FF6728A8248E44DE00E731B3 /* AchievementsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6728A7248E44DD00E731B3 /* AchievementsViewPresenter.swift */; };
+		FF6728AA248E546700E731B3 /* AchievementsViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6728A9248E546700E731B3 /* AchievementsViewFlowLayout.swift */; };
 		FF79EBDB248D57FC0063D703 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79EBDA248D57FC0063D703 /* AchievementsView.swift */; };
 		FF79EBDD248D580B0063D703 /* AchievementsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF79EBDC248D580B0063D703 /* AchievementsView.xib */; };
 		FF79EBDF248D581B0063D703 /* AchievementCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79EBDE248D581B0063D703 /* AchievementCellViewModel.swift */; };
@@ -105,6 +106,7 @@
 		FF3B7BB8248AC41400E56FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF6728A5248E44CD00E731B3 /* AchievementsViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewInteractor.swift; sourceTree = "<group>"; };
 		FF6728A7248E44DD00E731B3 /* AchievementsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewPresenter.swift; sourceTree = "<group>"; };
+		FF6728A9248E546700E731B3 /* AchievementsViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewFlowLayout.swift; sourceTree = "<group>"; };
 		FF79EBDA248D57FC0063D703 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		FF79EBDC248D580B0063D703 /* AchievementsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementsView.xib; sourceTree = "<group>"; };
 		FF79EBDE248D581B0063D703 /* AchievementCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCellViewModel.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				FF6728A4248E447A00E731B3 /* Cells */,
 				FF79EBDA248D57FC0063D703 /* AchievementsView.swift */,
 				FF79EBDC248D580B0063D703 /* AchievementsView.xib */,
+				FF6728A9248E546700E731B3 /* AchievementsViewFlowLayout.swift */,
 				FF6728A5248E44CD00E731B3 /* AchievementsViewInteractor.swift */,
 				FF6728A7248E44DD00E731B3 /* AchievementsViewPresenter.swift */,
 			);
@@ -714,6 +717,7 @@
 				FF361A3F248BD4B400E6DDA6 /* ProvidersFactory.swift in Sources */,
 				FFFC5AB3248C165E00116A4E /* UserBarView.swift in Sources */,
 				FFCBB2FB248ADC180026AE7F /* HomePresenter.swift in Sources */,
+				FF6728AA248E546700E731B3 /* AchievementsViewFlowLayout.swift in Sources */,
 				FF6728A6248E44CD00E731B3 /* AchievementsViewInteractor.swift in Sources */,
 				FFD3ED64248CF97C00E13C5C /* StepsSynchronizer.swift in Sources */,
 				FFD3ED69248D00FB00E13C5C /* UserDefaults+Extensions.swift in Sources */,
