@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChartView" customModule="MySteps" customModuleProvider="target">
             <connections>
+                <outlet property="chartView" destination="n7R-RD-5sb" id="fC7-2s-Teo"/>
                 <outlet property="containerView" destination="iN0-l3-epB" id="8ge-Bk-tGe"/>
                 <outlet property="datePeriodLabel" destination="BMN-rT-eqT" id="JeE-ZU-av2"/>
                 <outlet property="stepsCountLabel" destination="dsN-Ry-6aJ" id="Snq-xE-s7O"/>
@@ -38,9 +39,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7R-RD-5sb">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7R-RD-5sb" customClass="LineChartView" customModule="Charts">
                     <rect key="frame" x="0.0" y="68" width="414" height="138"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

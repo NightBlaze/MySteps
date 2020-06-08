@@ -71,6 +71,7 @@
 		FFFC5AB3248C165E00116A4E /* UserBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC5AB2248C165E00116A4E /* UserBarView.swift */; };
 		FFFC5AB5248C166E00116A4E /* UserBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFC5AB4248C166E00116A4E /* UserBarView.xib */; };
 		FFFC5AB7248C1E5300116A4E /* UserBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC5AB6248C1E5300116A4E /* UserBarViewModel.swift */; };
+		FFFDEE9F248E6D8700503866 /* ChartFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFDEE9E248E6D8700503866 /* ChartFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +146,7 @@
 		FFFC5AB2248C165E00116A4E /* UserBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBarView.swift; sourceTree = "<group>"; };
 		FFFC5AB4248C166E00116A4E /* UserBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserBarView.xib; sourceTree = "<group>"; };
 		FFFC5AB6248C1E5300116A4E /* UserBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBarViewModel.swift; sourceTree = "<group>"; };
+		FFFDEE9E248E6D8700503866 /* ChartFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +382,7 @@
 		FF9456D7248D4BE20011B819 /* Chart */ = {
 			isa = PBXGroup;
 			children = (
+				FFFDEE9E248E6D8700503866 /* ChartFormatter.swift */,
 				FF9456D8248D4C010011B819 /* ChartView.swift */,
 				FF9456DA248D4C0B0011B819 /* ChartView.xib */,
 				FF9456DC248D50340011B819 /* ChartViewModel.swift */,
@@ -708,6 +711,7 @@
 				FFD3ED66248CFF9300E13C5C /* SynchronizersFactory.swift in Sources */,
 				FFFC5AB7248C1E5300116A4E /* UserBarViewModel.swift in Sources */,
 				FF79EBE5248D62DB0063D703 /* AchievementCollectionViewCell.swift in Sources */,
+				FFFDEE9F248E6D8700503866 /* ChartFormatter.swift in Sources */,
 				FF82E0BF248B7D4B00F693DF /* HealthKitStore.swift in Sources */,
 				FF79EBDF248D581B0063D703 /* AchievementCellViewModel.swift in Sources */,
 				FF9456D9248D4C010011B819 /* ChartView.swift in Sources */,

@@ -18,6 +18,10 @@ extension Date {
         self.dateFor(.endOfMonth).adjust(hour: 23, minute: 59, second: 59)
     }
 
+    var day: Int {
+        self.component(.day)!
+    }
+
     static var startOfPreviousMonth: Date {
         Calendar.current.date(byAdding: .month, value: -1, to: Date())!.adjust(hour: 0, minute: 0, second: 0, day: 0)
     }
