@@ -43,6 +43,11 @@ final class AchievementsView: BaseNibView {
                                                name: UIApplication.didBecomeActiveNotification,
                                                object: nil)
 
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(synchronizationFinished(notification:)),
+                                               name: StepsSynchronizer.SynchronizationFinishedNotification,
+                                               object: nil)
+
         backgroundColor = Colors.Background.view
         achievementsTitleLabel.textColor = Colors.Foreground.white
         achievementsTitleLabel.backgroundColor = Colors.Background.label
@@ -90,8 +95,9 @@ extension AchievementsView: IAchievementsViewUpdater {
 
 private extension AchievementsView {
     func updateUI() {
+        let count = viewModels?.count ?? 0
         // TODO: localize
-        achievementsCountLabel.text = "\(viewModels?.count ?? 0)"
+        achievementsCountLabel.text = "\(count)"
 
         collectionView.performBatchUpdates(nil)
     }
@@ -112,6 +118,10 @@ private extension AchievementsView {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
             self.needToAnimate = false
         }
+    }
+
+    @objc func synchronizationFinished(notification: NSNotification) {
+        interactor?.loadData()
     }
 }
 

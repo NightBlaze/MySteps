@@ -30,6 +30,11 @@ final class ChartView: BaseNibView {
                              bundle: Bundle? = .main) {
         super.initialize(useAutoLayout: useAutoLayout, bundle: bundle)
 
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(synchronizationFinished(notification:)),
+                                               name: StepsSynchronizer.SynchronizationFinishedNotification,
+                                               object: nil)
+
         backgroundColor = Colors.Background.view
         stepsTitleLabel.textColor = Colors.Foreground.white
         stepsTitleLabel.backgroundColor = Colors.Background.label
@@ -113,5 +118,9 @@ private extension ChartView {
         lineChartData.setDrawValues(false)
 
         chartView.data = lineChartData
+    }
+
+    @objc func synchronizationFinished(notification: NSNotification) {
+        loadData()
     }
 }

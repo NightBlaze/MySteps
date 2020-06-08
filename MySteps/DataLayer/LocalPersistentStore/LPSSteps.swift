@@ -14,7 +14,7 @@ protocol ILPSStepsReader {
 }
 
 protocol ILPSStepsWriter {
-    func writeSteps(_ dailySteps: [DailySteps])
+    func writeSteps(_ dailySteps: [DailySteps], _ completion: @escaping () -> ())
 }
 
 final class LPSSteps {
@@ -46,7 +46,7 @@ extension LPSSteps: ILPSStepsReader {
 // MARK: - ILPSStepsWriter
 
 extension LPSSteps: ILPSStepsWriter {
-    func writeSteps(_ dailySteps: [DailySteps]) {
+    func writeSteps(_ dailySteps: [DailySteps], _ completion: @escaping () -> ()) {
         dataStack.perform(
             asynchronous: { (transaction) -> Void in
                 dailySteps.forEach { dailyStep in
@@ -63,7 +63,7 @@ extension LPSSteps: ILPSStepsWriter {
                 }
 
             },
-            completion: { _ in }
+            completion: { _ in completion() }
         )
     }
 }

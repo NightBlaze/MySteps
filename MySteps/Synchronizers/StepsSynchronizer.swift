@@ -15,6 +15,8 @@ protocol IStepsSynchronizer {
 /// StepsSynchronizer gets steps count from external resources
 /// and saves it to local store.
 final class StepsSynchronizer {
+    static let SynchronizationFinishedNotification = Notification.Name(rawValue: "SynchronizationFinishedNotification")
+
     // It's better to create seprate "SettingsStore"
     // and use it in this class as den dependency.
     // I use UserDefaults just to simplify this test assessment
@@ -64,7 +66,11 @@ private extension StepsSynchronizer {
             guard case .success(let steps) = result, let self = self else { return }
 
             // 3. Save steps to local store
-            self.stepsWriter.writeSteps(steps)
+            self.stepsWriter.writeSteps(steps) {
+                DispatchQueue.main.async {
+                    NotificationCenter.default.post(name: StepsSynchronizer.SynchronizationFinishedNotification, object: nil)
+                }
+            }
 
             // 4. Save last synchronization date
             self.saveLastSynchronizationDate(endDate)
