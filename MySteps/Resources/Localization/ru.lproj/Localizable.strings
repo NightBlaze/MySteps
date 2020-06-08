@@ -13,3 +13,12 @@
 // AppStartViewController
 "app_start_view_controller.app_initialization.error" = "Ошибка инициализации приложения";
 "app_start_view_controller.healthkit_initialization.error" = "Ошибка инициализации HealthKit";
+
+// AchievementCell
+"achievement_cell.achievement_title" = "Цель\nдостигнута";
+
+// AchievementsView
+"achievements_view.achievements_title" = "Достижения";
+
+// ChartView
+"chart_view.steps_title" = "Steps";

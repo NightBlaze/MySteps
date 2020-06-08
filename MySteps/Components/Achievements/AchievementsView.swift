@@ -61,8 +61,7 @@ final class AchievementsView: BaseNibView {
         presenter.resolveDependencies(view: self)
         interactor = AchievementsViewInteractor(presenter: presenter)
 
-        // TODO: localize
-        achievementsTitleLabel.text = "Achievements"
+        achievementsTitleLabel.text = "achievements_view.achievements_title".localized
 
         AchievementCollectionViewCell.registerNib(for: collectionView)
 
@@ -96,8 +95,7 @@ extension AchievementsView: IAchievementsViewUpdater {
 private extension AchievementsView {
     func updateUI() {
         let count = viewModels?.count ?? 0
-        // TODO: localize
-        achievementsCountLabel.text = "\(count)"
+        achievementsCountLabel.text = "\(count.localized)"
 
         collectionView.performBatchUpdates(nil)
     }

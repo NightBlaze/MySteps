@@ -13,3 +13,12 @@
 // AppStartViewController
 "app_start_view_controller.app_initialization.error" = "Error initialize application";
 "app_start_view_controller.healthkit_initialization.error" = "Error initialize HealthKit";
+
+// AchievementCell
+"achievement_cell.achievement_title" = "Goal\nachievement";
+
+// AchievementsView
+"achievements_view.achievements_title" = "Achievements";
+
+// ChartView
+"chart_view.steps_title" = "Steps";

@@ -14,11 +14,10 @@ struct AchievementCellViewModel {
     let imageName: String
 
     init(steps: Int) {
-        // TODO: localize
-        title = "Goal\nachievement"
+        title = "achievement_cell.achievement_title".localized
         let rounded = Double(steps).roundToLowestValue(5000)
         let thousands = Int(rounded / 1000)
-        stepsCount = "\(thousands)K"
+        stepsCount = "\(thousands.localized)K"
         imageName = "\(thousands)k"
     }
 }

@@ -18,6 +18,8 @@
 		FF0A9878248E936D00BAC69A /* FontsFree-Net-SFCompactText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF0A9877248E936D00BAC69A /* FontsFree-Net-SFCompactText-SemiBold.ttf */; };
 		FF0A987A248E983900BAC69A /* AchievementAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A9879248E983900BAC69A /* AchievementAnimator.swift */; };
 		FF0A987C248EA9A800BAC69A /* AnimatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A987B248EA9A800BAC69A /* AnimatorsFactory.swift */; };
+		FF0A987F248EB8CC00BAC69A /* Int+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A987E248EB8CC00BAC69A /* Int+Localization.swift */; };
+		FF0A9881248EBB1800BAC69A /* Date+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A9880248EBB1800BAC69A /* Date+Localization.swift */; };
 		FF361A0F248BAE2A00E6DDA6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF361A11248BAE2A00E6DDA6 /* Localizable.strings */; };
 		FF361A12248BAE2D00E6DDA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF361A14248BAE2D00E6DDA6 /* InfoPlist.strings */; };
 		FF361A19248BAF7200E6DDA6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF361A18248BAF7200E6DDA6 /* HealthKit.framework */; };
@@ -97,6 +99,8 @@
 		FF0A9877248E936D00BAC69A /* FontsFree-Net-SFCompactText-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFCompactText-SemiBold.ttf"; sourceTree = "<group>"; };
 		FF0A9879248E983900BAC69A /* AchievementAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementAnimator.swift; sourceTree = "<group>"; };
 		FF0A987B248EA9A800BAC69A /* AnimatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorsFactory.swift; sourceTree = "<group>"; };
+		FF0A987E248EB8CC00BAC69A /* Int+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Localization.swift"; sourceTree = "<group>"; };
+		FF0A9880248EBB1800BAC69A /* Date+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Localization.swift"; sourceTree = "<group>"; };
 		FF361A10248BAE2A00E6DDA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF361A13248BAE2D00E6DDA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FF361A15248BAE5900E6DDA6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -218,6 +222,14 @@
 				FF0A986D248E90BA00BAC69A /* FontsFree-Net-SFProText-Heavy.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FF0A987D248EB8B300BAC69A /* Int */ = {
+			isa = PBXGroup;
+			children = (
+				FF0A987E248EB8CC00BAC69A /* Int+Localization.swift */,
+			);
+			path = Int;
 			sourceTree = "<group>";
 		};
 		FF361A0B248BAD4C00E6DDA6 /* Localization */ = {
@@ -416,6 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				FF9456D0248D23060011B819 /* Date+Extensions.swift */,
+				FF0A9880248EBB1800BAC69A /* Date+Localization.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
@@ -458,6 +471,7 @@
 			children = (
 				FF9456CF248D22EE0011B819 /* Date */,
 				FF79EBE0248D60650063D703 /* Double */,
+				FF0A987D248EB8B300BAC69A /* Int */,
 				FF361A23248BC05400E6DDA6 /* NSObject */,
 				FF361A1A248BB8C100E6DDA6 /* String */,
 				FF79EBE7248D62FB0063D703 /* UICollectionViewCell */,
@@ -741,6 +755,7 @@
 				FF82E0B8248B799500F693DF /* AppStartErrorViewModel.swift in Sources */,
 				FFD3ED5F248CEC6600E13C5C /* StepsProvider.swift in Sources */,
 				FF9456D6248D35410011B819 /* AchievementsProvider.swift in Sources */,
+				FF0A987F248EB8CC00BAC69A /* Int+Localization.swift in Sources */,
 				FFCBB2FD248ADC180026AE7F /* HomeInteractor.swift in Sources */,
 				FF6728A8248E44DE00E731B3 /* AchievementsViewPresenter.swift in Sources */,
 				FFFC5AAF248C13DB00116A4E /* BaseNibView.swift in Sources */,
@@ -759,6 +774,7 @@
 				FF361A3B248BCA2200E6DDA6 /* LPSUser.swift in Sources */,
 				FFD3ED66248CFF9300E13C5C /* SynchronizersFactory.swift in Sources */,
 				FFFC5AB7248C1E5300116A4E /* UserBarViewModel.swift in Sources */,
+				FF0A9881248EBB1800BAC69A /* Date+Localization.swift in Sources */,
 				FF79EBE5248D62DB0063D703 /* AchievementCollectionViewCell.swift in Sources */,
 				FFFDEE9F248E6D8700503866 /* ChartFormatter.swift in Sources */,
 				FF0A987C248EA9A800BAC69A /* AnimatorsFactory.swift in Sources */,

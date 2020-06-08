@@ -47,8 +47,7 @@ final class ChartView: BaseNibView {
         stepsCountLabel.font = Fonts.stepsCount
         datePeriodLabel.font = Fonts.period
 
-        // TODO: localize
-        stepsTitleLabel.text = "Steps"
+        stepsTitleLabel.text = "chart_view.steps_title".localized
 
         chartView.chartDescription?.enabled = false
         chartView.dragEnabled = false
@@ -97,9 +96,12 @@ private extension ChartView {
     }
 
     func updateUI() {
-        // TODO: localize
-        stepsCountLabel.text = "\(viewModel?.totalSteps ?? 0)"
-//        datePeriodLabel.text = "\(viewModel?.startDate) - \(viewModel?.endDate)"
+        let count = Int(viewModel?.totalSteps ?? 0)
+        stepsCountLabel.text = count.localized
+        if let startDate = viewModel?.startDate,
+            let endDate = viewModel?.endDate {
+            datePeriodLabel.text = "\(startDate.localized(withYear: false)) - \(endDate.localized(withYear: true))"
+        }
 
         var dataEntries: [ChartDataEntry] = []
         let keys = viewModel?.stepsPerDay.keys.sorted() ?? [Date]()
