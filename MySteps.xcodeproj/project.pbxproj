@@ -58,7 +58,6 @@
 		FF82E0BF248B7D4B00F693DF /* HealthKitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82E0BE248B7D4B00F693DF /* HealthKitStore.swift */; };
 		FF82E0C1248B7DEF00F693DF /* DataLayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82E0C0248B7DEF00F693DF /* DataLayerFactory.swift */; };
 		FF9456D1248D23060011B819 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9456D0248D23060011B819 /* Date+Extensions.swift */; };
-		FF9456D6248D35410011B819 /* AchievementsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9456D5248D35410011B819 /* AchievementsProvider.swift */; };
 		FF9456D9248D4C010011B819 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9456D8248D4C010011B819 /* ChartView.swift */; };
 		FF9456DB248D4C0B0011B819 /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9456DA248D4C0B0011B819 /* ChartView.xib */; };
 		FF9456DD248D50340011B819 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9456DC248D50340011B819 /* ChartViewModel.swift */; };
@@ -146,7 +145,6 @@
 		FF82E0BE248B7D4B00F693DF /* HealthKitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitStore.swift; sourceTree = "<group>"; };
 		FF82E0C0248B7DEF00F693DF /* DataLayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerFactory.swift; sourceTree = "<group>"; };
 		FF9456D0248D23060011B819 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
-		FF9456D5248D35410011B819 /* AchievementsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsProvider.swift; sourceTree = "<group>"; };
 		FF9456D8248D4C010011B819 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		FF9456DA248D4C0B0011B819 /* ChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
 		FF9456DC248D50340011B819 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
@@ -317,7 +315,6 @@
 		FF361A37248BC8AF00E6DDA6 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				FF9456D5248D35410011B819 /* AchievementsProvider.swift */,
 				FFD3ED5E248CEC6600E13C5C /* StepsProvider.swift */,
 				FF361A38248BC8DB00E6DDA6 /* UserProvider.swift */,
 			);
@@ -769,7 +766,6 @@
 				FFCBB2F3248ADAFA0026AE7F /* AppStartViewController.swift in Sources */,
 				FF82E0B8248B799500F693DF /* AppStartErrorViewModel.swift in Sources */,
 				FFD3ED5F248CEC6600E13C5C /* StepsProvider.swift in Sources */,
-				FF9456D6248D35410011B819 /* AchievementsProvider.swift in Sources */,
 				FF0A987F248EB8CC00BAC69A /* Int+Localization.swift in Sources */,
 				FFCBB2FD248ADC180026AE7F /* HomeInteractor.swift in Sources */,
 				FF6728A8248E44DE00E731B3 /* AchievementsViewPresenter.swift in Sources */,
