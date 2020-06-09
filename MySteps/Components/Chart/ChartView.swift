@@ -49,25 +49,44 @@ final class ChartView: BaseNibView {
 
         stepsTitleLabel.text = "chart_view.steps_title".localized
 
+        // Chart view
         chartView.chartDescription?.enabled = false
         chartView.dragEnabled = false
         chartView.setScaleEnabled(false)
         chartView.pinchZoomEnabled = false
-
-        let formatter = ChartFormatter()
-        let xAxis = XAxis()
-        xAxis.valueFormatter = formatter
-
-        chartView.xAxis.labelPosition = .bottom
-        chartView.xAxis.drawGridLinesEnabled = false
-        chartView.xAxis.valueFormatter = xAxis.valueFormatter
-        chartView.chartDescription?.enabled = false
+        chartView.gridBackgroundColor = Colors.Background.view
+        chartView.drawBordersEnabled = false
         chartView.legend.enabled = false
+        chartView.autoScaleMinMaxEnabled = true
+
+        // Right axis
         chartView.rightAxis.enabled = true
         chartView.rightAxis.drawLabelsEnabled = true
         chartView.rightAxis.drawGridLinesEnabled = true
+        chartView.rightAxis.gridColor = Colors.Foreground.lightGrey
+        chartView.rightAxis.gridLineWidth = 1.0
+        chartView.rightAxis.axisLineColor = .clear
+        chartView.rightAxis.labelFont = Fonts.graphSteps
+        chartView.rightAxis.labelTextColor = Colors.Foreground.grey
+        chartView.rightAxis.labelPosition = .insideChart
+        chartView.rightAxis.labelCount = 4
+
+        // Left axis
         chartView.leftAxis.enabled = false
-        chartView.leftAxis.drawLabelsEnabled = false
+
+        // X axis
+        chartView.xAxis.valueFormatter = DefaultAxisValueFormatter(block: { (value, _) -> String in
+            if Int(value) == 1 || Int(value) % 5 == 0 {
+                return "\(Int(value))"
+            }
+            return ""
+        })
+        chartView.xAxis.drawGridLinesEnabled = false
+        chartView.xAxis.labelPosition = .bottom
+        chartView.xAxis.axisLineColor = .clear
+        chartView.xAxis.setLabelCount(30, force: false)
+        chartView.xAxis.labelFont = Fonts.graphDates
+        chartView.xAxis.labelTextColor = Colors.Foreground.grey
     }
 }
 
@@ -113,9 +132,12 @@ private extension ChartView {
         }
 
         let lineChartDataSet = LineChartDataSet(entries: dataEntries, label: nil)
-        lineChartDataSet.circleRadius = 0
         lineChartDataSet.lineCapType = .round
         lineChartDataSet.mode = .horizontalBezier
+        lineChartDataSet.drawCirclesEnabled = false
+        lineChartDataSet.lineWidth = 3.0
+        lineChartDataSet.colors = [Colors.Graph.blue]
+
         let lineChartData = LineChartData(dataSet: lineChartDataSet)
         lineChartData.setDrawValues(false)
 
