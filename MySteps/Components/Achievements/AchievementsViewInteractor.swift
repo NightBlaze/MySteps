@@ -19,6 +19,11 @@ final class AchievementsViewInteractor {
 
     init(presenter: IAchievementsViewPresenter) {
         self.presenter = presenter
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(synchronizationFinished(notification:)),
+                                               name: StepsSynchronizer.SynchronizationFinishedNotification,
+                                               object: nil)
     }
 }
 
@@ -36,5 +41,13 @@ extension AchievementsViewInteractor: IAchievementsViewInteractor {
 
             self.presenter.showAchievements(steps: stepsResult.steps)
         }
+    }
+}
+
+// MARK: - Private
+
+private extension AchievementsViewInteractor {
+    @objc func synchronizationFinished(notification: NSNotification) {
+        loadData()
     }
 }

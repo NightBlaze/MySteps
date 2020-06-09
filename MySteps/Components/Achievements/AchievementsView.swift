@@ -43,11 +43,6 @@ final class AchievementsView: BaseNibView {
                                                name: UIApplication.didBecomeActiveNotification,
                                                object: nil)
 
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(synchronizationFinished(notification:)),
-                                               name: StepsSynchronizer.SynchronizationFinishedNotification,
-                                               object: nil)
-
         backgroundColor = Colors.Background.view
         achievementsTitleLabel.textColor = Colors.Foreground.white
         achievementsTitleLabel.backgroundColor = Colors.Background.label
@@ -116,10 +111,6 @@ private extension AchievementsView {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
             self.needToAnimate = false
         }
-    }
-
-    @objc func synchronizationFinished(notification: NSNotification) {
-        interactor?.loadData()
     }
 }
 
