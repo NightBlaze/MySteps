@@ -69,7 +69,8 @@ final class ChartView: BaseNibView {
         chartView.rightAxis.labelFont = Fonts.graphSteps
         chartView.rightAxis.labelTextColor = Colors.Foreground.grey
         chartView.rightAxis.labelPosition = .insideChart
-        chartView.rightAxis.labelCount = 4
+        chartView.rightAxis.setLabelCount(4, force: true)
+        chartView.rightAxis.axisMinimum = 0
 
         // Left axis
         chartView.leftAxis.enabled = false
