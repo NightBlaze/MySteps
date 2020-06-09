@@ -43,9 +43,6 @@ class BaseNibView: UIView {
                 containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
                 containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
                 containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-
-                setNeedsLayout()
-                layoutIfNeeded()
             }
 
             containerView.backgroundColor = backgroundColor

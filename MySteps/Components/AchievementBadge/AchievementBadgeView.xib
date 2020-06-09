@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchievementBadgeView" customModule="MySteps" customModuleProvider="target">
+            <connections>
+                <outlet property="achievementTitleLabel" destination="u0j-FA-Fqk" id="zyy-AE-jjP"/>
+                <outlet property="containerView" destination="iN0-l3-epB" id="6nA-rV-icw"/>
+                <outlet property="imageView" destination="sJz-yP-7mt" id="dOB-Eb-oEN"/>
+                <outlet property="stepsCountLabel" destination="vUf-0c-eaE" id="Xc4-9M-nVA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="116" height="177"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sJz-yP-7mt">
+                    <rect key="frame" x="0.0" y="0.0" width="116" height="116"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="116" id="KwR-ww-YJw"/>
+                    </constraints>
+                </imageView>
+                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-FA-Fqk">
+                    <rect key="frame" x="0.0" y="122" width="116" height="36"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <string key="text">Goal
+achievement</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUf-0c-eaE">
+                    <rect key="frame" x="42.5" y="159" width="31" height="16"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="sJz-yP-7mt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6FH-MJ-1M7"/>
+                <constraint firstItem="vUf-0c-eaE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OTa-j5-G2z"/>
+                <constraint firstItem="vUf-0c-eaE" firstAttribute="top" secondItem="u0j-FA-Fqk" secondAttribute="bottom" constant="1" id="Pd5-ag-BQb"/>
+                <constraint firstItem="u0j-FA-Fqk" firstAttribute="top" secondItem="sJz-yP-7mt" secondAttribute="bottom" constant="6" id="Uh4-ra-6I3"/>
+                <constraint firstItem="sJz-yP-7mt" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="aee-W6-L92"/>
+                <constraint firstItem="u0j-FA-Fqk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="iSp-vw-yBD"/>
+                <constraint firstItem="sJz-yP-7mt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kB7-hK-j3I"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="u0j-FA-Fqk" secondAttribute="trailing" id="njB-W4-3wW"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-112.5"/>
+        </view>
+    </objects>
+</document>

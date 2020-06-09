@@ -37,6 +37,9 @@
 		FF361A3B248BCA2200E6DDA6 /* LPSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A3A248BCA2200E6DDA6 /* LPSUser.swift */; };
 		FF361A3D248BCDC900E6DDA6 /* UserDAO+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A3C248BCDC900E6DDA6 /* UserDAO+Extensions.swift */; };
 		FF361A3F248BD4B400E6DDA6 /* ProvidersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF361A3E248BD4B400E6DDA6 /* ProvidersFactory.swift */; };
+		FF3AFEAB248F4176005D5FF2 /* AchievementBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AFEAA248F4176005D5FF2 /* AchievementBadgeView.swift */; };
+		FF3AFEAD248F4180005D5FF2 /* AchievementBadgeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3AFEAC248F4180005D5FF2 /* AchievementBadgeView.xib */; };
+		FF3AFEAF248F4342005D5FF2 /* AchievementBadgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AFEAE248F4342005D5FF2 /* AchievementBadgeViewModel.swift */; };
 		FF3B7BA8248AC41300E56FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BA7248AC41300E56FDB /* AppDelegate.swift */; };
 		FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BA9248AC41300E56FDB /* SceneDelegate.swift */; };
 		FF3B7BB2248AC41300E56FDB /* MySteps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF3B7BB0248AC41300E56FDB /* MySteps.xcdatamodeld */; };
@@ -46,7 +49,6 @@
 		FF6728A8248E44DE00E731B3 /* AchievementsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6728A7248E44DD00E731B3 /* AchievementsViewPresenter.swift */; };
 		FF79EBDB248D57FC0063D703 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79EBDA248D57FC0063D703 /* AchievementsView.swift */; };
 		FF79EBDD248D580B0063D703 /* AchievementsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF79EBDC248D580B0063D703 /* AchievementsView.xib */; };
-		FF79EBDF248D581B0063D703 /* AchievementCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79EBDE248D581B0063D703 /* AchievementCellViewModel.swift */; };
 		FF79EBE2248D60790063D703 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79EBE1248D60790063D703 /* Double+Extensions.swift */; };
 		FF79EBE5248D62DB0063D703 /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79EBE3248D62DB0063D703 /* AchievementCollectionViewCell.swift */; };
 		FF79EBE6248D62DB0063D703 /* AchievementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF79EBE4248D62DB0063D703 /* AchievementCollectionViewCell.xib */; };
@@ -121,6 +123,9 @@
 		FF361A3A248BCA2200E6DDA6 /* LPSUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPSUser.swift; sourceTree = "<group>"; };
 		FF361A3C248BCDC900E6DDA6 /* UserDAO+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDAO+Extensions.swift"; sourceTree = "<group>"; };
 		FF361A3E248BD4B400E6DDA6 /* ProvidersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersFactory.swift; sourceTree = "<group>"; };
+		FF3AFEAA248F4176005D5FF2 /* AchievementBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementBadgeView.swift; sourceTree = "<group>"; };
+		FF3AFEAC248F4180005D5FF2 /* AchievementBadgeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementBadgeView.xib; sourceTree = "<group>"; };
+		FF3AFEAE248F4342005D5FF2 /* AchievementBadgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementBadgeViewModel.swift; sourceTree = "<group>"; };
 		FF3B7BA4248AC41300E56FDB /* MySteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3B7BA7248AC41300E56FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF3B7BA9248AC41300E56FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,7 +137,6 @@
 		FF6728A7248E44DD00E731B3 /* AchievementsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewPresenter.swift; sourceTree = "<group>"; };
 		FF79EBDA248D57FC0063D703 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		FF79EBDC248D580B0063D703 /* AchievementsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementsView.xib; sourceTree = "<group>"; };
-		FF79EBDE248D581B0063D703 /* AchievementCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCellViewModel.swift; sourceTree = "<group>"; };
 		FF79EBE1248D60790063D703 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		FF79EBE3248D62DB0063D703 /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF79EBE4248D62DB0063D703 /* AchievementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -320,6 +324,16 @@
 			path = Providers;
 			sourceTree = "<group>";
 		};
+		FF3AFEA9248F4157005D5FF2 /* AchievementBadge */ = {
+			isa = PBXGroup;
+			children = (
+				FF3AFEAA248F4176005D5FF2 /* AchievementBadgeView.swift */,
+				FF3AFEAC248F4180005D5FF2 /* AchievementBadgeView.xib */,
+				FF3AFEAE248F4342005D5FF2 /* AchievementBadgeViewModel.swift */,
+			);
+			path = AchievementBadge;
+			sourceTree = "<group>";
+		};
 		FF3B7B9B248AC41300E56FDB = {
 			isa = PBXGroup;
 			children = (
@@ -363,7 +377,6 @@
 			children = (
 				FF79EBE3248D62DB0063D703 /* AchievementCollectionViewCell.swift */,
 				FF79EBE4248D62DB0063D703 /* AchievementCollectionViewCell.xib */,
-				FF79EBDE248D581B0063D703 /* AchievementCellViewModel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -589,6 +602,7 @@
 		FFFC5AAC248C138200116A4E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FF3AFEA9248F4157005D5FF2 /* AchievementBadge */,
 				FF79EBD9248D57E90063D703 /* Achievements */,
 				FFFC5AAD248C13C300116A4E /* Base */,
 				FF9456D7248D4BE20011B819 /* Chart */,
@@ -676,6 +690,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF3AFEAD248F4180005D5FF2 /* AchievementBadgeView.xib in Resources */,
 				FF361A2B248BC1BA00E6DDA6 /* UserAvatarTableViewCell.xib in Resources */,
 				FF361A0F248BAE2A00E6DDA6 /* Localizable.strings in Resources */,
 				FF361A12248BAE2D00E6DDA6 /* InfoPlist.strings in Resources */,
@@ -775,15 +790,16 @@
 				FFD3ED66248CFF9300E13C5C /* SynchronizersFactory.swift in Sources */,
 				FFFC5AB7248C1E5300116A4E /* UserBarViewModel.swift in Sources */,
 				FF0A9881248EBB1800BAC69A /* Date+Localization.swift in Sources */,
+				FF3AFEAB248F4176005D5FF2 /* AchievementBadgeView.swift in Sources */,
 				FF79EBE5248D62DB0063D703 /* AchievementCollectionViewCell.swift in Sources */,
 				FFFDEE9F248E6D8700503866 /* ChartFormatter.swift in Sources */,
 				FF0A987C248EA9A800BAC69A /* AnimatorsFactory.swift in Sources */,
 				FF0A986B248E7E1400BAC69A /* Fonts.swift in Sources */,
 				FF82E0BF248B7D4B00F693DF /* HealthKitStore.swift in Sources */,
-				FF79EBDF248D581B0063D703 /* AchievementCellViewModel.swift in Sources */,
 				FF9456D9248D4C010011B819 /* ChartView.swift in Sources */,
 				FF79EBE9248D631A0063D703 /* UICollectionViewCell+Creation.swift in Sources */,
 				FF361A3D248BCDC900E6DDA6 /* UserDAO+Extensions.swift in Sources */,
+				FF3AFEAF248F4342005D5FF2 /* AchievementBadgeViewModel.swift in Sources */,
 				FF3B7BAA248AC41300E56FDB /* SceneDelegate.swift in Sources */,
 				FF361A3F248BD4B400E6DDA6 /* ProvidersFactory.swift in Sources */,
 				FFFC5AB3248C165E00116A4E /* UserBarView.swift in Sources */,

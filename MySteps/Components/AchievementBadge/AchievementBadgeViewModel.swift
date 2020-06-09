@@ -1,14 +1,14 @@
 //
-//  AchievementCellViewModel.swift
+//  AchievementBadgeViewModel.swift
 //  MySteps
 //
-//  Created by Alexander Timonenkov on 07.06.2020.
+//  Created by Alexander Timonenkov on 09.06.2020.
 //  Copyright © 2020 ATi Soft. All rights reserved.
 //
 
 import Foundation
 
-struct AchievementCellViewModel {
+struct AchievementBadgeViewModel {
     let title: String
     let stepsCount: String
     let imageName: String

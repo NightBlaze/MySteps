@@ -14,7 +14,7 @@ protocol IAchievementsView: UIView {
 }
 
 protocol IAchievementsViewUpdater: UIView {
-    func updateViewModels(_ viewModels: [AchievementCellViewModel])
+    func updateViewModels(_ viewModels: [AchievementBadgeViewModel])
 }
 
 final class AchievementsView: BaseNibView {
@@ -25,8 +25,8 @@ final class AchievementsView: BaseNibView {
     private var interactor: IAchievementsViewInteractor?
     private var animator: IAchievementAnimator?
 
-    private var viewModels: [AchievementCellViewModel]?
-    private var tempViewModels: [AchievementCellViewModel]?
+    private var viewModels: [AchievementBadgeViewModel]?
+    private var tempViewModels: [AchievementBadgeViewModel]?
     private var needToAnimate = true
 
     override func initialize(useAutoLayout: Bool = true,
@@ -84,7 +84,7 @@ extension AchievementsView: IAchievementsView {
 // MARK: - IAchievementsViewUpdater
 
 extension AchievementsView: IAchievementsViewUpdater {
-    func updateViewModels(_ viewModels: [AchievementCellViewModel]) {
+    func updateViewModels(_ viewModels: [AchievementBadgeViewModel]) {
         self.viewModels = viewModels
         updateUI()
     }

@@ -32,7 +32,7 @@ extension AchievementsViewPresenter: IAchievementsViewPresenter {
 // MARK: - Private
 
 private extension AchievementsViewPresenter {
-    func createViewModels(daos: [StepsDAO]) -> [AchievementCellViewModel] {
+    func createViewModels(daos: [StepsDAO]) -> [AchievementBadgeViewModel] {
         var totalSteps = Int(daos.reduce(0) { $0 + $1.count })
         if totalSteps > 40000 {
             totalSteps = 40000
@@ -40,12 +40,12 @@ private extension AchievementsViewPresenter {
         return checkStepsAndReturnAchievements(acc: [], steps: totalSteps, decreaseStep: 5000).reversed()
     }
 
-    func checkStepsAndReturnAchievements(acc: [AchievementCellViewModel], steps: Int, decreaseStep: Int) -> [AchievementCellViewModel] {
+    func checkStepsAndReturnAchievements(acc: [AchievementBadgeViewModel], steps: Int, decreaseStep: Int) -> [AchievementBadgeViewModel] {
         if steps < 10000 {
             return acc
         }
 
-        let achievement = AchievementCellViewModel(steps: steps)
+        let achievement = AchievementBadgeViewModel(steps: steps)
         var result = acc
         result.append(achievement)
 

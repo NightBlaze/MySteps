@@ -16,46 +16,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="116" height="177"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sWg-9s-f0X">
-                        <rect key="frame" x="0.0" y="0.0" width="116" height="116"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="116" id="PxD-Hd-9FB"/>
-                        </constraints>
-                    </imageView>
-                    <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeT-IK-250">
-                        <rect key="frame" x="0.0" y="122" width="116" height="36"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <string key="text">Goal
-achievement</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgT-4L-xrh">
-                        <rect key="frame" x="42.5" y="159" width="31" height="16"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhb-fo-VuS" customClass="AchievementBadgeView" customModule="MySteps" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="116" height="177"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="sWg-9s-f0X" secondAttribute="trailing" id="5uh-iD-kbn"/>
-                <constraint firstItem="sWg-9s-f0X" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6ts-dV-hvh"/>
-                <constraint firstItem="sWg-9s-f0X" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Age-8y-5kr"/>
-                <constraint firstItem="EgT-4L-xrh" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="BrQ-Wa-oVn"/>
-                <constraint firstAttribute="trailing" secondItem="NeT-IK-250" secondAttribute="trailing" id="EHh-DJ-Cn8"/>
-                <constraint firstItem="NeT-IK-250" firstAttribute="top" secondItem="sWg-9s-f0X" secondAttribute="bottom" constant="6" id="SCf-uF-tme"/>
-                <constraint firstItem="EgT-4L-xrh" firstAttribute="top" secondItem="NeT-IK-250" secondAttribute="bottom" constant="1" id="UtA-6P-tzC"/>
-                <constraint firstItem="NeT-IK-250" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uPK-TK-7JU"/>
+                <constraint firstAttribute="bottom" secondItem="Qhb-fo-VuS" secondAttribute="bottom" id="B1z-cj-04D"/>
+                <constraint firstAttribute="trailing" secondItem="Qhb-fo-VuS" secondAttribute="trailing" id="BDb-tZ-4eC"/>
+                <constraint firstItem="Qhb-fo-VuS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XKg-jZ-4Oi"/>
+                <constraint firstItem="Qhb-fo-VuS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lhh-WL-rVu"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="187" height="125"/>
             <connections>
-                <outlet property="achievementTitleLabel" destination="NeT-IK-250" id="1R3-h2-5TL"/>
-                <outlet property="imageView" destination="sWg-9s-f0X" id="vrO-iB-mAH"/>
-                <outlet property="stepsCountLabel" destination="EgT-4L-xrh" id="0XQ-1W-ati"/>
+                <outlet property="badgeView" destination="Qhb-fo-VuS" id="MIM-5p-3xE"/>
             </connections>
             <point key="canvasLocation" x="236.23188405797103" y="137.61160714285714"/>
         </collectionViewCell>
