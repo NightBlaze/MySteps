@@ -9,7 +9,7 @@
 import UIKit
 
 class ChartTableViewCell: UITableViewCell {
-    static let height: CGFloat = 206
+    static let height: CGFloat = 226
 
     @IBOutlet weak var chartView: ChartView!
 

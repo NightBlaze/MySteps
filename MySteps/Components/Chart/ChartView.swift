@@ -18,7 +18,13 @@ final class ChartView: BaseNibView {
     @IBOutlet weak var stepsCountLabel: UILabel!
     @IBOutlet weak var datePeriodLabel: UILabel!
     @IBOutlet weak var chartView: LineChartView!
-    
+    // Some hack to satisfy design requirements
+    // It's hard to position labels for X axis in
+    // current library. So I decided to make
+    // hard-designed labels
+    @IBOutlet weak var daysStackView: UIStackView!
+    @IBOutlet var dayLabels: [UILabel]!
+
     private var stepsReader: IStepsProviderReader?
     private var viewModel: ChartViewModel? {
         didSet {
@@ -46,6 +52,12 @@ final class ChartView: BaseNibView {
         stepsTitleLabel.font = Fonts.stepsTitle
         stepsCountLabel.font = Fonts.stepsCount
         datePeriodLabel.font = Fonts.period
+        daysStackView.backgroundColor = Colors.Background.view
+        dayLabels.forEach { label in
+            label.backgroundColor = Colors.Background.label
+            label.textColor = Colors.Foreground.grey
+            label.font = Fonts.graphDates
+        }
 
         stepsTitleLabel.text = "chart_view.steps_title".localized
 
@@ -58,6 +70,8 @@ final class ChartView: BaseNibView {
         chartView.drawBordersEnabled = false
         chartView.legend.enabled = false
         chartView.autoScaleMinMaxEnabled = true
+        chartView.minOffset = 0
+        chartView.extraTopOffset = 20
 
         // Right axis
         chartView.rightAxis.enabled = true
@@ -71,23 +85,13 @@ final class ChartView: BaseNibView {
         chartView.rightAxis.labelPosition = .insideChart
         chartView.rightAxis.setLabelCount(4, force: true)
         chartView.rightAxis.axisMinimum = 0
+        chartView.rightAxis.yOffset = -10
 
         // Left axis
         chartView.leftAxis.enabled = false
 
         // X axis
-        chartView.xAxis.valueFormatter = DefaultAxisValueFormatter(block: { (value, _) -> String in
-            if Int(value) == 1 || Int(value) % 5 == 0 {
-                return "\(Int(value))"
-            }
-            return ""
-        })
-        chartView.xAxis.drawGridLinesEnabled = false
-        chartView.xAxis.labelPosition = .bottom
-        chartView.xAxis.axisLineColor = .clear
-        chartView.xAxis.setLabelCount(30, force: false)
-        chartView.xAxis.labelFont = Fonts.graphDates
-        chartView.xAxis.labelTextColor = Colors.Foreground.grey
+        chartView.xAxis.enabled = false
     }
 }
 
