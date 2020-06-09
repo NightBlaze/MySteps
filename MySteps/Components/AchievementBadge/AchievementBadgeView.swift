@@ -40,6 +40,6 @@ extension AchievementBadgeView: IAchievementBadgeView {
     func update(viewModel: AchievementBadgeViewModel) {
         imageView.image = UIImage(named: viewModel.imageName)
         achievementTitleLabel.text = viewModel.title
-        stepsCountLabel.text = viewModel.stepsCount
+        stepsCountLabel.text = viewModel.subtitle
     }
 }

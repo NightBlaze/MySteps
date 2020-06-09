@@ -10,14 +10,26 @@ import Foundation
 
 struct AchievementBadgeViewModel {
     let title: String
-    let stepsCount: String
+    let subtitle: String
     let imageName: String
 
+    static func noAchievements() -> AchievementBadgeViewModel {
+        return AchievementBadgeViewModel(title: "achievement_badge.no_achievements_title".localized,
+                                         subtitle: "achievement_badge.no_achievements_subtitle".localized,
+                                         imageName: "no-steps")
+    }
+
+    private init(title: String, subtitle: String, imageName: String) {
+        self.title = title
+        self.subtitle = subtitle
+        self.imageName = imageName
+    }
+
     init(steps: Int) {
-        title = "achievement_cell.achievement_title".localized
+        title = "achievement_badge.achievement_title".localized
         let rounded = Double(steps).roundToLowestValue(5000)
         let thousands = Int(rounded / 1000)
-        stepsCount = "\(thousands.localized)K"
+        subtitle = "\(thousands.localized)K"
         imageName = "\(thousands)k"
     }
 }

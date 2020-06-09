@@ -25,7 +25,12 @@ final class AchievementsViewPresenter {
 extension AchievementsViewPresenter: IAchievementsViewPresenter {
     func showAchievements(steps: [StepsDAO]) {
         let viewModels = createViewModels(daos: steps)
-        view?.updateViewModels(viewModels)
+        if viewModels.count > 0 {
+            view?.showAchievements(viewModels: viewModels)
+        } else {
+            let viewModel = AchievementBadgeViewModel.noAchievements()
+            view?.showNoAchievement(viewModel: viewModel)
+        }
     }
 }
 

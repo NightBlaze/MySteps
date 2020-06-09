@@ -14,8 +14,10 @@
 "app_start_view_controller.app_initialization.error" = "Error initialize application";
 "app_start_view_controller.healthkit_initialization.error" = "Error initialize HealthKit";
 
-// AchievementCell
-"achievement_cell.achievement_title" = "Goal\nachievement";
+// AchievementBadge
+"achievement_badge.achievement_title" = "Goal\nachievement";
+"achievement_badge.no_achievements_title" = "No achievements yet";
+"achievement_badge.no_achievements_subtitle" = "Keep walking!";
 
 // AchievementsView
 "achievements_view.achievements_title" = "Achievements";

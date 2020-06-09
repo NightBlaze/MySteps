@@ -15,7 +15,9 @@
 "app_start_view_controller.healthkit_initialization.error" = "Ошибка инициализации HealthKit";
 
 // AchievementCell
-"achievement_cell.achievement_title" = "Цель\nдостигнута";
+"achievement_badge.achievement_title" = "Цель\nдостигнута";
+"achievement_badge.no_achievements_title" = "Нет достижений";
+"achievement_badge.no_achievements_subtitle" = "Продолжай ходить!";
 
 // AchievementsView
 "achievements_view.achievements_title" = "Достижения";

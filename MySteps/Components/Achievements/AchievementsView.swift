@@ -14,14 +14,16 @@ protocol IAchievementsView: UIView {
 }
 
 protocol IAchievementsViewUpdater: UIView {
-    func updateViewModels(_ viewModels: [AchievementBadgeViewModel])
+    func showAchievements(viewModels: [AchievementBadgeViewModel])
+    func showNoAchievement(viewModel: AchievementBadgeViewModel)
 }
 
 final class AchievementsView: BaseNibView {
     @IBOutlet weak var achievementsTitleLabel: UILabel!
     @IBOutlet weak var achievementsCountLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var noAchievementsBadgeView: AchievementBadgeView!
+    
     private var interactor: IAchievementsViewInteractor?
     private var animator: IAchievementAnimator?
 
@@ -79,20 +81,32 @@ extension AchievementsView: IAchievementsView {
 // MARK: - IAchievementsViewUpdater
 
 extension AchievementsView: IAchievementsViewUpdater {
-    func updateViewModels(_ viewModels: [AchievementBadgeViewModel]) {
+    func showAchievements(viewModels: [AchievementBadgeViewModel]) {
+        updateNoAchievementsBadgeVisibility(visible: false)
         self.viewModels = viewModels
-        updateUI()
+        updateAchievementsCountLabel()
+        collectionView.performBatchUpdates(nil)
+    }
+
+    func showNoAchievement(viewModel: AchievementBadgeViewModel) {
+        updateNoAchievementsBadgeVisibility(visible: true)
+        viewModels = nil
+        updateAchievementsCountLabel()
+        noAchievementsBadgeView.update(viewModel: viewModel)
     }
 }
 
 // MARK: - Private
 
 private extension AchievementsView {
-    func updateUI() {
+    func updateAchievementsCountLabel() {
         let count = viewModels?.count ?? 0
         achievementsCountLabel.text = "\(count.localized)"
+    }
 
-        collectionView.performBatchUpdates(nil)
+    func updateNoAchievementsBadgeVisibility(visible: Bool) {
+        noAchievementsBadgeView.isHidden = !visible
+        collectionView.isHidden = !noAchievementsBadgeView.isHidden
     }
 
     @objc func applicationWillEnterForeground(notification: NSNotification) {
