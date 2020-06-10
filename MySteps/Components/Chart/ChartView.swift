@@ -62,7 +62,7 @@ final class ChartView: BaseNibView {
         stepsTitleLabel.text = "chart_view.steps_title".localized
 
         // Chart view
-        chartView.chartDescription?.enabled = false
+        chartView.chartDescription.enabled = false
         chartView.dragEnabled = false
         chartView.setScaleEnabled(false)
         chartView.pinchZoomEnabled = false
@@ -136,12 +136,14 @@ private extension ChartView {
             dataEntries.append(dataEntry)
         }
 
-        let lineChartDataSet = LineChartDataSet(entries: dataEntries, label: nil)
+        let lineChartDataSet = LineChartDataSet(values: dataEntries, label: "")
         lineChartDataSet.lineCapType = .round
         lineChartDataSet.mode = .horizontalBezier
         lineChartDataSet.drawCirclesEnabled = false
         lineChartDataSet.lineWidth = 3.0
-        lineChartDataSet.colors = [Colors.Graph.blue]
+        lineChartDataSet.colors = [Colors.Graph.blue, Colors.Graph.green]
+        lineChartDataSet.gradientPositions = [CGFloat(lineChartDataSet.yMin), CGFloat(lineChartDataSet.yMax)]
+        lineChartDataSet.isDrawLineWithGradientEnabled = true
 
         let lineChartData = LineChartData(dataSet: lineChartDataSet)
         lineChartData.setDrawValues(false)
