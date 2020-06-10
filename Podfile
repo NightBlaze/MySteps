@@ -9,5 +9,5 @@ target 'MySteps' do
   pod 'Swinject', '~> 2.7.1'
   pod 'CoreStore', '~> 7.1.0'
   pod 'AFDateHelper', '~> 4.3.0'
-  pod 'Charts', '~> 3.5.0'
+  pod 'Charts', :git => 'https://github.com/danielgindi/Charts', :branch => '4.0.0'
 end

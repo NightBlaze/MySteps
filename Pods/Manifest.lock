@@ -1,30 +1,39 @@
 PODS:
   - AFDateHelper (4.3.0)
-  - Charts (3.5.0):
-    - Charts/Core (= 3.5.0)
-  - Charts/Core (3.5.0)
+  - Charts (3.2.1):
+    - Charts/Core (= 3.2.1)
+  - Charts/Core (3.2.1)
   - CoreStore (7.1.0)
   - Swinject (2.7.1)
 
 DEPENDENCIES:
   - AFDateHelper (~> 4.3.0)
-  - Charts (~> 3.5.0)
+  - Charts (from `https://github.com/danielgindi/Charts`, branch `4.0.0`)
   - CoreStore (~> 7.1.0)
   - Swinject (~> 2.7.1)
 
 SPEC REPOS:
   trunk:
     - AFDateHelper
-    - Charts
     - CoreStore
     - Swinject
 
+EXTERNAL SOURCES:
+  Charts:
+    :branch: 4.0.0
+    :git: https://github.com/danielgindi/Charts
+
+CHECKOUT OPTIONS:
+  Charts:
+    :commit: 4b2332765e61c6ce78ac7892266784532962a39b
+    :git: https://github.com/danielgindi/Charts
+
 SPEC CHECKSUMS:
   AFDateHelper: b769c07d3d4784ee9a74633285304261bb27dc52
-  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  Charts: 5d168be9c09f00333e0e99475fc02545143e42d3
   CoreStore: 7bab47bb4189c116ea4491802313613a98c12882
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: f189c83c56e0b1cd4ea2a252bc7c428bf6eaa668
+PODFILE CHECKSUM: f4275caf078b3b9efbdaa4ffc93e941b56164f36
 
 COCOAPODS: 1.9.2
