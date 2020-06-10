@@ -21,8 +21,7 @@ final class AchievementBadgeView: BaseNibView {
         super.initialize(useAutoLayout: useAutoLayout, bundle: bundle)
 
         backgroundColor = Colors.Background.view
-        imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = imageView.bounds.size.width / 2
+        imageView.makeRound()
         imageView.backgroundColor = Colors.Background.imageView
         achievementTitleLabel.textColor = Colors.Foreground.white
         achievementTitleLabel.backgroundColor = Colors.Background.label

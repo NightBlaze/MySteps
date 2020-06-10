@@ -38,8 +38,7 @@ class UserAvatarTableViewCell: UITableViewCell {
     }
 
     override func awakeFromNib() {
-        avatarImageView.layer.masksToBounds = true
-        avatarImageView.layer.cornerRadius = avatarImageView.bounds.size.width / 2
+        avatarImageView.makeRound()
 
         backgroundColor = Colors.Background.tableViewCell
         avatarImageView.backgroundColor = Colors.Background.imageView

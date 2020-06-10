@@ -53,6 +53,7 @@
 		FF79EBE5248D62DB0063D703 /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79EBE3248D62DB0063D703 /* AchievementCollectionViewCell.swift */; };
 		FF79EBE6248D62DB0063D703 /* AchievementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF79EBE4248D62DB0063D703 /* AchievementCollectionViewCell.xib */; };
 		FF79EBE9248D631A0063D703 /* UICollectionViewCell+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79EBE8248D631A0063D703 /* UICollectionViewCell+Creation.swift */; };
+		FF7FAE642490E95D00F83792 /* UIView+UILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FAE632490E95D00F83792 /* UIView+UILayer.swift */; };
 		FF82E0B8248B799500F693DF /* AppStartErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82E0B7248B799500F693DF /* AppStartErrorViewModel.swift */; };
 		FF82E0BC248B7BF600F693DF /* LocalPersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82E0BB248B7BF600F693DF /* LocalPersistentStore.swift */; };
 		FF82E0BF248B7D4B00F693DF /* HealthKitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82E0BE248B7D4B00F693DF /* HealthKitStore.swift */; };
@@ -139,6 +140,7 @@
 		FF79EBE3248D62DB0063D703 /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF79EBE4248D62DB0063D703 /* AchievementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementCollectionViewCell.xib; sourceTree = "<group>"; };
 		FF79EBE8248D631A0063D703 /* UICollectionViewCell+Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Creation.swift"; sourceTree = "<group>"; };
+		FF7FAE632490E95D00F83792 /* UIView+UILayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UILayer.swift"; sourceTree = "<group>"; };
 		FF82E0B7248B799500F693DF /* AppStartErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartErrorViewModel.swift; sourceTree = "<group>"; };
 		FF82E0BB248B7BF600F693DF /* LocalPersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPersistentStore.swift; sourceTree = "<group>"; };
 		FF82E0BE248B7D4B00F693DF /* HealthKitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitStore.swift; sourceTree = "<group>"; };
@@ -405,6 +407,14 @@
 			path = UICollectionViewCell;
 			sourceTree = "<group>";
 		};
+		FF7FAE622490E94200F83792 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				FF7FAE632490E95D00F83792 /* UIView+UILayer.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		FF82E0B9248B7BC800F693DF /* DataAccessObjects */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +493,7 @@
 				FF361A1A248BB8C100E6DDA6 /* String */,
 				FF79EBE7248D62FB0063D703 /* UICollectionViewCell */,
 				FF361A20248BBFE800E6DDA6 /* UITableViewCell */,
+				FF7FAE622490E94200F83792 /* UIView */,
 				FFCBB2E6248AD7180026AE7F /* UIViewController */,
 				FFD3ED67248D00DA00E13C5C /* UserDefaults */,
 			);
@@ -809,6 +820,7 @@
 				FF82E0BC248B7BF600F693DF /* LocalPersistentStore.swift in Sources */,
 				FFD3ED61248CF47200E13C5C /* LPSSteps.swift in Sources */,
 				FFCBB2E1248AD5560026AE7F /* ViewControllersFactory.swift in Sources */,
+				FF7FAE642490E95D00F83792 /* UIView+UILayer.swift in Sources */,
 				FF361A1C248BB8DF00E6DDA6 /* String+Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
