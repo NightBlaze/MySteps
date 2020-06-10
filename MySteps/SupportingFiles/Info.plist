@@ -20,6 +20,17 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>We need access to HealthKit to gather your steps count</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FontsFree-Net-SFProText-Heavy.ttf</string>
+		<string>FontsFree-Net-SFProDisplay-Heavy.ttf</string>
+		<string>FontsFree-Net-SFProDisplay-Regular.ttf</string>
+		<string>FontsFree-Net-SFProDisplay-Semibold.ttf</string>
+		<string>FontsFree-Net-SFProDisplay-Bold.ttf</string>
+		<string>FontsFree-Net-SFCompactText-SemiBold.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -43,6 +54,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -54,16 +69,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>FontsFree-Net-SFProText-Heavy.ttf</string>
-		<string>FontsFree-Net-SFProDisplay-Heavy.ttf</string>
-		<string>FontsFree-Net-SFProDisplay-Regular.ttf</string>
-		<string>FontsFree-Net-SFProDisplay-Semibold.ttf</string>
-		<string>FontsFree-Net-SFProDisplay-Bold.ttf</string>
-		<string>FontsFree-Net-SFCompactText-SemiBold.ttf</string>
-	</array>
-	<key>NSHealthShareUsageDescription</key>
-	<string>We need access to HealthKit to gather your steps count</string>
 </dict>
 </plist>
