@@ -85,7 +85,7 @@ extension AchievementsView: IAchievementsViewUpdater {
         updateNoAchievementsBadgeVisibility(visible: false)
         self.viewModels = viewModels
         updateAchievementsCountLabel()
-        collectionView.reloadSections(IndexSet(integer: 0))
+        collectionView.performBatchUpdates(nil)
     }
 
     func showNoAchievement(viewModel: AchievementBadgeViewModel) {
