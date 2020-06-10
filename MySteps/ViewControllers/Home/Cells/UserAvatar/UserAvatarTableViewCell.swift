@@ -19,7 +19,7 @@ class UserAvatarTableViewCell: UITableViewCell {
         didSet {
             if oldValue != avatarImageName,
                 let avatarImageName = avatarImageName {
-                avatarImageView.image = UIImage(named: avatarImageName)
+                avatarImageView.image = UIImage.roundedImage(named: avatarImageName)
             }
         }
     }
@@ -38,8 +38,6 @@ class UserAvatarTableViewCell: UITableViewCell {
     }
 
     override func awakeFromNib() {
-        avatarImageView.makeRound()
-
         backgroundColor = Colors.Background.tableViewCell
         avatarImageView.backgroundColor = Colors.Background.imageView
     }

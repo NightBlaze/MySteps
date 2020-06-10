@@ -21,7 +21,6 @@ final class AchievementBadgeView: BaseNibView {
         super.initialize(useAutoLayout: useAutoLayout, bundle: bundle)
 
         backgroundColor = Colors.Background.view
-        imageView.makeRound()
         imageView.backgroundColor = Colors.Background.imageView
         achievementTitleLabel.textColor = Colors.Foreground.white
         achievementTitleLabel.backgroundColor = Colors.Background.label
@@ -37,7 +36,7 @@ final class AchievementBadgeView: BaseNibView {
 
 extension AchievementBadgeView: IAchievementBadgeView {
     func update(viewModel: AchievementBadgeViewModel) {
-        imageView.image = UIImage(named: viewModel.imageName)
+        imageView.image = UIImage.roundedImage(named: viewModel.imageName)
         achievementTitleLabel.text = viewModel.title
         stepsCountLabel.text = viewModel.subtitle
     }
